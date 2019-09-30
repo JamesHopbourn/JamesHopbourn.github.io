@@ -18,8 +18,7 @@ before_install:
 # 由于使用了yarn，所以需要下载，如不用yarn这两行可以删除
 - npm install -g hexo-cli
 install:
-# 不用yarn的话这里改成 npm i 即可
-- npm I
+- npm i
 script:
 - hexo clean
 - hexo generate
