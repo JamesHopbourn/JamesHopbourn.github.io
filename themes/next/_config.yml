@@ -126,8 +126,8 @@ scheme: Mist
 # External url should start with http:// or https://
 menu:
   home: / || home
-  #about: /about/ || user
-  #tags: /tags/ || tags
+  about: /about/ || user
+  tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
@@ -147,8 +147,8 @@ menu_settings:
 
 sidebar:
   # Sidebar Position.
-  position: left
-  #position: right
+  # position: left
+  position: right
 
   # Manual define the sidebar width. If commented, will be default for:
   # Muse | Mist: 320
@@ -188,7 +188,7 @@ site_state: true
 # Value after `||` delimiter is the name of Font Awesome icon. If icon (with or without delimiter) is not specified, globe icon will be loaded.
 social:
   GitHub: https://github.com/JamesHopbourn || github
-  E-Mail: hopbourncontact@gmail.com || envelope
+  E-Mail: mailto:hopbourncontact@gmail.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
   Twitter: https://twitter.com/JamesHopbourn || twitter
