@@ -10,6 +10,9 @@ tags:
 2. Working Copy 上传文章 
 3. Travis-CI 自动部署 
 4. Bark 推送更新完成通知
+
+<!-- more -->
+
 # 需要的软件
 iOS：MWeb(60¥ 内购)、Working Copy（108¥/年 订阅）、Bark（免费）
 
