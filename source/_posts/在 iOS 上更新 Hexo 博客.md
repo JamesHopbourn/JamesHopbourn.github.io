@@ -1,5 +1,5 @@
 ---
-title: 如何在 iOS 上更新 Hexo 博客
+title: 在 iOS 上更新 Hexo 博客
 date: 2019-10-04 23:04
 tags: 流程
 ---
