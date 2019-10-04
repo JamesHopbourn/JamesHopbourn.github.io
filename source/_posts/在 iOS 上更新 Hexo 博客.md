@@ -1,10 +1,8 @@
 ---
-title: 
+title: 如何在 iOS 上更新 Hexo 博客文章
 date: 2019-10-04 23:04
-tags: 
+tags: 流程
 ---
-
-# 如何在 iOS 上更新 Hexo 博客文章
 最终实现效果：
 1. MWeb 编辑文章 
 2. Working Copy 上传文章 
