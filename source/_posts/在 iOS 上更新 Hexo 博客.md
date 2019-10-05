@@ -1,7 +1,7 @@
 ---
 title: 在 iOS 上更新 Hexo 博客
 date: 2019-10-04 23:04
-tags: 流程
+tags: 流程, 效率
 ---
 
 最终实现效果：
@@ -12,10 +12,10 @@ tags: 流程
 
 <!-- more -->
 
-# 需要的软件
+## 需要的软件
 iOS：MWeb(60¥ 内购)、Working Copy（108¥/年 订阅）、Bark（免费）
 
-# macOS 端操作
+## macOS 端操作
 ### Hexo
 下载安装 Homebrew：/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 下载安装 Node：brew install node
@@ -34,7 +34,7 @@ clone 博客仓库到本地
 ### Travis-CI
 关联博客仓库配置 token
 
-# iOS 端操作
+## iOS 端操作
 ### Bark
 下载好 Bark 后获取设备唯一标识符，构造更新提醒推送链接，设备唯一标识符为图中红色高亮部分。
 ![](/media/15702021204276.jpg)
