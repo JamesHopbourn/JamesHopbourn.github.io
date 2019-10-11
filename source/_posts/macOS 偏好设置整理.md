@@ -5,9 +5,9 @@ tags: 合集
 categories: 
 ---
 
-Safari：自动填充 → 关闭自动填充用户名和密码
-Safari：高级 → 在菜单中显示开发者选项
 Safari：搜索引擎 → Google
+Safari：高级 → 在菜单中显示开发者选项
+Safari：自动填充 → 关闭自动填充用户名和密码
 
 <!-- more -->
 
