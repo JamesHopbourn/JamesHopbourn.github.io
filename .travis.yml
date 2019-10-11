@@ -26,6 +26,5 @@ after_success:
 - git push --quiet --force https://${hexo}@github.com/JamesHopbourn/JamesHopbourn.github.io.git
   master
 # 修改 {hexo} 和 push 的地址
-- sleep 30
 - curl https://api.day.app/oQ3DDZqR3TLmsyLSscVevH/Hexo%20%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E5%AE%8C%E6%88%90?url=https://jameshopbourn.github.io/
 # 修改为你自己 Bark 推送链接
