@@ -1,5 +1,5 @@
 ---
-title: 玩 App 总结的两个经验
+title: 玩 App 的两个建议
 date: 2019-10-12 19:54
 tags: 短文
 categories: 
