@@ -134,6 +134,7 @@ menu:
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
   diagram: /diagram || diagram
+  telegram: https://t.me/s/JamesNotes
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
