@@ -5,14 +5,12 @@ tags: 终端
 ---
 
 监控文件变化情况，例如变化执行具体指令
-
 ```
 用法：fswatch -0 被监控文件 | xargs -0 -n1 -I{} 变化后执行的命令
 例子：fswatch -0 test.c | xargs -0 -n1 -I{} gcc test.c -o test
 ```
 
 批量创建有序文件/文件夹
-
 ```
 touch {1..10}.txt
 mkdir {1..10}
@@ -71,10 +69,11 @@ bwm-ng 端口速度
 Base64 相关
 
 ```
-echo c3dvcmQueW9ya0BnbWFpbC5jb20K | base64 --decode
+base64 <<< string
+base64 -D <<< string
 
-echo jameshopbourn@gmail.com | base64 --encode
-
+base64 -in file
+base64 -D -in file
 ```
 
 iperf 内网测试
