@@ -11,6 +11,25 @@ tags: 终端
 例子：fswatch -0 test.c | xargs -0 -n1 -I{} gcc test.c -o test
 ```
 
+批量创建有序文件/文件夹
+
+```
+touch {1..10}.txt
+mkdir {1..10}
+```
+
+一次性定时执行命令
+
+```
+command | at 12:00
+```
+
+计算命令执行时间
+
+```
+time gcc test.c 
+```
+
 查看 SIP 状态及关闭 SIP：
 
 ```
