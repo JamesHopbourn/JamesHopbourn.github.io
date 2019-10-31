@@ -16,6 +16,8 @@ touch {1..10}.txt
 mkdir {1..10}
 ```
 
+<!-- more -->
+
 一次性定时执行命令
 
 ```
@@ -76,6 +78,11 @@ base64 -in file
 base64 -D -in file
 ```
 
+md5 相关
+```
+md5 <<< string
+md5 file
+```
 iperf 内网测试
 
 lolcat 彩色文本输出
@@ -94,9 +101,9 @@ crunch 字典生成
 
 wtf 短语查询
 
-ag
+ag 高级搜索
 
-tig
+tig 
 
 htop 进程监控工具
 
