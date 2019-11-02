@@ -46,6 +46,15 @@ diff -rq directory1 directory2
 diff (file input 1) (file input 2)
 ```
 
+curl [参考文章](https://coderlt.coding.me/2016/03/22/mac-command-curl/)
+```
+post：curl -D "name=xxx&age=xxx" 127.0.0.1:8899/post
+头信息：curl -i www.sina.com
+通信过程：curl -v www.sina.com
+发送表单：curl --form username=xxxx --form password=xxx https://sm.ms/api/v2/token
+
+```
+
 Brew 查看文件路径
 
 ```
