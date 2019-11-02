@@ -65,7 +65,17 @@ osascript scriptname
 
 ```
 
+say 命令输出文件
+```
+say '测试音频文件' -o 音频文件.aiff
+say -f file -o file.aiff
+```
 
+shell 运算符号
+```
+与或：brew install tig && say '安装成功' || say '安装失败'
+顺序：brew install tig ; say '命令执行完成'
+```
 bwm-ng 端口速度
 
 Base64 相关
