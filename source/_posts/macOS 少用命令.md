@@ -73,7 +73,7 @@ pip show condo
 纯色图片：convert -size 640x480 xc:black empty.jpg
 反转图片颜色：convert input.png -channel RGB -negate output.png
 文本转图片：convert -fill white -pointsize 60 -font helvetica -draw 'text 10,80 "Hello, World!"' hello.jpg  helloworld.jpg
-**在图像的10,80 位置采用60磅的全黑Helvetica字体写上 Hello, World! **
+在图像的10,80 位置采用60磅的全黑Helvetica字体写上 Hello, World! 
 convert -size 300x150 xc:black -pointsize 20 -fill white -draw 'text 120,120 "Here is the TEXT"' image-with-text.jpg
 ```
 
@@ -90,7 +90,7 @@ say '测试音频文件' -o 音频文件.aiff
 say -f file -o file.aiff
 ```
 
-shell 运算符号
+shell 运算符
 ```
 与或：brew install tig && say '安装成功' || say '安装失败'
 顺序：brew install tig ; say '命令执行完成'
@@ -99,14 +99,14 @@ bwm-ng 端口速度
 
 Base64 相关
 ```
+base64 <<< string
+base64 -D <<< string
+
 openssl base64 -in base.png > base.txt
 openssl base64 -d -in base.txt > base.png
 
 data:image/png;base64,
 data:image/svg+xml;base64,
-
-base64 <<< string
-base64 -D <<< string
 
 base64 -in file
 base64 -D -in file
@@ -114,7 +114,7 @@ base64 -D -in file
 
 md5 相关
 ```
-md5 <<< string
+md5 -s string
 md5 file
 ```
 
@@ -147,15 +147,9 @@ unzip final.png
 
 echo bboysoul is a bad guy | pv -qL 10 打字效果输出
 
-yes 一直输出输入值
-
-thefuck 错误自动修正
-
 hydra 暴力破解
 
 crunch 字典生成
-
-wtf 短语查询
 
 ag 高级搜索
 
