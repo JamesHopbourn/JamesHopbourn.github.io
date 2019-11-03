@@ -70,8 +70,8 @@ pip show condo
 [convert 命令](https://www.thalib.in/notes/2016-10-31-linux-create-image-commandline.html)
 [ImageMagick使用心得](http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html)
 ```
-反转图片颜色：convert input.png -channel RGB -negate output.png
 纯色图片：convert -size 640x480 xc:black empty.jpg
+反转图片颜色：convert input.png -channel RGB -negate output.png
 文本转图片：convert -fill white -pointsize 60 -font helvetica -draw 'text 10,80 "Hello, World!"' hello.jpg  helloworld.jpg
 **在图像的10,80 位置采用60磅的全黑Helvetica字体写上 Hello, World! **
 convert -size 300x150 xc:black -pointsize 20 -fill white -draw 'text 120,120 "Here is the TEXT"' image-with-text.jpg
@@ -98,8 +98,13 @@ shell 运算符号
 bwm-ng 端口速度
 
 Base64 相关
-
 ```
+openssl base64 -in base.png > base.txt
+openssl base64 -d -in base.txt > base.png
+
+data:image/png;base64,
+data:image/svg+xml;base64,
+
 base64 <<< string
 base64 -D <<< string
 
