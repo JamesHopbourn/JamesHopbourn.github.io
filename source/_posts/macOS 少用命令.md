@@ -64,12 +64,17 @@ brew --prefix wget
 pip 查看软件包路径
 
 ```
-Pip show condo
+pip show condo
 ```
 
-反转图片颜色
+[convert 命令](https://www.thalib.in/notes/2016-10-31-linux-create-image-commandline.html)
+[ImageMagick使用心得](http://www.charry.org/docs/linux/ImageMagick/ImageMagick.html)
 ```
-convert input.png -channel RGB -negate output.png
+反转图片颜色：convert input.png -channel RGB -negate output.png
+纯色图片：convert -size 640x480 xc:black empty.jpg
+文本转图片：convert -fill white -pointsize 60 -font helvetica -draw 'text 10,80 "Hello, World!"' hello.jpg  helloworld.jpg
+**在图像的10,80 位置采用60磅的全黑Helvetica字体写上 Hello, World! **
+convert -size 300x150 xc:black -pointsize 20 -fill white -draw 'text 120,120 "Here is the TEXT"' image-with-text.jpg
 ```
 
 终端执行 AppleScript 脚本
@@ -107,6 +112,34 @@ md5 相关
 md5 <<< string
 md5 file
 ```
+
+[进制转换](http://www.freecls.com/a/2712/7a)
+[shell - How to convert a text file to binary file using linux commands - Stack Overflow](https://stackoverflow.com/questions/28242813/how-to-convert-a-text-file-to-binary-file-using-linux-commands)
+```
+以16进制文本显示
+xxd -p -l 16 1.jpg
+ffd8ffe000104a464946000101010060
+
+十六进制转二进制
+echo -n 'ffd8ff' | xxd -b
+
+文件二进制显示
+xxd -b file
+
+```
+
+批量按照文件名压缩
+```
+ls -1 * | xargs -n 1 bash -c 'zip "$0".zip "$0"'
+```
+
+zip 显隐术
+```
+zip -P password output.zip input.txt
+cat test.png output.zip > final.png
+unzip final.png
+```
+
 iperf 内网测试
 
 lolcat 彩色文本输出
@@ -136,3 +169,5 @@ cloc 代码概览工具
 mc 文本编辑工具
 
 qrencode 二维码生成
+
+bc命令 [ubuntu 下二进制 ，十进制，十六进制的转换 - 程序人生 - CSDN博客](https://blog.csdn.net/Harith/article/details/12185713)
