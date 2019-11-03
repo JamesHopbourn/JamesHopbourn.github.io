@@ -147,13 +147,9 @@ unzip final.png
 
 iperf 内网测试
 
-lolcat 彩色文本输出
-
 echo bboysoul is a bad guy | pv -qL 10 打字效果输出
 
-yes 一只输出
-
-mycli
+yes 一直输出输入值
 
 thefuck 错误自动修正
 
@@ -164,8 +160,6 @@ crunch 字典生成
 wtf 短语查询
 
 ag 高级搜索
-
-tig 
 
 htop 进程监控工具
 
