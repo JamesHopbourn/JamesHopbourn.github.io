@@ -67,6 +67,11 @@ pip 查看软件包路径
 Pip show condo
 ```
 
+反转图片颜色
+```
+convert input.png -channel RGB -negate output.png
+```
+
 终端执行 AppleScript 脚本
 
 ```
@@ -129,3 +134,5 @@ htop 进程监控工具
 cloc 代码概览工具
 
 mc 文本编辑工具
+
+qrencode 二维码生成
