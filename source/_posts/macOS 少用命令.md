@@ -145,8 +145,6 @@ cat test.png output.zip > final.png
 unzip final.png
 ```
 
-iperf 内网测试
-
 echo bboysoul is a bad guy | pv -qL 10 打字效果输出
 
 yes 一直输出输入值
