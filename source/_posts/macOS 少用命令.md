@@ -84,6 +84,16 @@ osascript scriptname
 
 ```
 
+VPS 性能测试
+
+```
+快速测试：
+wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash -s fast
+完整测试：
+wget -qO- https://ilemonrain.com/download/shell/LemonBench.sh | bash -s full
+
+```
+
 say 命令输出文件
 ```
 say '测试音频文件' -o 音频文件.aiff
