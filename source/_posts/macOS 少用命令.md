@@ -100,6 +100,35 @@ say '测试音频文件' -o 音频文件.aiff
 say -f file -o file.aiff
 ```
 
+二进制下编辑文件
+```
+$ xxd file1 file1.dump
+$ cat file1.dump 
+00000000: 736f 6d65 2063 6f6e 7465 6e74 206f 6620  some content of 
+00000010: 6669 6c65 310a                           file1.
+$ vim file1.dump 
+# magic editing...
+$ cat file1.dump
+00000000: 736f 6d65 4d41 4749 4321 6e74 206f 6620  some content of 
+00000010: 6669 6c65 310a                           file1.
+$ xxd -r file1.dump 
+someMAGIC!nt of file1
+```
+
+[进制转换](http://www.freecls.com/a/2712/7a)
+[shell - How to convert a text file to binary file using linux commands - Stack Overflow](https://stackoverflow.com/questions/28242813/how-to-convert-a-text-file-to-binary-file-using-linux-commands)
+```
+以16进制文本显示
+xxd -p -l 16 1.jpg
+ffd8ffe000104a464946000101010060
+
+十六进制转二进制
+echo -n 'ffd8ff' | xxd -b
+
+文件二进制显示
+xxd -b file
+```
+
 shell 运算符
 ```
 与或：brew install tig && say '安装成功' || say '安装失败'
@@ -126,21 +155,6 @@ md5 相关
 ```
 md5 -s string
 md5 file
-```
-
-[进制转换](http://www.freecls.com/a/2712/7a)
-[shell - How to convert a text file to binary file using linux commands - Stack Overflow](https://stackoverflow.com/questions/28242813/how-to-convert-a-text-file-to-binary-file-using-linux-commands)
-```
-以16进制文本显示
-xxd -p -l 16 1.jpg
-ffd8ffe000104a464946000101010060
-
-十六进制转二进制
-echo -n 'ffd8ff' | xxd -b
-
-文件二进制显示
-xxd -b file
-
 ```
 
 批量按照文件名压缩
