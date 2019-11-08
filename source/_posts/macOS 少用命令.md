@@ -115,6 +115,15 @@ $ xxd -r file1.dump
 someMAGIC!nt of file1
 ```
 
+vim 集成：
+```
+先用二进制方式打开文件 vim FILE -b
+在正常模式下输入魔法 :%!xxd
+修改
+退出到正常模式，继续魔法 :%!xxd -r
+```
+[xxd (从新手到菜鸟的Linux教程)](https://zhuanlan.zhihu.com/p/24883064)
+
 [进制转换](http://www.freecls.com/a/2712/7a)
 [shell - How to convert a text file to binary file using linux commands - Stack Overflow](https://stackoverflow.com/questions/28242813/how-to-convert-a-text-file-to-binary-file-using-linux-commands)
 ```
@@ -131,9 +140,22 @@ xxd -b file
 
 shell 运算符
 ```
+同时执行：command A & command B & command C
 与或：brew install tig && say '安装成功' || say '安装失败'
 顺序：brew install tig ; say '命令执行完成'
 ```
+
+设置文件/文件夹不可见
+```
+chflags hidden /path/to/file
+chflags nohidden /path/to/file
+```
+
+axel 多线程下载
+```
+axel -n 10 -o /tmp/ http://www.jsdig.com/lnmp.tar.gz
+```
+
 bwm-ng 端口速度
 
 Base64 相关
