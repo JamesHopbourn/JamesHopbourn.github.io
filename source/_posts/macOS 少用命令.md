@@ -156,6 +156,23 @@ axel 多线程下载
 axel -n 10 -o /tmp/ http://www.jsdig.com/lnmp.tar.gz
 ```
 
+文件备份
+```
+cp file{,.$(date -r file "+%y%m%d")}
+```
+
+显示一个文件并且在每行开头添加行号
+```
+cat test.txt | nl
+     1  line 1 
+     2  line 2
+```
+
+在以普通用户打开的VIM当中保存一个ROOT用户文件
+```
+:w !sudo tee %
+```
+
 bwm-ng 端口速度
 
 Base64 相关
