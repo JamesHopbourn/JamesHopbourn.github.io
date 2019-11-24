@@ -99,33 +99,6 @@ say '测试音频文件' -o 音频文件.aiff
 say -f file -o file.aiff
 ```
 
-二进制下编辑文件
-```
-$ xxd file1 file1.dump
-$ cat file1.dump 
-00000000: 736f 6d65 2063 6f6e 7465 6e74 206f 6620  some content of 
-00000010: 6669 6c65 310a                           file1.
-$ vim file1.dump 
-# magic editing...
-$ cat file1.dump
-00000000: 736f 6d65 4d41 4749 4321 6e74 206f 6620  some content of 
-00000010: 6669 6c65 310a                           file1.
-$ xxd -r file1.dump 
-someMAGIC!nt of file1
-```
-
-vim 集成：
-```
-先用二进制方式打开文件 vim FILE -b
-在正常模式下输入魔法 :%!xxd
-修改
-退出到正常模式，继续魔法 :%!xxd -r
-```
-[xxd (从新手到菜鸟的Linux教程)](https://zhuanlan.zhihu.com/p/24883064)
-
-[进制转换](http://www.freecls.com/a/2712/7a)
-[shell - How to convert a text file to binary file using linux commands - Stack Overflow](https://stackoverflow.com/questions/28242813/how-to-convert-a-text-file-to-binary-file-using-linux-commands)
-```
 以16进制文本显示
 xxd -p -l 16 1.jpg
 ffd8ffe000104a464946000101010060
