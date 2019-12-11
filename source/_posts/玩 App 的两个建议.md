@@ -17,8 +17,3 @@ categories:
 Surge、1Password、Forest、FancyDays、Annotable 等软件质量和口碑在同类产品中皆属上乘，所以这些类型的软件我只用它们，这些-来一直都是。
 
 用 iPhone 也是类似的道理，省心。
-
-$$\frac{\partial u}{\partial t}
-= h^2 \left( \frac{\partial^2 u}{\partial x^2} +
-\frac{\partial^2 u}{\partial y^2} +
-\frac{\partial^2 u}{\partial z^2}\right)$$
