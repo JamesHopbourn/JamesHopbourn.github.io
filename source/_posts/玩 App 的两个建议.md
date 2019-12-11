@@ -18,3 +18,7 @@ Surge、1Password、Forest、FancyDays、Annotable 等软件质量和口碑在�
 
 用 iPhone 也是类似的道理，省心。
 
+$$\frac{\partial u}{\partial t}
+= h^2 \left( \frac{\partial^2 u}{\partial x^2} +
+\frac{\partial^2 u}{\partial y^2} +
+\frac{\partial^2 u}{\partial z^2}\right)$$
