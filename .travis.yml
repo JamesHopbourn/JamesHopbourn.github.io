@@ -13,6 +13,7 @@ before_install:
 - git config --global user.email "jameshopbourn@gmail.com"
 # 此处的 user.name 和 user.email 修改为自己的
 - npm install -g hexo-cli
+- npm install hexo-math --save
 install:
 - npm i
 script:
