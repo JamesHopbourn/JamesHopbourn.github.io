@@ -7,7 +7,7 @@
   {{ next_url('http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' + theme.footer.beian.gongan_id,
   theme.footer.beian.gongan_num + ' ') }}{#
 #}{%- endif %}{#
-#}Copyright &copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} – {% endif %} {#
+#}Copyright &copy; {% if theme.footer.since and theme.footer.since != current %} {% endif %} {#
 #}<span itemprop="copyrightYear">{{ current }}</span>
 
   <span class="author">{{ theme.footer.copyright or author }} . All rights reserved.</span>
