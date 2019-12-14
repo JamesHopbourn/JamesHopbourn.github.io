@@ -7,12 +7,12 @@
   {{ next_url('http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=' + theme.footer.beian.gongan_id,
   theme.footer.beian.gongan_num + ' ') }}{#
 #}{%- endif %}{#
-#}Copyright &copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} – {% endif %} . All rights reserved.{#
+#}Copyright &copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} – {% endif %} {#
 #}<span itemprop="copyrightYear">{{ current }}</span>
   <span class="with-love" id="animate">
     <i class="fa fa-{{ theme.footer.icon.name }}"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright or author }}</span>
+  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright or author }} . All rights reserved.</span>
 
   {%- if config.symbols_count_time.total_symbols %}
     <span class="post-meta-divider">|</span>
