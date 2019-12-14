@@ -9,9 +9,7 @@
 #}{%- endif %}{#
 #}Copyright &copy; {% if theme.footer.since and theme.footer.since != current %}{{ theme.footer.since }} – {% endif %} {#
 #}<span itemprop="copyrightYear">{{ current }}</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-{{ theme.footer.icon.name }}"></i>
-  </span>
+
   <span class="author">{{ theme.footer.copyright or author }} . All rights reserved.</span>
 
   {%- if config.symbols_count_time.total_symbols %}
