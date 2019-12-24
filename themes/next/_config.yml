@@ -134,7 +134,7 @@ menu:
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
   diagram: /diagram || diagram
-  频道: https://t.me/s/JamesNotes  || telegram
+  频道: https://t.me/s/JamesNotes  || fa-telegram
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
