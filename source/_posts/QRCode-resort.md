@@ -16,9 +16,9 @@ categories:
 生成 ACSII 字符：
 qrencode -t ASCII 'flag:jbcool' > new.txt
 删除前四行空白行：
-sed -i '' '4d' new.txt
+sed -i '' -e '1,4d' new.txt
 删除后四行空白行：
-sed -i '' '21,24d' new.txt
+sed -i '' -e '26,30d' new.txt
 vim
     %s/^        //g
     %s/        $//g
