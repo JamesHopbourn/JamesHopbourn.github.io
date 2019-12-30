@@ -28,6 +28,7 @@ vim
 字符之间添加空格：
 sed -i '' -e 's/\(.\)/\1 /g' new.txt
 ```
+
 ## 批处理脚本
 vim resort.sh
 
