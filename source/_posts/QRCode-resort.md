@@ -38,6 +38,7 @@ line=$(echo  $chac/$line-1 | bc)
 line=$(echo  $line/2 | bc)
 
 rm sort.txt
+touch sort.txt
 
 for ((i=1;i<=$line;i++))
 do
