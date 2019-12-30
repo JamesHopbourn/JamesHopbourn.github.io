@@ -25,9 +25,11 @@ categories:
 
 ```
 var character = process.argv[2];
+
 function isInteger(obj) {
     return obj%1 === 0
 }
+
 for (var i=0;i<50;i++)
 {
 	line = character/i
