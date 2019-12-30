@@ -26,6 +26,7 @@ base64 编码：openssl base64 -in edit.zip > base.txt
 
 ## 解题
 1. base64 解码
+
 ```
 openssl base64 -d -in base.txt > edit.zip
 unzip edit.zip
@@ -69,6 +70,7 @@ node 191227\ 行数判断.js 882
 ```
 
 4. 大概排除一下，盲猜应该是属于 14、18、21、42 这四个比较有可能，我直接用 21 来演示：
+
 ```
 fold -w 42 news.txt > flag.txt
 111111111111110000110011110011111111111111
