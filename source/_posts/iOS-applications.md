@@ -7,7 +7,6 @@ categories:
 
 ## 图片编辑
 Annotable：图片标注、调色板
-LongScreen：图片拼接，自动删除
 Picsew：长图拼接、水印添加、格式化状态栏
 
 <!-- more -->
