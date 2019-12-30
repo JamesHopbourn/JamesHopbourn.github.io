@@ -142,3 +142,18 @@ text = text.join("");
 console.log(text);
 ```
 
+大小写转换后的结果：
+
+```
+h4SiaphRcv4aa4vswW7aiaJ732NK/PEBzMg0PuqsdCQRbsjq1PzZF3QiRf/qj99L
+Q1J0tb1T6LK+n8+S6hmYtKtfojKDh89Cy51fAXBw/Op3pigPR5Zd9uxZ+04RiMAG
+dkFj9x4YC90AROH7GNfAr7eZ+Z7j3NUFu6V5xEP7WGX9xTsEf2Yr0oXZaWaa
+```
+
+进行 base64 decode 后的结果：
+
+```
+���j�Qr�k���nډ�{�cJ����4>�t$n�����t"E���KCRt��S貾�ϒ����_�2���B˝_pp��w�(G�]��Y�N��vAc�
+                  �D�������������y�C�Xe��;f+҅�if�%
+```
+```
