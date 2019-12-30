@@ -1,5 +1,5 @@
 ---
-title: CTF 二维码出题与解题一个思路
+title: CTF 二维码出题解题思路
 date: 2019-12-30 20:05
 tags: CTF
 categories: 
