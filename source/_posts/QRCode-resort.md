@@ -15,10 +15,8 @@ categories:
 ```
 生成 ACSII 字符：
 qrencode -t ASCII 'flag:jbcool' > flag.txt
-删除前四行空白行：
-sed -i '' -e '1,4d' flag.txt
-删除后四行空白行：
-sed -i '' -e '22,26d' flag.txt
+删除所有的空白行：
+sed -i '' -e '/^[  ]*$/d' flag.txt
 删除前 8 个空格
 sed -i '' -e 's/^        //g' flag.txt
 删除后 8 个空格
