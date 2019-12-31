@@ -14,27 +14,27 @@ categories:
 
 ```
 生成 ACSII 字符：
-qrencode -t ASCII 'flag:jbcool' > new.txt
+qrencode -t ASCII 'flag:jbcool' > flag.txt
 删除前四行空白行：
-sed -i '' -e '1,4d' new.txt
+sed -i '' -e '1,4d' flag.txt
 删除后四行空白行：
-sed -i '' -e '26,30d' new.txt
-vim
+sed -i '' -e '26,30d' flag.txt
+vim flag.txt
     %s/^        //g
     %s/        $//g
     %s/ /0/g
     %s/#/1/g
     wq
 字符之间添加空格：
-sed -i '' -e 's/\(.\)/\1 /g' new.txt
+sed -i '' -e 's/\(.\)/\1 /g' flag.txt
 ```
 
 ## 批处理脚本
 vim resort.sh
 
 ```
-chac=$(wc -c new.txt | awk '{print $1}')
-line=$(wc -l new.txt | awk '{print $1}')
+chac=$(wc -c flag.txt | awk '{print $1}')
+line=$(wc -l flag.txt | awk '{print $1}')
 line=$(echo  $chac/$line-1 | bc)
 line=$(echo  $line/2 | bc)
 
@@ -43,7 +43,7 @@ touch sort.txt
 
 for ((i=1;i<=$line;i++))
 do
-	cut -d ' ' -f$i new.txt > $i.txt
+	cut -d ' ' -f$i flag.txtt > $i.txt
 	tr "\n" " "  < $i.txt > $i-bak.txt
 	rm $i.txt
 	echo `cat $i-bak.txt` >> sort.txt
