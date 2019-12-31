@@ -130,3 +130,17 @@ sed -i '' -e 's/ //g' sort.txt
 11111100110110101100
 11111100110110101100
 ```
+
+## base64 编码
+
+```
+cat sort.txt | gzip > new.zip
+openssl base64 -in new.zip > base.txt
+```
+
+```
+H4sIAGO7Cl4AA82TURKEIAxD/z1Nev/L7UpSKkyD+7kwqDwmLQ0INO3q4H/QYMPd
+Ac0cHZLBgivfD0upJ9Dshc7+A4XGmTILKqWnj4qj9aFomsc8u78bDer05rKhQaHk
+ehiqXCE1h6GzAKgMxW2p6ix7Ao7OW8T9MYih5aRyba4vtHzUUY4IhkbmkKfa74Hm
+dV0j9FTm599iaO5s1rtUsdDI03lgQz9sh3NCTAQAAA==
+```
