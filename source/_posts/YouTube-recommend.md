@@ -1,5 +1,5 @@
 ---
-title: YouTube 推荐频道列表
+title: <i class="fa fa-youtube fa-1x fa-fw"></i> YouTube 推荐频道列表
 date: 2019-12-31 19:00
 tags: YouTube
 categories: 
@@ -12,7 +12,7 @@ categories:
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 
 ## 言论
-<i class="fa fa-youtube fa-1x fa-fw"></i>[陈秋实官方频道](https://www.youtube.com/channel/UCv361SF6FKznoGPKEFG9Yhw)
+[陈秋实官方频道](https://www.youtube.com/channel/UCv361SF6FKznoGPKEFG9Yhw)
 
 <!-- more -->
 
