@@ -43,7 +43,7 @@ touch sort.txt
 
 for ((i=1;i<=$line;i++))
 do
-	cut -d ' ' -f$i flag.txtt > $i.txt
+	cut -d ' ' -f$i flag.txt > $i.txt
 	tr "\n" " "  < $i.txt > $i-bak.txt
 	rm $i.txt
 	echo `cat $i-bak.txt` >> sort.txt
