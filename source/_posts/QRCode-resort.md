@@ -19,12 +19,14 @@ qrencode -t ASCII 'flag:jbcool' > flag.txt
 sed -i '' -e '1,4d' flag.txt
 删除后四行空白行：
 sed -i '' -e '22,26d' flag.txt
-vim flag.txt
-    %s/^        //g
-    %s/        $//g
-    %s/ /0/g
-    %s/#/1/g
-    wq
+删除前 8 个空格
+sed -i '' -e 's/^        //g' flag.txt
+删除后 8 个空格
+sed -i '' -e 's/        $//g' flag.txt
+替换井号为 1
+sed -i '' -e 's/#/1/g' flag.txt
+替换空格为 0
+sed -i '' -e 's/ /0/g' flag.txt
 字符之间添加空格：
 sed -i '' -e 's/\(.\)/\1 /g' flag.txt
 ```
