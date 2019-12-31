@@ -32,7 +32,7 @@ sed -i '' -e 's/\(.\)/\1 /g' flag.txt
 ## 批处理脚本
 
 ```
-vim resort.sh && chmod +x resort.sh && ./resort.sh
+vim resort.sh && chmod 755 resort.sh && ./resort.sh
 ```
 
 ```
