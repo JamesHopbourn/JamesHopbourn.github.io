@@ -35,11 +35,14 @@ vim resort.sh
 ```
 chac=$(wc -c flag.txt | awk '{print $1}')
 line=$(wc -l flag.txt | awk '{print $1}')
-line=$(echo  $chac/$line-1 | bc)
-line=$(echo  $line/2 | bc)
+line=$(echo  $chac/$line-1 | bc) #行数减一是有一个换行符
+line=$(echo  $line/2 | bc) #行数除二是中间有空格
 
-rm sort.txt
-touch sort.txt
+if [ ! -f "sort.txt" ]; then #sort.txt 文件处理
+	touch "sort.txt"
+else
+	rm "sort.txt"
+fi 
 
 for ((i=1;i<=$line;i++))
 do
@@ -47,6 +50,7 @@ do
 	tr "\n" " "  < $i.txt > $i-bak.txt
 	rm $i.txt
 	echo `cat $i-bak.txt` >> sort.txt
+	rm $i-bak.txt
 done
 
 sed -i '' -e 's/ //g' sort.txt
