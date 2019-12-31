@@ -8,6 +8,7 @@ categories:
 ## 图片编辑
 Annotable：图片标注、调色板
 Picsew：长图拼接、水印添加、格式化状态栏
+LightScreen：反向选择模糊、软件图标下载
 
 <!-- more -->
 
