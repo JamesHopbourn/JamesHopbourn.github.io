@@ -18,7 +18,7 @@ qrencode -t ASCII 'flag:jbcool' > flag.txt
 删除前四行空白行：
 sed -i '' -e '1,4d' flag.txt
 删除后四行空白行：
-sed -i '' -e '26,30d' flag.txt
+sed -i '' -e '22,26d' flag.txt
 vim flag.txt
     %s/^        //g
     %s/        $//g
