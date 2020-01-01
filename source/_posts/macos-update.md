@@ -30,8 +30,7 @@ update(){
 ![](/media/brewtomcat.png)
 
 ```
-cd ~/dotfile
-gaa;gcsm 'tomcat';gp 
+cd ~/dotfile;update;gaa;gcsm tomcat;gp 
 ```
 
 ![](/media/gittomcat.png)
