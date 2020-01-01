@@ -23,14 +23,10 @@ categories:
 qrencode -t ASCII 'flag:jbcool' > flag.txt
 删除所有的空白行：
 sed -i '' -e '/^[  ]*$/d' flag.txt
-删除前 8 个空格
-sed -i '' -e 's/^        //g' flag.txt
-删除后 8 个空格
-sed -i '' -e 's/        $//g' flag.txt
-替换井号为 1
-sed -i '' -e 's/#/1/g' flag.txt
-替换空格为 0
-sed -i '' -e 's/ /0/g' flag.txt
+删除前后 8 个空格：
+sed -i '' -e 's/^        //g' -e 's/        $//g' flag.txt
+替换井号和空格：
+sed -i '' -e 's/ /0/g' -e 's/#/1/g' flag.txt
 字符之间添加空格：
 sed -i '' -e 's/\(.\)/\1 /g' flag.txt
 ```
