@@ -4,6 +4,7 @@ date: 2020-01-01 22:00
 tags: macOS
 categories: 
 ---
+
 ## 思路
 用户目录下clone GitHub 上面创建好的 dotfile 仓库，zshrc 配置更新 function
 
@@ -14,8 +15,8 @@ function 功能：导出现在安装的 Homebrew、pip、npm、mas 软件清单�
 
 ```
 update(){
-	dir="$HOME/dotfile/Backup"
-	echo "$(brew list -1 >> $dir/brew.txt && sort -n $dir/brew.txt | uniq)" > $dir/brew.txt
+    dir="$HOME/dotfile/Backup"
+    echo "$(brew list -1 >> $dir/brew.txt && sort -n $dir/brew.txt | uniq)" > $dir/brew.txt
     echo "$(brew cask list -1 >> $dir/cask.txt && sort -n $dir/cask.txt | uniq)" > $dir/cask.txt
     echo "$(mas list| awk '{print $1}' >> $dir/mas.txt && sort -n $dir/mas.txt | uniq)" > $dir/mas.txt
     echo "$(pip freeze 2>/dev/null >> $dir/pip.txt && sort -n $dir/pip.txt | uniq)" > $dir/pip.txt
@@ -26,11 +27,11 @@ update(){
 
 ## 更新软件清单
 安装一下 tomcat 来进行测试
-![](media/brewtomcat.png)
+![](/media/brewtomcat.png)
 
 ```
 cd ~/dotfile
 gaa;gcsm 'tomcat';gp 
 ```
 
-![](media/gittomcat.png)
+![](/media/gittomcat.png)
