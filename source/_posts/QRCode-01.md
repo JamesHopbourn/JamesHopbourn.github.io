@@ -16,8 +16,7 @@ DKfJ9X4yc90aroh7gnFaR7Ez+z7J3nufU6v5Xep7wgx9XtSeF2yR0OxzAwAA
 ## 出题
 ```
 生成 flag 二维码的 ASCII：qrencode -t ASCII 'flag:jbcool' > new.txt
-空格替换为数字0：sed -i '' -e 's/ /0/g' new.txt
-井号替换为数字1：sed -i '' -e 's/#/1/g' new.txt
+井号和空格替换：sed -i '' -e 's/ /0/g' -e 's/#/1/g' new.txt
 压缩为一行数字：tr  "\n" " " < new.txt > edit.txt
 删去多余的空格：sed -i '' -e 's/ //g' edit.txt
 压缩 01 字符：cat edit.txt | gzip > edit.zip
