@@ -6,7 +6,7 @@ categories:
 ---
 
 ## 思路
-用户目录下clone GitHub 上面创建好的 dotfile 仓库，zshrc 配置更新 function
+在用户目录下 clone GitHub 上面创建好的 dotfile 仓库，zshrc 配置更新 function
 
 <!-- more -->
 
