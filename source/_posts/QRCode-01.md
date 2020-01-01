@@ -139,8 +139,9 @@ for(var i=0;i<text.length;i++){
 if(text[i] == text[i].toLowerCase())text[i]  = text[i].toUpperCase();
 else if(text[i] == text[i].toUpperCase())text[i] = text[i].toLowerCase();
 }
+
 text = text.join("");
-console.log(text);
+console.log("\n大小写互换之后的结果是：\n"+text);
 ```
 
 大小写转换后的结果：
