@@ -27,8 +27,6 @@ sed -i '' -e '/^[  ]*$/d' flag.txt
 sed -i '' -Ee 's/^[ ]{8}//g' -Ee 's/[ ]{8}$//g' flag.txt
 替换井号和空格：
 sed -i '' -e 's/ /0/g' -e 's/#/1/g' flag.txt
-字符之间添加空格：
-sed -i '' -e 's/\(.\)/\1 /g' flag.txt
 ```
 
 ## 批处理脚本
@@ -38,6 +36,8 @@ vim resort.sh && chmod 755 resort.sh && ./resort.sh
 ```
 
 ```
+sed -i '' -e 's/\(.\)/\1 /g' flag.txt
+
 chac=$(wc -c flag.txt | awk '{print $1}')
 line=$(wc -l flag.txt | awk '{print $1}')
 line=$(echo  $chac/$line-1 | bc) #行数减一是有一个换行符
