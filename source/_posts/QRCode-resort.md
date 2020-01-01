@@ -27,6 +27,9 @@ sed -i '' -e '/^[  ]*$/d' flag.txt
 sed -i '' -Ee 's/^[ ]{8}//g' -Ee 's/[ ]{8}$//g' flag.txt
 替换井号和空格：
 sed -i '' -e 's/ /0/g' -e 's/#/1/g' flag.txt
+
+sed 命令整合版：
+sed -i '' -e '/^[  ]*$/d' -Ee 's/^[ ]{8}//g' -Ee 's/[ ]{8}$//g' -e 's/ /0/g' -e 's/#/1/g' -e 's/\(.\)/& /g' flag.txt
 ```
 
 ## 批处理脚本
