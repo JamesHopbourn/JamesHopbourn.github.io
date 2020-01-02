@@ -32,14 +32,15 @@ categories:
 
 ## 网络
 [nt l](https://www.youtube.com/channel/UCmgoFtSRdfFNP6Y5vhSY3vg)
-[周莫烦](https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg)
+[TuTu生活志](https://www.youtube.com/channel/UCuhAUKCdKrjYoMiJQc74ZkQ)
 [翼王](https://www.youtube.com/channel/UCxcuxsAjdnQaiRwYb5CVISw)
 [BIGDONGDONG](https://www.youtube.com/channel/UCpPswAyGzdRwWmiW5oTNnvA)
 [Vedio Talk](https://www.youtube.com/channel/UCaMih5WXqoXq7Hg0S_XJdOg)
 
 ## 编程
-[CodeSheep程序羊](https://www.youtube.com/channel/UC9PZ_j30JhfgjOrJZAtYzRw)
+[周莫烦](https://www.youtube.com/channel/UCdyjiB5H8Pu7aDTNVXTTpcg)
 [代码真香](https://www.youtube.com/channel/UCmlhPmTdqYhRWwWZWSIBwGw)
+[CodeSheep程序羊](https://www.youtube.com/channel/UC9PZ_j30JhfgjOrJZAtYzRw)
 
 ## 单车
 [自行车笔记](https://www.youtube.com/channel/UCHGBovOEgaYcz0bz5-Kt7cQ)
