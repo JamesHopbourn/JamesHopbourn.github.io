@@ -63,6 +63,7 @@ categories:
 [Men's Business](https://www.youtube.com/channel/UCerJL6HRAKWhzMz4rcH5HmA)
 
 ## 金融
+[金融交易技术分析](https://m.youtube.com/channel/UCg9zI64pEB_3xwJPur6isiQ)
 [金钱语言 钱会说话 雨生百谷](https://www.youtube.com/channel/UCKI-awVP1ftTyjotSLVf-EQ)
 
 ## 成长
