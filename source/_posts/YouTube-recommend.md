@@ -1,5 +1,5 @@
 ---
-title: <i class="fa fa-youtube fa-1x fa-fw"></i> YouTube 推荐频道列表
+title: YouTube 推荐频道列表
 date: 2019-12-31 19:00
 tags: [YouTube, 清单]
 categories: 
@@ -31,6 +31,7 @@ categories:
 [Kyle Beats](https://www.youtube.com/channel/UCfYEdvKQekP7RiemXC0o92w)
 
 ## 网络
+[Mike Bill](https://www.youtube.com/channel/UCFI8X90NLp4C5Qu7X0DVGDA)
 [nt l](https://www.youtube.com/channel/UCmgoFtSRdfFNP6Y5vhSY3vg)
 [TuTu生活志](https://www.youtube.com/channel/UCuhAUKCdKrjYoMiJQc74ZkQ)
 [翼王](https://www.youtube.com/channel/UCxcuxsAjdnQaiRwYb5CVISw)
