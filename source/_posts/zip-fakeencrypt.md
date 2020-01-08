@@ -12,8 +12,6 @@ categories:
 
 ![](/media/zipfakeencrypt.png)
 
-<code> te <font color="red"> st </font> </code>
-
 ## 新建压缩包：
 
 ```
