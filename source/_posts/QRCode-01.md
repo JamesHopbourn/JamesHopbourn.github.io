@@ -7,6 +7,10 @@ categories:
 ## 题目
 昨天晚上没睡着突然有个这么个想法，觉得还行，故意挖了个坑会让人觉得这是个二进制去处理
 
+<link href="http://apps.bdimg.com/libs/highlight.js/9.1.0/styles/default.min.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
 <!-- more -->
 
 H4sIAPHrCV4AA4VSWw7AIAj732nk/pebZmG0pUQSDcqrBSJQ1pZzf3qIrF/QJ99l
