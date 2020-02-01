@@ -31,13 +31,11 @@ vim ~/.ssh/config
 然后复制以下内容到 config 文件
 
 ```
-# 个人帐户
 Host personal
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_rsa_personal
 
-# 公司账户
 Host company
    HostName github.com
    User git
