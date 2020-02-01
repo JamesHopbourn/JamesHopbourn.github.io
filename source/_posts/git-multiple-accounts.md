@@ -12,19 +12,21 @@ TL;DR: 生成两个不同的公私钥添加到两个 GitHub 账号，新建 SSH 
 生成公私钥并添加到 GitHub 账号的 SSH key 中
 
 ```
-ssh-keygen -t rsa -b 4096 -C "jameshopbourn@gmail.com"
+➜  ~ ssh-keygen -t rsa -b 4096 -C "jameshopbourn@gmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/james/.ssh/id_rsa): /Users/james/.ssh/id_rsa_personal
 
-ssh-keygen -t rsa -b 4096 -C "jameshopbourn@protonmail.com"
+➜  ~ ssh-keygen -t rsa -b 4096 -C "jameshopbourn@protonmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/james/.ssh/id_rsa): /Users/james/.ssh/id_rsa_company
 ```
 
 连通性测试：
 ```
-ssh -T personal
-ssh -T company
+➜  ~ ssh -T personal
+Hi JamesHopbourn! You've successfully authenticated, but GitHub does not provide shell access.
+➜  ~ ssh -T company
+Hi Username! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
 vim ~/.ssh/config
