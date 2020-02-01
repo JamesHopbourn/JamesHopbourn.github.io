@@ -5,17 +5,6 @@ tags: git
 categories: 
 ---
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({tex2jax: {inlineMath:[['$','$']]}});
-</script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script type="text/x-mathjax-config">
-	MathJax.Hub.Config({
- TeX: {extensions: ["mhchem.js"]}
-});
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
-
 TL;DR: 生成两个不同的公私钥添加到两个 GitHub 账号，新建 SSH config 文件，Done.
 
 <!-- more -->
@@ -66,4 +55,11 @@ clone 仓库：
 ```
 原先命令：gcl git@github.com:Username/test.git
 修改命令：gcl git@github.com:company/test.git
+```
+
+觉得这样太麻烦？我觉得也是，所以可以在 .zshrc 中添加以下两个 function，最后 source 一下就可以很方便地使用了
+
+```
+company(){git clone $(pbpaste|sed 's/github.com/company/')}
+personal(){git clone $(pbpaste|sed 's/github.com/personal/')}
 ```
