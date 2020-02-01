@@ -44,8 +44,8 @@ Host company
 
 clone 仓库：
 ```
-原先命令：gcl git@github.com:Username/test.git
-修改命令：gcl git@personal:Username/test.git
+原先命令：git clone git@github.com:Username/test.git
+修改命令：git clone git@personal:Username/test.git
 ```
 
 觉得这样太麻烦？我觉得也是，所以可以在 .zshrc 中添加以下两个 function，然后 source .zshrc 就可以了，配置好之后直接复制地址栏里的 URL 然后在终端输入 personal 或者 company 就可以了
