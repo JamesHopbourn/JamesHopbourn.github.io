@@ -50,9 +50,34 @@ clone 仓库：
 修改命令：gcl git@github.com:company/test.git
 ```
 
-觉得这样太麻烦？我觉得也是，所以可以在 .zshrc 中添加以下两个 function，最后 source 一下就可以很方便地使用了
+觉得这样太麻烦？我觉得也是，所以可以在 .zshrc 中添加以下两个 function，然后 source .zshrc 就可以了，配置好之后直接复制地址栏里的 URL 然后在终端输入 personal 或者 company 就可以了
 
 ```
-company(){git clone $(pbpaste|sed 's/github.com/company/')}
-personal(){git clone $(pbpaste|sed 's/github.com/personal/')}
+personal(){
+text=$(pbpaste)
+text=$(echo $text|sed 's/https:\/\/github.com\//git@personal:/')
+text=$(echo $text|sed 's/$/&.git/g')
+name=$
+git clone $text
+}
+
+company(){
+text=$(pbpaste)
+text=$(echo $text|sed 's/https:\/\/github.com\//git@company:/')
+text=$(echo $text|sed 's/$/&.git/g')
+git clone $text
+}
+```
+
+最后效果：
+
+```
+~ personal
+Cloning into 'Roadbike-knowledge'...
+remote: Enumerating objects: 37, done.
+remote: Counting objects: 100% (37/37), done.
+remote: Compressing objects: 100% (30/30), done.
+remote: Total 37 (delta 9), reused 29 (delta 4), pack-reused 0
+Receiving objects: 100% (37/37), 1.36 MiB | 45.00 KiB/s, done.
+Resolving deltas: 100% (9/9), done.
 ```
