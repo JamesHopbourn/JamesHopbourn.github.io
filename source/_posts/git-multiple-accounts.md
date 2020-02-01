@@ -97,14 +97,14 @@ personal(){
 text=$(pbpaste)
 text=$(echo $text|sed 's/https:\/\/github.com\//git@personal:/')
 text=$(echo $text|sed 's/$/&.git/g')
-git clone $text && cd $(basename $(pbpaste) .git)
+git clone $text && cd $(basename $(pbpaste))
 }
 
 company(){
 text=$(pbpaste)
 text=$(echo $text|sed 's/https:\/\/github.com\//git@company:/')
 text=$(echo $text|sed 's/$/&.git/g')
-git clone $text && cd $(basename $(pbpaste) .git)
+git clone $text && cd $(basename $(pbpaste))
 }
 ```
 
