@@ -57,27 +57,15 @@ personal(){
 text=$(pbpaste)
 text=$(echo $text|sed 's/https:\/\/github.com\//git@personal:/')
 text=$(echo $text|sed 's/$/&.git/g')
-name=$
-git clone $text
+git clone $text && cd $(basename $(pbpaste) .git)
 }
 
 company(){
 text=$(pbpaste)
 text=$(echo $text|sed 's/https:\/\/github.com\//git@company:/')
 text=$(echo $text|sed 's/$/&.git/g')
-git clone $text
+git clone $text && cd $(basename $(pbpaste) .git)
 }
 ```
 
-最后效果：
-
-```
-~ personal
-Cloning into 'Roadbike-knowledge'...
-remote: Enumerating objects: 37, done.
-remote: Counting objects: 100% (37/37), done.
-remote: Compressing objects: 100% (30/30), done.
-remote: Total 37 (delta 9), reused 29 (delta 4), pack-reused 0
-Receiving objects: 100% (37/37), 1.36 MiB | 45.00 KiB/s, done.
-Resolving deltas: 100% (9/9), done.
-```
+![](/media/200201gitclone.png)
