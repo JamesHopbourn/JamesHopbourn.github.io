@@ -15,10 +15,46 @@ TL;DR: 生成两个不同的公私钥添加到两个 GitHub 账号，新建 SSH 
 ➜  ~ ssh-keygen -t rsa -b 4096 -C "jameshopbourn@gmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/james/.ssh/id_rsa): /Users/james/.ssh/id_rsa_personal
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/james/.ssh/id_rsa_personal.
+Your public key has been saved in /Users/james/.ssh/id_rsa_personal_pub.
+The key fingerprint is:
+SHA256:O3KyKB6lj5GKCr3NMzCj+uqq2DLJQ1BiTrpUOT/MMmc jameshopbourn@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    .            |
+|.o.+             |
+|=o. =            |
+|oo o E           |
+|o.  * . S        |
+|.o++     .       |
+|+o*+  o +        |
+|O=.Oo. = .       |
+|/BB.=o.          |
++----[SHA256]-----+
 
 ➜  ~ ssh-keygen -t rsa -b 4096 -C "jameshopbourn@protonmail.com"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/james/.ssh/id_rsa): /Users/james/.ssh/id_rsa_company
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/james/.ssh/id_rsa_company.
+Your public key has been saved in /Users/james/.ssh/id_rsa_company_pub.
+The key fingerprint is:
+SHA256:O3KyKB6lj5GKCr3NMzCj+uqq2DLJQ1BiTrpUOT/MMmc jameshopbourn@protonmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|    .            |
+|.o.+             |
+|=o. =            |
+|oo o E           |
+|o.  * . S        |
+|.o++     .       |
+|+o*+  o +        |
+|O=.Oo. = .       |
+|/BB.=o.          |
++----[SHA256]-----+
 ```
 
 连通性测试：
