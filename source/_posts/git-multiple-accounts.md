@@ -55,6 +55,10 @@ The key's randomart image is:
 |O=.Oo. = .       |
 |/BB.=o.          |
 +----[SHA256]-----+
+
+➜  ~ cat ~/.ssh/id_rsa_personal.pub|pbcopy
+
+➜  ~ cat ~/.ssh/id_rsa_company.pub|pbcopy
 ```
 
 连通性测试：
