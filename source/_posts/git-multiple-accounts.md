@@ -74,14 +74,14 @@ vim ~/.ssh/config
 
 ```
 Host personal
-   HostName github.com
    User git
+   HostName github.com
    IdentityFile ~/.ssh/id_rsa_personal
    ProxyCommand nc -X 5 -x 127.0.0.1:6153 %h %p
 
 Host company
-   HostName github.com
    User git
+   HostName github.com
    IdentityFile ~/.ssh/id_rsa_company
    ProxyCommand nc -X 5 -x 127.0.0.1:6153 %h %p
 ```
