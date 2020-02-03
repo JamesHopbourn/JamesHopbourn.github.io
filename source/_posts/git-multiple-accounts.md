@@ -109,6 +109,9 @@ git clone $url && cd $(basename $(pbpaste))
 
 ![](/media/200201gitclone.png)
 
+再打开 Surge Dashboard 看一下，显示 nc 转发代理也是可以正常工作的。
+
+![](/media/200203sshlog.png)
 
 ### 参考文章
 [使用 GitHub 的几种方式——兼谈安全性和隐匿性的经验](https://program-think.blogspot.com/2016/03/GitHub-Security-Tips.html)
