@@ -79,7 +79,6 @@ Host personal
    IdentityFile ~/.ssh/id_rsa_personal
    ProxyCommand nc -X 5 -x 127.0.0.1:6153 %h %p
 
-
 Host company
    HostName github.com
    User git
@@ -109,7 +108,7 @@ git clone $url && cd $(basename $(pbpaste))
 
 ![](/media/200201gitclone.png)
 
-再打开 Surge Dashboard 看一下，显示 nc 转发代理也是可以正常工作的。
+再打开 Surge Dashboard 看一下，可以看到 nc 转发代理也是正常工作的。
 
 ![](/media/200203sshlog.png)
 
