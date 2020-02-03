@@ -101,7 +101,7 @@ git clone $url && cd $(basename $(pbpaste))
 }
 
 company(){
-text=$(pbpaste|sed 's/https:\/\/github.com\//ssh:\/\/company\//')
+url=$(pbpaste|sed 's/https:\/\/github.com\//ssh:\/\/company\//')
 git clone $url && cd $(basename $(pbpaste))
 }
 ```
