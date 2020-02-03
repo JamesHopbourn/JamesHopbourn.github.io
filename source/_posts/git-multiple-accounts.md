@@ -77,11 +77,14 @@ Host personal
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_rsa_personal
+   ProxyCommand nc -X 5 -x 127.0.0.1:6153 %h %p
+
 
 Host company
    HostName github.com
    User git
    IdentityFile ~/.ssh/id_rsa_company
+   ProxyCommand nc -X 5 -x 127.0.0.1:6153 %h %p
 ```
 
 clone 仓库：
@@ -94,18 +97,18 @@ clone 仓库：
 
 ```
 personal(){
-text=$(pbpaste)
-text=$(echo $text|sed 's/$/&.git/g')
-text=$(echo $text|sed 's/https:\/\/github.com\//git@personal:/')
-git clone $text && cd $(basename $(pbpaste))
+url=$(pbpaste|sed 's/https:\/\/github.com\//ssh:\/\/personal\//')
+git clone $url && cd $(basename $(pbpaste))
 }
 
 company(){
-text=$(pbpaste)
-text=$(echo $text|sed 's/$/&.git/g')
-text=$(echo $text|sed 's/https:\/\/github.com\//git@company:/')
-git clone $text && cd $(basename $(pbpaste))
+text=$(pbpaste|sed 's/https:\/\/github.com\//ssh:\/\/company\//')
+git clone $url && cd $(basename $(pbpaste))
 }
 ```
 
 ![](/media/200201gitclone.png)
+
+
+### 参考文章
+[使用 GitHub 的几种方式——兼谈安全性和隐匿性的经验](https://program-think.blogspot.com/2016/03/GitHub-Security-Tips.html)
