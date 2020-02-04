@@ -116,7 +116,8 @@ git clone $url && cd $(basename $(pbpaste))
 一个 alias 从终端打开 GitHub 仓库 URL
 
 ```
-alias go="open `git remote -v|awk '/fetch/{print $2}'|perl -pe 's/git.*?:|ssh:\/\/.*?\//https:\/\/github.com\//'|sed 's/\.git$//'`"```
+alias go="open `git remote -v|awk '/fetch/{print $2}'|perl -pe 's/git.*?:|ssh:\/\/.*?\//https:\/\/github.com\//'|sed 's/\.git$//'`"
+```
 
 ### 参考文章
 [使用 GitHub 的几种方式——兼谈安全性和隐匿性的经验](https://program-think.blogspot.com/2016/03/GitHub-Security-Tips.html)
