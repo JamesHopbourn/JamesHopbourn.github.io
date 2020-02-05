@@ -20,5 +20,5 @@ git remote set-url origin ssh://personal/JamesHopbourn/test
 git push -u origin master
 ```
 
-## 参考资料
+#### 参考资料
 [hub 中文文档](http://llever.com/hub-zh/hub-create.1.zh.html)
