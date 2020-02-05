@@ -16,6 +16,6 @@ TL;DR: brew install hub ; hub create repository name
 我个人一般是使用 ssh 协议连接 GitHub，所以需要设置 URL
 
 ```
-git remote add origin ssh://personal/JamesHopbourn/test
+git remote set-url origin ssh://personal/JamesHopbourn/test
 git push -u origin master
 ```
