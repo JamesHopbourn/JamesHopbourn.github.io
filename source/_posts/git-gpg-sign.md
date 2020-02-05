@@ -26,7 +26,7 @@ gpg --full-generate-key
 gpg --list-keys --keyid-format SHORT
 ```
 
-发送公私钥(如果需要)
+发送公钥到公钥服务器 (如果需要)
 ```
 发送公钥
 gpg --keyserver hkp://pool.sks-keyservers.net --send-keys gpg -a --export 140A9123A5C9FCA6178E2A04BC7A876AA744BDCF 
