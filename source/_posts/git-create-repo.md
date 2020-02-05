@@ -13,8 +13,7 @@ TL;DR: brew install hub ; hub create repository name
 2. mkdir test && cd test && git init
 3. hub create test
 
-Personally, I'd like to use ssh protocol connect to GitHub, so I need set the
-origin URL
+Personally, I'd like to use ssh protocol connect to GitHub, so need change repository remote's URL
 
 ```
 git remote set-url origin ssh://personal/JamesHopbourn/test
