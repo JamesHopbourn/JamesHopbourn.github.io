@@ -119,5 +119,7 @@ git clone $url && cd $(basename $(pbpaste))
 alias go="open `git remote -v|awk '/fetch/{print $2}'|perl -pe 's/git.*?:|ssh:\/\/.*?\//https:\/\/github.com\//'|sed 's/\.git$//'`"
 ```
 
+如果你有使用 hub 也可以使用 hub browse 命令实现
+
 ### 参考文章
 [使用 GitHub 的几种方式——兼谈安全性和隐匿性的经验](https://program-think.blogspot.com/2016/03/GitHub-Security-Tips.html)
