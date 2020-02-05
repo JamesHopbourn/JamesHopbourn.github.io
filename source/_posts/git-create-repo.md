@@ -17,5 +17,5 @@ TL;DR: brew install hub ; hub create repository name
 
 ```
 git remote add origin ssh://personal/JamesHopbourn/test
-git push origin master
+git push -u origin master
 ```
