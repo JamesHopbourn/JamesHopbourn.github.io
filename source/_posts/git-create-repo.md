@@ -5,7 +5,8 @@ tags: git
 categories:
 ---
 
-TL;DR: brew install hub ; hub create repository name
+TL;DR: brew install hub
+hub create repository name
 
 <!-- more -->
 
