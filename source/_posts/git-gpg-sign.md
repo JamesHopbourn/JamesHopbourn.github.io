@@ -9,11 +9,21 @@ categories:
 
 <!-- more -->
 
+安装 GPG
+```
+brew install gnupg
+```
+
 生成公私钥
 ```
-完整版本: gpg --full-generate-key
-简单版本: gpg --generate-key
-查看信息: gpg -k
+简单版本
+gpg --generate-key
+
+完整版本
+gpg --full-generate-key
+
+查看信息
+gpg --list-keys --keyid-format SHORT
 ```
 
 发送公私钥(如果需要)
