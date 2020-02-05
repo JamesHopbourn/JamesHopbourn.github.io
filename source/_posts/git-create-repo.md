@@ -19,3 +19,6 @@ Personally, I'd like to use ssh protocol connect to GitHub, so need change repos
 git remote set-url origin ssh://personal/JamesHopbourn/test
 git push -u origin master
 ```
+
+## 参考资料
+[hub 中文文档](http://llever.com/hub-zh/hub-create.1.zh.html)
