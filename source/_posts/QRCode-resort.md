@@ -5,14 +5,8 @@ tags: CTF
 categories: 
 ---
 
-<head> 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script> 
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/v4-shims.js"></script> 
-</head> 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-
 ## 思路
-<i class="fa fa-cog fa-spin fa-1x fa-fw"></i>打死出题人系列：Flag 生成 ACSII 字符文本，文本使用01替换后进行行列重排。
+打死出题人系列：Flag 生成 ACSII 字符文本，文本使用01替换后进行行列重排。
 
 <!-- more -->
 
