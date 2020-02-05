@@ -30,6 +30,7 @@ gpg --list-keys --keyid-format SHORT
 ```
 发送公钥
 gpg --keyserver hkp://pool.sks-keyservers.net --send-keys gpg -a --export 140A9123A5C9FCA6178E2A04BC7A876AA744BDCF 
+
 检查公钥
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 140A9123A5C9FCA6178E2A04BC7A876AA744BDCF
 ```
