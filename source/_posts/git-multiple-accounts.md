@@ -1,5 +1,5 @@
 ---
-title: git 多账号配置
+title: git multiple accounts
 date: 2020-01-28 16:04
 tags: git
 categories: 
