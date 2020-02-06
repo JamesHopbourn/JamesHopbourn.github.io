@@ -225,8 +225,8 @@ vim ~/.zshrc
 ```
 plugin=(... ssh-agent)
 
-zstyle :omz:plugins:ssh-agent identities id_rsa_personal id_rsa_company 
 zstyle :omz:plugins:ssh-agent lifetime 4h
+zstyle :omz:plugins:ssh-agent identities id_rsa_personal id_rsa_company 
 ```
 
 ### git 忽略文件
