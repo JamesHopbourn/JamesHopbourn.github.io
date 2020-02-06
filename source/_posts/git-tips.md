@@ -223,10 +223,10 @@ Host personal
 
 vim ~/.zshrc
 ```
-if [ -z "$SSH_AUTH_SOCK" ] ; then
-    eval `ssh-agent -s`
-    ssh-add - A
-fi
+plugin=(... ssh-agent)
+
+zstyle :omz:plugins:ssh-agent identities id_rsa_personal id_rsa_company 
+zstyle :omz:plugins:ssh-agent lifetime 4h
 ```
 
 ### git 忽略文件
