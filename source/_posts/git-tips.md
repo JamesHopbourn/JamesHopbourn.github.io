@@ -118,7 +118,6 @@ git clone $url && cd $(basename $(pbpaste))
 
 ![](/media/200203sshlog.png)
 
-### 彩蛋
 一个 alias 从终端打开 GitHub 仓库 URL
 
 ```
@@ -126,9 +125,6 @@ alias go="open `git remote -v|awk '/fetch/{print $2}'|perl -pe 's/git.*?:|ssh:\/
 ```
 
 如果你有使用 hub 也可以使用 hub browse 命令实现
-
-### 参考文章
-[使用 GitHub 的几种方式——兼谈安全性和隐匿性的经验](https://program-think.blogspot.com/2016/03/GitHub-Security-Tips.html)
 
 ### git commit 添加 GPG 签名认证
 安装 GPG
@@ -169,9 +165,6 @@ git config --global commit.gpgsign true
 git commit -m 'gpg sign test'
 ```
 
-#### Reference
-[Git:使用GPG签名Commit](https://juejin.im/post/5da3ec32e51d45784d3f865d)
-
 ### 从命令行创建 GitHub 仓库
 1. brew install hub
 2. mkdir test && cd test && git init
@@ -183,9 +176,6 @@ Personally, I'd like to use ssh protocol connect to GitHub, so need change repos
 git remote set-url origin ssh://personal/JamesHopbourn/test
 git push -u origin master
 ```
-
-#### Reference
-[hub 中文文档](http://llever.com/hub-zh/hub-create.1.zh.html)
 
 ### git 删掉指定内容
 ```
@@ -247,6 +237,32 @@ C/*.o
 .DS_Store
 #忽略所有目录下的 .DS_Store 文件
 .DS_Store?
-#忽略build文件下的所有文件
+#忽略整个
 Objective-C/build
 ```
+
+### hub pull request 
+```
+hub clone https://github.com/JamesHopbourn/Roadbike-knowledge 
+cd Roadbike-knowledge
+hub fork
+git remote set-url origin https://github.com/JustinPual/Roadbike-knowledge
+
+git checkout -b test
+
+vim test.txt
+gaa
+gcsm test.txt
+git push --set-upstream origin test
+
+hub pull-request --base JamesHopbourn:master --head Username:test -m 测试内容
+```
+
+### travis-CI with gcc
+### hide git push email
+
+### 参考文章
+[使用 GitHub 的几种方式——兼谈安全性和隐匿性的经验](https://program-think.blogspot.com/2016/03/GitHub-Security-Tips.html)
+[Git:使用GPG签名Commit](https://juejin.im/post/5da3ec32e51d45784d3f865d)
+[hub 中文文档](http://llever.com/hub-zh/hub-create.1.zh.html)
+
