@@ -1,16 +1,14 @@
 ---
-title: git create & push repository form CLI 
+title: git 的一些技巧
 date: 2020-02-05 21:40
 tags: git
 categories:
 ---
 
-git 的一些技巧
-
-<!-- more -->
-
 ### 配置两个或多个 git 账号
 TL;DR: 生成两个不同的公私钥添加到两个 GitHub 账号，新建 SSH config 文件，Done.
+
+<!-- more -->
 
 生成公私钥并添加到 GitHub 账号的 SSH key 中
 
@@ -170,7 +168,7 @@ git commit -m 'gpg sign test'
 2. mkdir test && cd test && git init
 3. hub create test
 
-Personally, I'd like to use ssh protocol connect to GitHub, so need change repository remote's URL
+我个人习惯使用 SSH 协议连接，所以需要的可以在这里修改一下
 
 ```
 git remote set-url origin ssh://personal/JamesHopbourn/test
@@ -181,7 +179,7 @@ git push -u origin master
 ```
 echo test.txt filter=rm_conf >> .gitattributes
 echo -e "username: jameshopbourn\npassword: mypassword" > test.txt
-git config filter.rm_conf.clean "sed 's/mypassword//'"
+git config filter.rm_conf.clean "sed 's/password:.*/password:/'"
 git add -A ; git commit -m 'sed test' ; git push
 ```
 
@@ -248,7 +246,7 @@ Objective-C/build
 hub clone https://github.com/JamesHopbourn/Roadbike-knowledge 
 cd Roadbike-knowledge
 hub fork
-git remote set-url origin https://github.com/JustinPual/Roadbike-knowledge
+git remote set-url origin https://github.com/Username/Roadbike-knowledge
 
 git checkout -b test
 
