@@ -237,3 +237,16 @@ vim ~/.zshrc
 eval `ssh-agent -s` 1>/dev/null
 ```
 
+### git 忽略文件
+```
+vim .gitignore
+
+#忽略C文件夹下的.o文件
+C/*.o
+#忽略根目录下的 .DS_Store 文件
+.DS_Store
+#忽略所有目录下的 .DS_Store 文件
+.DS_Store?
+#忽略build文件下的所有文件
+Objective-C/build
+```
