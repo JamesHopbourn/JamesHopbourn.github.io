@@ -221,10 +221,12 @@ Host personal
   ProxyCommand nc -X 5 -x 127.0.0.1:6153 %h %p
 ```
 
-```
 vim ~/.zshrc
-
-eval `ssh-agent -s` 1>/dev/null
+```
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent -s`
+    ssh-add - A
+fi
 ```
 
 ### git 忽略文件
