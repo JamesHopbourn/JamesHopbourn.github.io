@@ -71,4 +71,3 @@ gem install colorls --user
 ```
 sudo spctl --master-disable
 ```
-
