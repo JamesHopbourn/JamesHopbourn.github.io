@@ -25,7 +25,9 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 ## Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
 brew tap caskroom/cask
+
 brew tap homebrew/cask-fonts
 ```
 
@@ -38,13 +40,13 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## Brew
 ```
-brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight
-hexyl gpg gnu-sed autojump hub git vim  
+brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump hub git vim  
 ```
 
 ## dotfile
 ```
 git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
+
 stow ~/potfile/home
 ```
 
@@ -53,7 +55,9 @@ stow ~/potfile/home
 ## GPG
 ```
 gpg --import secret-backup.gpg
+
 gshred -f -v -z -u --iterations=36 secret-backup.gpg
+
 gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
 ```
 
