@@ -50,6 +50,6 @@ stow ~/potfile/home
 ## GPG
 ```
 gpg --import secret-backup.gpg
-gshred -f -v -z -u --iterations=25 secret-backup.gpg
-gshred -f -v -z -u --iterations=25 ~/Downloads/*.txt
+gshred -f -v -z -u --iterations=36 secret-backup.gpg
+gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
 ```
