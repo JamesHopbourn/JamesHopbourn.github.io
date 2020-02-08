@@ -34,7 +34,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## Brew
 ```
-brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl binutils 
+brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl binutils gnupg 
 ```
 
 ## dotfile
@@ -43,3 +43,8 @@ cd ~ && git clone ssh://personal/JamesHopbourn/potfile
 stow ~/potfile/home
 ```
 
+## GPG
+```
+gpg --import secret-backup.gpg
+gshred -f -v -z -u --iterations=25 secret-backup.gpg
+```
