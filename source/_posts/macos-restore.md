@@ -53,3 +53,8 @@ gpg --import secret-backup.gpg
 gshred -f -v -z -u --iterations=36 secret-backup.gpg
 gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
 ```
+
+## WeChat
+```
+git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-macOS && cd /tmp/WeChatTweak-macOS && sudo make install && cd -
+```
