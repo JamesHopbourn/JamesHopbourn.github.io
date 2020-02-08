@@ -25,6 +25,8 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 ## Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew tap caskroom/cask
+brew tap homebrew/cask-fonts
 ```
 
 ## SpaceVim
@@ -36,7 +38,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## Brew
 ```
-brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump hub 
+brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight
+hexyl gpg gnu-sed autojump hub git vim  
 ```
 
 ## dotfile
@@ -58,3 +61,14 @@ gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
 ```
 git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-macOS && cd /tmp/WeChatTweak-macOS && sudo make install && cd -
 ```
+
+## gem
+```
+gem install colorls --user
+```
+
+## Security
+```
+sudo spctl --master-disable
+```
+
