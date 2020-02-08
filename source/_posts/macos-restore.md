@@ -1,6 +1,6 @@
 ---
 title: macOS restore
-date: 2019-11-01 16:10:00
+date: 2020-02-08 22:53:00
 tags: macOS
 ---
 
@@ -8,6 +8,8 @@ U 盘里存储：iTerm2、Surge、Spectacle
 1Password 里存储：SSH、GPG 私钥
 iPhone 内存储：Surge 配置文件
 以上三个 airdrop 传输给 macOS
+
+<!-- more -->
 
 ## ZSH
 ```
