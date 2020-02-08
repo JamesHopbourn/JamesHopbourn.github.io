@@ -34,17 +34,20 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## Brew
 ```
-brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl binutils gnupg 
+brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg 
 ```
 
 ## dotfile
 ```
-cd ~ && git clone ssh://personal/JamesHopbourn/potfile
+git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
 stow ~/potfile/home
 ```
+
+至于为什么是 potfile 而不是 dotfile，因为 zsh 补全输入 d 会显示：Downloads、Desktop、dotfile 麻烦，就直接 potfile 了
 
 ## GPG
 ```
 gpg --import secret-backup.gpg
 gshred -f -v -z -u --iterations=25 secret-backup.gpg
+gshred -f -v -z -u --iterations=25 ~/Downloads/*.txt
 ```
