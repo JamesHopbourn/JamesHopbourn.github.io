@@ -39,7 +39,7 @@ brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight
 
 ## dotfile
 ```
-git clone ssh://personal/JamesHopbourn/potfile ~
+cd ~ && git clone ssh://personal/JamesHopbourn/potfile
 stow ~/potfile/home
 ```
 
