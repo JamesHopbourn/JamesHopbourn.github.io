@@ -36,7 +36,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## Brew
 ```
-brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump 
+brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump hub 
 ```
 
 ## dotfile
