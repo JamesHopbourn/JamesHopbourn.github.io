@@ -77,6 +77,7 @@ gem install colorls --user
 ## macOS 
 ```
 sudo spctl --master-disable
+sudo killall -STOP -c usbd
 sudo nvram SystemAudioVolume=" "
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
