@@ -19,6 +19,7 @@ macOS 解压缩软件推荐使用 [Keka](https://www.keka.io)
 ```
 brew cask install keka
 ```
+![](media/2002097z.png)
 7. 抹除敏感文件需要用 [gshred](https://www.freebsd.org/cgi/man.cgi?query=gshred&apropos=0&sektion=0&manpath=FreeBSD+10.2-RELEASE+and+Ports&arch=default&format=html) 擦写 36 次或以上
 ```
 brew install coreutils
