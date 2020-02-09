@@ -74,7 +74,11 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 gem install colorls --user
 ```
 
-## Security
+## macOS 
 ```
 sudo spctl --master-disable
+sudo nvram SystemAudioVolume=" "
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
 ```
