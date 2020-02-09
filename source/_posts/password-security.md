@@ -16,11 +16,10 @@ tags: 审查, 安全, 隐私, 密钥, 密码
 5. 不要过于信任 Touch ID，因为它可以被欺骗也可以「被」认证，Face ID 同理
 6. 归档敏感文件使用 7z 固实压缩并加密文件名，密码不少于 36 位，用 1Password 生成
 macOS 解压缩软件推荐使用 [Keka](https://www.keka.io)
-
-![](/media/2002097z.png)
 ```
 brew cask install keka
 ```
+![](/media/2002097z.png)
 7. 抹除敏感文件需要用 [gshred](https://www.freebsd.org/cgi/man.cgi?query=gshred&apropos=0&sektion=0&manpath=FreeBSD+10.2-RELEASE+and+Ports&arch=default&format=html) 擦写 36 次或以上
 ```
 brew install coreutils
