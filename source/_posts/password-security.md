@@ -19,9 +19,9 @@ macOS 解压缩软件推荐使用 [Keka](https://www.keka.io)
 ```
 brew cask install keka
 ```
-<div align="center">
+<span><div style="text-align: center;">
 <img src="/media/2002097z.png" height="300px" alt="图片说明" >
-</div>
+</div></span>
 
 7. 抹除敏感文件需要用 [gshred](https://www.freebsd.org/cgi/man.cgi?query=gshred&apropos=0&sektion=0&manpath=FreeBSD+10.2-RELEASE+and+Ports&arch=default&format=html) 擦写 36 次或以上
 ```
