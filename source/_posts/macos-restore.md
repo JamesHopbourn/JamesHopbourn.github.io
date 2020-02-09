@@ -10,6 +10,15 @@ U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
 
 <!-- more -->
 
+## Homebrew
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew tap caskroom/cask
+
+brew tap homebrew/cask-fonts
+```
+
 ## ZSH
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -26,15 +35,6 @@ sudo easy_install pip
 
 pip install powerline-status --user
 
-```
-
-## Homebrew
-```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-brew tap caskroom/cask
-
-brew tap homebrew/cask-fonts
 ```
 
 ## SpaceVim
