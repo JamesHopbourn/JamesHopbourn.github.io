@@ -74,6 +74,11 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 gem install colorls --user
 ```
 
+## crontab
+```
+@reboot say 'Welcome back James'
+```
+
 ## macOS 
 ```
 sudo spctl --master-disable
