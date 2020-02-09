@@ -14,8 +14,6 @@ U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew tap caskroom/cask
-
 brew tap homebrew/cask-fonts
 
 brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump hub git vim
