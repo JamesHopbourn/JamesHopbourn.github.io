@@ -17,6 +17,8 @@ U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
 brew tap caskroom/cask
 
 brew tap homebrew/cask-fonts
+
+brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump hub git vim
 ```
 
 ## ZSH
@@ -42,11 +44,6 @@ pip install powerline-status --user
 curl -sLf https://spacevim.org/cn/install.sh | bash
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-## Brew
-```
-brew install pigz gnu-tar zip unzip unrar p7zip rmtrash coreuntil stow highlight hexyl gpg gnu-sed autojump hub git vim  
 ```
 
 ## dotfile
