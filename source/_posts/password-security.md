@@ -17,9 +17,7 @@ tags: 审查, 安全, 隐私, 密钥, 密码
 6. 归档敏感文件使用 7z 固实压缩并加密文件名，密码不少于 36 位，用 1Password 生成
 macOS 解压缩软件推荐使用 [Keka](https://www.keka.io)
 
-<div align=center>
 ![](/media/2002097z.png)
-</div>
 
 ```
 brew cask install keka
