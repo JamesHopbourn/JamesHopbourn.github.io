@@ -18,7 +18,6 @@ tags: 审查, 安全, 隐私, 密钥, 密码
 macOS 解压缩软件推荐使用 [Keka](https://www.keka.io)
 
 ![](/media/2002097z.png)
-
 ```
 brew cask install keka
 ```
