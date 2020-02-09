@@ -22,6 +22,10 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 curl https://gist.githubusercontent.com/gnachman/4cbe6743baa7fe07536b/raw/61fceba4a0b2624850ac1b4a20ac8ca48e07f7d2/gistfile1.txt|pbcopy
 
+sudo easy_install pip
+
+pip install powerline-status --user
+
 ```
 
 ## Homebrew
