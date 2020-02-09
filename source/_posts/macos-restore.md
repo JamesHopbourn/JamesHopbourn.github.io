@@ -53,8 +53,6 @@ git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
 stow ~/potfile/home
 ```
 
-至于为什么是 potfile 而不是 dotfile，因为 zsh 补全输入 d 会显示：Downloads、Desktop、dotfile 麻烦，就直接 potfile 了
-
 ## GPG
 ```
 gpg --import secret-backup.gpg
