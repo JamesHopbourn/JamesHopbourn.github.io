@@ -165,8 +165,7 @@ git commit -m 'gpg sign test'
 
 ### 从命令行创建 GitHub 仓库
 1. brew install hub
-2. mkdir test && cd test && git init
-3. hub create test
+2. git init test && cd test && hub create test 
 
 我个人习惯使用 SSH 协议连接，所以需要的可以在这里修改一下
 
