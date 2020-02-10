@@ -54,7 +54,7 @@ qrencode -r password.txt -o password.png
 ```
 12. 常用敏感文件使用 [VeraCrypt]((https://www.veracrypt.fr/en/Downloads.html)) 加密，iCloud 同步。
 iOS 客户端: [Disk Decipher](https://apps.apple.com/us/app/disk-decipher/id516538625) 
-macOS 客户端: [VeraCrypt](https://www.veracrypt.fr/en/Downloads.html)。建议配合隐藏卷和 [keyfile](https://www.veracrypt.fr/en/Keyfiles%20in%20VeraCrypt.html) 使用。
+macOS 客户端: [VeraCrypt](https://www.veracrypt.fr/en/Downloads.html)。建议配合[隐藏卷](https://www.veracrypt.fr/en/Hidden%20Volume.html)和 [keyfile](https://www.veracrypt.fr/en/Keyfiles%20in%20VeraCrypt.html) 使用。
 [keyfile](https://www.veracrypt.fr/en/Keyfiles%20in%20VeraCrypt.html) 保存在 TF卡，遇到审查直接剪断 TF卡
 13. 特别重要或者敏感的账号配置 [Yubikey](https://zh.wikipedia.org/zh-cn/YubiKey) 硬件物理认证
 14. 能用 SSH 尽量用 SSH，比如使用 SSH 连接 GitHub 而不是 HTTPS
