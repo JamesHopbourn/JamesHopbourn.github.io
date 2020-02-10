@@ -18,7 +18,7 @@ brew tap homebrew/cask-fonts
 
 brew install gpg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl gnu-sed autojump hub git vim icdiff fzf 
 
-brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro
+brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro adguard
 ```
 
 ## ZSH
