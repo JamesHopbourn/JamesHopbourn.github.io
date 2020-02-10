@@ -16,9 +16,9 @@ U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
 
 brew tap homebrew/cask-fonts
 
-brew install gpg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl gnu-sed autojump hub git vim icdiff fzf
+brew install gpg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl gnu-sed autojump hub git vim icdiff fzf 
 
-brew cask install sublime-text
+brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro
 ```
 
 ## ZSH
