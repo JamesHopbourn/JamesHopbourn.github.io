@@ -77,8 +77,7 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 
 ## gem
 ```
-gem install travis --user
-gem install colorls --user
+gem install travis colorls --user
 ```
 
 ## crontab
