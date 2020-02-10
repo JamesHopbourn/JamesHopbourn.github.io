@@ -85,5 +85,9 @@ sudo killall -STOP -c usbd
 sudo nvram SystemAudioVolume=" "
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+```
 
+## Sublime Text
+```
+	"font_face": "Ubuntu Mono derivative Powerline Nerd Font Complete",
 ```
