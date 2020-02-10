@@ -89,5 +89,5 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 ## Sublime Text
 ```
-	"font_face": "Ubuntu Mono derivative Powerline Nerd Font Complete",
+	"font_face": "SourceCodePro-Semibold",
 ```
