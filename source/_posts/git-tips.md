@@ -139,7 +139,7 @@ gpg --generate-key
 gpg --full-generate-key
 
 查看信息
-gpg --list-keys --keyid-format SHORT
+gpg --list-keys --keyid-format LONG
 ```
 
 发送公钥到公钥服务器 (如果需要)
