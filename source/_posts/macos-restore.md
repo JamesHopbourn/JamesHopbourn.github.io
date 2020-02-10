@@ -65,7 +65,7 @@ gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
 
 ## dotfile
 ```
-git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
+git clone ssh://james/JamesHopbourn/dotfile ~/potfile
 
 stow ~/potfile/home
 ```
