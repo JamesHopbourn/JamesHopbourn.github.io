@@ -88,5 +88,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 ## Sublime Text
 ```
-	"font_face": "SourceCodePro-Semibold",
+"font_size": 20,
+"font_face": "SourceCodePro-Semibold",
 ```
