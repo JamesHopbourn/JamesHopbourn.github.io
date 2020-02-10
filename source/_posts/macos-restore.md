@@ -10,6 +10,11 @@ U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
 
 <!-- more -->
 
+## Surge proxy
+```
+export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
+```
+
 ## Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,7 +37,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/i
 cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf && cd -
 
 curl https://gist.githubusercontent.com/gnachman/4cbe6743baa7fe07536b/raw/61fceba4a0b2624850ac1b4a20ac8ca48e07f7d2/gistfile1.txt|pbcopy
+```
 
+## pip
+```
 sudo easy_install pip
 
 pip install powerline-status --user
@@ -46,13 +54,6 @@ curl -sLf https://spacevim.org/cn/install.sh | bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-## dotfile
-```
-git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
-
-stow ~/potfile/home
-```
-
 ## GPG
 ```
 gpg --import secret-backup.gpg
@@ -60,6 +61,13 @@ gpg --import secret-backup.gpg
 gshred -f -v -z -u --iterations=36 secret-backup.gpg
 
 gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
+```
+
+## dotfile
+```
+git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
+
+stow ~/potfile/home
 ```
 
 ## WeChat
