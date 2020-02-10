@@ -21,7 +21,7 @@ export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152
 
 brew tap homebrew/cask-fonts
 
-brew install gpg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl gnu-sed autojump hub git vim icdiff fzf 
+brew install lsd gpg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf 
 
 brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro adguard
 ```
@@ -35,7 +35,6 @@ sed -i '' '201s/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf && cd -
-
 ```
 
 ## pip
@@ -43,7 +42,6 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 sudo easy_install pip
 
 pip install powerline-status --user
-
 ```
 
 ## SpaceVim
@@ -72,11 +70,6 @@ source ~/.zshrc
 ## WeChat
 ```
 git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-macOS && cd /tmp/WeChatTweak-macOS && sudo make install && cd -
-```
-
-## gem
-```
-gem install travis colorls --user
 ```
 
 ## crontab
