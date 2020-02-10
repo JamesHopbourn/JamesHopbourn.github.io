@@ -55,11 +55,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## GPG
 ```
-gpg --import secret-backup.gpg
+gpg --import ~/Downloads/secret-backup.gpg
 
-gshred -f -v -z -u --iterations=36 secret-backup.gpg
-
-gshred -f -v -z -u --iterations=36 ~/Downloads/*.txt
+gshred -f -v -z -u --iterations=36 ~/Downloads/*
 ```
 
 ## dotfile
