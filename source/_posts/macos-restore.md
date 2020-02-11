@@ -62,6 +62,8 @@ gshred -f -v -z -u --iterations=36 ~/Downloads/*
 ```
 git clone ssh://james/JamesHopbourn/dotfile ~/potfile
 
+chflags hidden ~/potfile
+
 stow ~/potfile/home
 
 source ~/.zshrc
