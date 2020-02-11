@@ -65,6 +65,10 @@ git clone ssh://james/JamesHopbourn/dotfile ~/potfile
 stow ~/potfile/home
 
 source ~/.zshrc
+
+rm ~/Library/Preferences/com.googlecode.iterm2.plist
+
+cp ~/potfile/com.googlecode.iterm2.plist ~/Library/Preferences/
 ```
 
 ## WeChat
