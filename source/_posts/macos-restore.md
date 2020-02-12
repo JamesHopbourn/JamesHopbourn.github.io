@@ -82,8 +82,6 @@ stow ~/potfile/home
 
 source ~/.zshrc
 
-rm ~/Library/Preferences/com.googlecode.iterm2.plist
-
 cp ~/potfile/com.googlecode.iterm2.plist ~/Library/Preferences/
 ```
 
@@ -96,7 +94,7 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 ```
 @reboot say 'Welcome back James'
 @reboot /Applications/v2ray-macos/v2ray
-@reboot sudo python /Users/james/Desktop/usbkill/usbkill/usbkill.py
+@reboot sudo python $HOME/dotfile/bin/usbkill.py
 @reboot osascript $HOME/dotfile/bin/reminder.scpt
 
 ```
