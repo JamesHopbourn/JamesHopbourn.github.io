@@ -50,7 +50,7 @@ d6d
 prompt_context() {
   emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
   RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
-  prompt_segment black default "${emojis[$RAND_EMOJI_N]} "
+  prompt_segment yellow black "${emojis[$RAND_EMOJI_N]} "
 }
 
 ```
