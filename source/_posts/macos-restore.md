@@ -96,6 +96,10 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 ## crontab
 ```
 @reboot say 'Welcome back James'
+@reboot /Applications/v2ray-macos/v2ray
+@reboot sudo python /Users/james/Desktop/usbkill/usbkill/usbkill.py
+@reboot osascript $HOME/dotfile/bin/reminder.scpt
+
 ```
 
 ## macOS 
@@ -105,6 +109,13 @@ sudo killall -STOP -c usbd
 sudo nvram SystemAudioVolume=%00
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+设置进入休眠状态时马上启动屏幕保护程序
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+launchpad 图标
+defaults write com.apple.dock springboard-columns -int 8; defaults write com.apple.dock springboard-rows -int 8; defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock
 ```
 
 ## Sublime Text
