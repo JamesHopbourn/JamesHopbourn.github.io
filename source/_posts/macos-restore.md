@@ -63,8 +63,6 @@ pip install powerline-status --user
 ## SpaceVim
 ```
 curl -sLf https://spacevim.org/cn/install.sh | bash
-
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## GPG
