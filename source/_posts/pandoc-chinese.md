@@ -30,6 +30,7 @@ brew install fontconfig
 
 编辑 Markdown 文本
 ```
+➜ vim Hepburn.md 
 ---
 title: 奥黛丽·赫本
 author: 唐纳德·斯伯特
