@@ -1,5 +1,6 @@
 ---
 title: pandoc 中文支持
+subtitle: 《纽约时报》赫本最佳传记
 date: 2020-02-14 22:30
 tags: pandoc
 categories:
@@ -16,6 +17,7 @@ brew install fontconfig
 
 查看系统已安装的中文支持
 ```
+➜ fc-list :lang=zh-cn
 ......
 /System/Library/Fonts/Supplemental/Songti.ttc: Songti SC,宋體\-簡,宋体\-简:style=Light,細體,细体
 /System/Library/Fonts/Supplemental/Songti.ttc: Songti TC,宋體\-繁,宋体\-繁:style=Regular,標準體,常规体
