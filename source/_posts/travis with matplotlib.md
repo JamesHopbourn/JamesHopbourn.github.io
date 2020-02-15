@@ -32,14 +32,20 @@ git commit -m 'Demo.py'
 git push -u origin develop
 ```
 
+---
+
 新建 master 分支并推送回远程仓库
 ```
 git checkout -b master
 git push -u origin master
 ```
 
+---
+
 打开 Travis-CI 项目设置界面设置 token 值为 GitHub 申请的 token,指定 develop 分支使用
 ![](/media/200216token.png)
+
+--
 
 新建 .travis.yml 配置文件
 ```
@@ -66,12 +72,16 @@ after_success:
  master 
 ```
 
+---
+
 推送回远程仓库,等待云端编译完成
 ```
 git add .
 git commit -m '.travis.yml'
 git push
 ```
+
+---
 
 云端编译完成后在 master 分支下找到图片的 download 连接,切换到 develop 分支,引用图片使用
 ```
@@ -84,6 +94,8 @@ git add .
 git commit -m 'README.md'
 git push
 ```
+
+---
 
 [matplotlib-with-travis](https://github.com/JamesHopbourn/matplotlib-with-travis)
 
