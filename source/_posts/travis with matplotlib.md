@@ -19,7 +19,7 @@ TL,DR:
 clone 仓库,新建 develop 分支后创建 Demo.py README.md 文件推送回远程仓库
 ```
 git clone https://github.com/JamesHopbourn/matplotlib-with-travis
-cd matplotlib-with-travis
+cd  matplotlib-with-travis
 git checkout -b develop
 vim Demo.py
 git add .
