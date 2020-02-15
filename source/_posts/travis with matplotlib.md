@@ -11,11 +11,15 @@ categories:
 
 <!-- more -->
 
+---
+
 TL,DR:
 1. GitHub 新建仓库
 2. clone 仓库,新建 develop 分支后创建 Demo.py 文件推送回远程仓库
 3. 新建 master 分支,推送到远程仓库
 4. 在 develop 分支下编辑 .travis.yml
+
+---
 
 clone 仓库,新建 develop 分支后创建 Demo.py README.md 文件推送回远程仓库
 ```
