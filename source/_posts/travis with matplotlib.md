@@ -72,6 +72,9 @@ git push
 ```
 git checkout develop
 vim README.md
+```
+![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/master/Demo.png)
+```
 git add .
 git commit -m 'README.md'
 git push
