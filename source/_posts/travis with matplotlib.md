@@ -6,7 +6,7 @@ categories:
 ---
 
 思路: develop 分支存储 matplotlib 代码,git push 之后交由 Travis-CI 云端编译,编译成功后推送到 master 分支供 develop 分支引用
-原因: 之所以要在在 GitHub 上使用 matplotlib + Travis-CI 是因为我把投资报表存储在 GitHub 上，想着加点可视化的折线图,于是便有了这般折腾
+原因: 之所以要在 GitHub 上使用 matplotlib + Travis-CI 是因为我把投资报表存储在 GitHub 上，想加点可视化的折线图,于是便有了这般折腾
 
 <!-- more -->
 
