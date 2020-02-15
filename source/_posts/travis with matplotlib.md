@@ -53,7 +53,7 @@ script:
 
 # 成功之后进入 public 目录将 public 目录内的内容上传到 develop 分支
 after_success:
-- cd ./public
+- cd  public
 - git init
 - git add --all .
 - git commit -m "Travis CI Auto Builder"
