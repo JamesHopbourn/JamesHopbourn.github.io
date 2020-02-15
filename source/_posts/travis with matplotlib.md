@@ -34,6 +34,7 @@ git push -u origin master
 ```
 
 打开 Travis-CI 项目设置界面设置 token 值为 GitHub 申请的 token,指定 develop 分支使用
+![](/media/200216token.png)
 
 新建 .travis.yml 配置文件
 ```
@@ -76,3 +77,4 @@ git commit -m 'README.md'
 git push
 ```
 
+![](/media/200216diagram.jpg)
