@@ -77,4 +77,6 @@ git commit -m 'README.md'
 git push
 ```
 
+[matplotlib-with-travis](https://github.com/JamesHopbourn/matplotlib-with-travis)
+
 ![](/media/200216diagram.jpg)
