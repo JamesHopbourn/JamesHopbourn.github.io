@@ -7,9 +7,9 @@ categories:
 ---
 
 使用 -V mainfont 参数提供中文支持 
-```
+
 pandoc Hepburn.md --pdf-engine=xelatex -V mainfont='Songti SC' -o Hepburn.pdf
-```
+
 
 <!-- more -->
 
