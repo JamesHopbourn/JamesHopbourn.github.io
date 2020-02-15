@@ -1,7 +1,7 @@
 ---
 title: matplotlib with Travis-CI  
 date: 2020-02-16 01:00
-tags: [Matplotlib, travis, 自动化]
+tags: [matplotlib, travis, Travis-ci, 自动化]
 categories:
 ---
 
