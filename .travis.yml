@@ -23,4 +23,4 @@ after_success:
 - git commit -m "Travis CI Auto Builder"
 - git push --quiet --force https://${hexo}@github.com/JamesHopbourn/JamesHopbourn.github.io.git
   master
-- curl https://api.day.app/B2jmef5ooBh6xyBjKmgAve/Hexo%20%E5%8D%9A%E5%AE%A2%E6%9B%B4%E6%96%B0%E5%AE%8C%E6%88%90?url=https://jameshopbourn.github.io/
+- curl ${url}
