@@ -22,5 +22,4 @@ after_success:
 - git add .
 - git commit -m "Travis CI Auto Builder"
 - git push --quiet --force https://${hexo}@github.com/JamesHopbourn/JamesHopbourn.github.io.git master
-- sleep 60
-- curl ${url}
+- sleep 60 ; curl ${url}
