@@ -128,6 +128,9 @@ git add .
 添加修改注释
 git commit -m 'add README.md'
 
+使用 [skip ci] 可以跳过再次编译
+git commit -m 'add README.md [skip ci]'
+
 推送远程仓库
 git push
 ```
