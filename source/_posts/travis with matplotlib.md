@@ -17,8 +17,9 @@ TL,DR:
 1. GitHub 新建仓库
 2. clone 仓库,新建 develop 分支后创建 Demo.py 文件推送回远程仓库
 3. 新建 master 分支,推送到远程仓库
-4. 在 develop 分支下编辑 .travis.yml 推送远程仓库
-5. 在 develop 分支下编辑 README.md 推送远程仓库
+4. 申请 GitHub token 用于配置 Travis-CI
+5. 在 develop 分支下编辑 .travis.yml 推送远程仓库
+6. 在 develop 分支下编辑 README.md 推送远程仓库
 
 ---
 
