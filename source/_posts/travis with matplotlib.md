@@ -66,10 +66,11 @@ git push -u origin master
 ```
 切换回 develop 分支
 git checkout develop
-```
 
 新建 .travis.yml 配置文件
-```
+vim .travis.yml
+
+.travis.yml 内容
 before_install:
 # 安装 matplotlib
 - python -m pip install matplotlib --user
