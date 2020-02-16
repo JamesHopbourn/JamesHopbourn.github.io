@@ -91,8 +91,7 @@ after_success:
 - git init
 - git add .
 - git commit -m "Travis CI Auto Builder"
-- git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git
- master 
+- git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git master 
 ```
 
 ---
@@ -103,7 +102,7 @@ after_success:
 git add .
 
 添加修改注释
-git commit -m '.travis.yml'
+git commit -m 'add .travis.yml'
 
 推送远程仓库
 git push
@@ -126,7 +125,7 @@ README.md 内容
 git add .
 
 添加修改注释
-git commit -m 'README.md'
+git commit -m 'add README.md'
 
 推送远程仓库
 git push
