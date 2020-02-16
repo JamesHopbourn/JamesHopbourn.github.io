@@ -23,12 +23,25 @@ TL,DR:
 
 clone 仓库,新建 develop 分支后创建 Demo.py README.md 文件推送回远程仓库
 ```
+克隆远程仓库
 git clone https://github.com/JamesHopbourn/matplotlib-with-travis
+
+进入仓库目录
 cd  matplotlib-with-travis
+
+新建 develop 分支
 git checkout -b develop
+
+新建 Demo.py 脚本
 vim Demo.py
+
+添加修改内容
 git add .
+
+添加修改注释
 git commit -m 'Demo.py'
+
+推送远程仓库
 git push -u origin develop
 ```
 
@@ -36,7 +49,10 @@ git push -u origin develop
 
 新建 master 分支并推送回远程仓库
 ```
+新建 master 分支
 git checkout -b master
+
+推送远程仓库
 git push -u origin master
 ```
 
@@ -46,6 +62,11 @@ git push -u origin master
 ![](/media/200216token.png)
 
 ---
+
+```
+切换回 develop 分支
+git checkout develop
+```
 
 新建 .travis.yml 配置文件
 ```
@@ -76,8 +97,13 @@ after_success:
 
 推送回远程仓库,等待云端编译完成
 ```
+添加修改内容
 git add .
+
+添加修改注释
 git commit -m '.travis.yml'
+
+推送远程仓库
 git push
 ```
 
@@ -85,13 +111,22 @@ git push
 
 云端编译完成后在 master 分支下找到图片的 download 连接,切换到 develop 分支,引用图片使用
 ```
+切换到 develop 分支
 git checkout develop
+
+编辑 README.md
 vim README.md
 
+README.md 内容
 ![](https://raw.githubusercontent.com/JamesHopbourn/matplotlib-with-travis/master/Demo.png)
 
+添加修改内容
 git add .
+
+添加修改注释
 git commit -m 'README.md'
+
+推送远程仓库
 git push
 ```
 
