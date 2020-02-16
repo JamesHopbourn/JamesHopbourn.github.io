@@ -257,7 +257,9 @@ git push --set-upstream origin test
 hub pull-request --base JamesHopbourn:master --head Username:test -m 测试内容
 ```
 
-### travis-CI with gcc
+### travis-CI with python
+[matplotlib with Travis-CI](https://jameshopbourn.github.io/2020/02/16/travis%20with%20matplotlib)
+
 ### hide git push email
 
 ### 参考文章
