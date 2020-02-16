@@ -17,10 +17,9 @@ script:
 - hexo clean
 - hexo generate
 after_success:
-- cd ./public
+- cd  public
 - git init
-- git add --all .
+- git add .
 - git commit -m "Travis CI Auto Builder"
-- git push --quiet --force https://${hexo}@github.com/JamesHopbourn/JamesHopbourn.github.io.git
-  master
+- git push --quiet --force https://${hexo}@github.com/JamesHopbourn/JamesHopbourn.github.io.git master
 - curl ${url}
