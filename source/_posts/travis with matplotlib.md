@@ -17,11 +17,12 @@ TL,DR:
 1. GitHub 新建仓库
 2. clone 仓库,新建 develop 分支后创建 Demo.py 文件推送回远程仓库
 3. 新建 master 分支,推送到远程仓库
-4. 在 develop 分支下编辑 .travis.yml
+4. 在 develop 分支下编辑 .travis.yml 推送远程仓库
+5. 在 develop 分支下编辑 README.md 推送远程仓库
 
 ---
 
-clone 仓库,新建 develop 分支后创建 Demo.py README.md 文件推送回远程仓库
+clone 仓库,新建 develop 分支后创建 Demo.py 文件推送回远程仓库
 ```
 克隆远程仓库
 git clone https://github.com/JamesHopbourn/matplotlib-with-travis
@@ -39,7 +40,7 @@ vim Demo.py
 git add .
 
 添加修改注释
-git commit -m 'Demo.py'
+git commit -m 'add Demo.py'
 
 推送远程仓库
 git push -u origin develop
@@ -88,7 +89,7 @@ script:
 after_success:
 - cd  public
 - git init
-- git add --all .
+- git add .
 - git commit -m "Travis CI Auto Builder"
 - git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git
  master 
