@@ -4,9 +4,9 @@ date: 2020-02-08 22:53:00
 tags: macOS
 ---
 
-U 盘里存储：
-- iTerm2
+系统 U 盘里存储：
 - Surge
+- iTerm2
 - Spectacle
 - Surge 配置文件
 - Command Line Tools.dmg
