@@ -22,6 +22,7 @@ export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152
 ## Command Line Tools
 ```
 sudo hdiutil attach /Volumes/Catalina/Restore/Command_Line_Tools_for_Xcode_11.3.1.dmg
+
 sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools.pkg  -target /
 ```
 
@@ -54,6 +55,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 vim ~/.oh-my-zsh/themes/agnoster.zsh-theme +90
 d6d
+o
 ```
 
 ```
