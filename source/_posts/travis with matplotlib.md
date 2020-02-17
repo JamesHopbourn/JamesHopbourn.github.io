@@ -86,7 +86,7 @@ script:
 - mkdir -p public
 - python Demo.py
 
-# 成功之后进入 public 目录将 public 目录内的内容上传到 develop 分支
+# 成功之后进入 public 目录将 public 目录内的内容上传到 master 分支
 after_success:
 - cd  public
 - git init
