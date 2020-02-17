@@ -4,7 +4,7 @@ date: 2020-02-08 22:53:00
 tags: macOS
 ---
 
-U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
+U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件、Command Line Tools
 1Password 里存储：SSH、GPG 私钥
 以上两个 airdrop 传输给 macOS
 
@@ -17,7 +17,7 @@ export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152
 
 ## Command Line Tools
 ```
-sudo installer -pkg /Volume/Catalina/Restore/Install Command Line Tools.pkg -target /
+sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools.pkg  -target /
 ```
 
 ## Homebrew
