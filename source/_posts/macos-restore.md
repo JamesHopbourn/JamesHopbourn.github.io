@@ -60,7 +60,7 @@ o
 
 ```
 prompt_context() {
-  emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
+  emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "😄" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
   RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
   prompt_segment magent black "${emojis[$RAND_EMOJI_N]} "
 }
@@ -80,9 +80,7 @@ curl -sLf https://spacevim.org/cn/install.sh | bash
 
 ## GPG
 ```
-gpg --import ~/Downloads/secret-backup.gpg
-
-gshred -f -v -z -u --iterations=36 ~/Downloads/*
+gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
 ```
 
 ## dotfile
