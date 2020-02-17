@@ -15,6 +15,11 @@ U 盘里存储：iTerm2、Surge、Spectacle、Surge 配置文件
 export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
 ```
 
+## Command Line Tools
+```
+sudo installer -pkg /Volume/Catalina/Restore/Install Command Line Tools.pkg -target /
+```
+
 ## Homebrew
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
