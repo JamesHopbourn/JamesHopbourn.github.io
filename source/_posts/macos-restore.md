@@ -72,8 +72,16 @@ prompt_context() {
   emojis=("⚡️" "🔥" "💀" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "😄" "🚀" "💡" "🎉" "🔑" "🇹🇭" "🚦" "🌙")
   RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
   prompt_segment magent black "${emojis[$RAND_EMOJI_N]} "
-} 
+}
 ```
+
+```
+[ESC]
+o
+[ESC]
+:wq
+```
+
 ![](/media/200212iterm.png)
 ## pip
 ```
