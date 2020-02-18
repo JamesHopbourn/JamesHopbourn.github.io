@@ -139,6 +139,8 @@ sudo killall -STOP -c usbd
 
 禁用开机音效
 sudo nvram SystemAudioVolume=%00
+
+拼写自动纠正
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 禁用 DS_Store
@@ -148,7 +150,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
-launchpad 图标
+Launchpad 图标数量
 defaults write com.apple.dock springboard-columns -int 8; defaults write com.apple.dock springboard-rows -int 8; defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock
 ```
 
