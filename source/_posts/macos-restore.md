@@ -17,7 +17,9 @@ tags: macOS
 ## Applications
 ```
 cp -r /Volumes/Catalina/软件/* /Applications
+
 cp -r /Volumes/Catalina/Surge ~/Documents
+
 unzip /Volumes/Catalina/Restore/SSH.zip
 ```
 
@@ -129,10 +131,17 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 
 ## macOS 
 ```
+信任软件来源
 sudo spctl --master-disable
+
+禁用连接设备弹窗
 sudo killall -STOP -c usbd
+
+禁用开机音效
 sudo nvram SystemAudioVolume=%00
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+
+禁用 DS_Store
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 设置进入休眠状态时马上启动屏幕保护程序
