@@ -64,6 +64,7 @@ prompt_context() {
   RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
   prompt_segment magent black "${emojis[$RAND_EMOJI_N]} "
 }
+
 ```
 ![](/media/200212iterm.png)
 ## pip
