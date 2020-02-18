@@ -99,7 +99,9 @@ curl -sLf https://spacevim.org/cn/install.sh | bash
 
 ## GPG
 ```
-sed -n '23p' /Volumes/Catalina/Restore/password.txt|pbcopy
+hdiutil attach /Volumes/Catalina/Restore/Password.dmg
+
+sed -n '23p' /Volumes/Password/password.txt|pbcopy
 
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
 ```
