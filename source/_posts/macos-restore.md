@@ -47,7 +47,7 @@ cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps
 
 brew install lsd gnupg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf 
 
-brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro adguard
+brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro font-hack-nerd-font adguard
 ```
 
 ## ZSH
