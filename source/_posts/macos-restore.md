@@ -108,7 +108,11 @@ git clone ssh://james/JamesHopbourn/dotfile ~/potfile
 
 chflags hidden ~/potfile
 
-stow ~/potfile/home
+cd ~/potfile
+
+rm ~/.SpaceVim.d/init.toml ~/.zshrc
+
+stow home
 
 source ~/.zshrc
 
