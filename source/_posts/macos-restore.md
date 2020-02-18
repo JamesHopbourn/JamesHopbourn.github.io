@@ -50,6 +50,23 @@ brew install lsd gnupg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip
 brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro font-hack-nerd-font adguard
 ```
 
+## dotfile
+```
+git clone ssh://james/JamesHopbourn/dotfile ~/potfile
+
+chflags hidden ~/potfile
+
+cd ~/potfile
+
+rm ~/.SpaceVim.d/init.toml ~/.zshrc
+
+stow home
+
+source ~/.zshrc
+
+cp ~/potfile/com.googlecode.iterm2.plist ~/Library/Preferences/
+```
+
 ## ZSH
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -104,23 +121,6 @@ hdiutil attach /Volumes/Catalina/Restore/Password.dmg
 sed -n '23p' /Volumes/Password/password.txt|pbcopy
 
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
-```
-
-## dotfile
-```
-git clone ssh://james/JamesHopbourn/dotfile ~/potfile
-
-chflags hidden ~/potfile
-
-cd ~/potfile
-
-rm ~/.SpaceVim.d/init.toml ~/.zshrc
-
-stow home
-
-source ~/.zshrc
-
-cp ~/potfile/com.googlecode.iterm2.plist ~/Library/Preferences/
 ```
 
 ## WeChat
