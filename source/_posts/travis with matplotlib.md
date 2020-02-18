@@ -5,11 +5,13 @@ tags: [matplotlib, travis, Travis-ci, 自动化]
 categories:
 ---
 
-思路: develop 分支存储 matplotlib 代码,git push 之后交由 Travis-CI 云端编译,编译成功后推送到 master 分支供 develop 分支 markdown 引用
+思路: develop 分支存储 matplotlib 代码,git push 之后交由 Travis-CI 云端编译,编译成功后推送到 master 分支供 develop 分支 markdown 引用。
 
-原因: 之所以要在 GitHub 上使用 matplotlib + Travis-CI 是因为我把投资报表存储在 GitHub 上，想加点可视化的折线图,于是便有了这般折腾
+原因: 之所以要在 GitHub 上使用 matplotlib + Travis-CI 是因为我把投资报表存储在 GitHub 上，想加点可视化的折线图,于是便有了这般折腾。
 
 <!-- more -->
+
+备注：如果偏好使用 master 分支作为默认分支，只需要在第 5 步中将 .travis.yml 文件最后一行末尾的 HEAD:master 改为 HEAD:develop 即可。master 与 develop 文件内容对调。
 
 ---
 
@@ -92,7 +94,7 @@ after_success:
 - git init
 - git add .
 - git commit -m "Travis CI Auto Builder"
-- git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git master 
+- git push --force https://${token}@github.com/JamesHopbourn/matplotlib-with-travis.git HEAD:master 
 ```
 
 ---
