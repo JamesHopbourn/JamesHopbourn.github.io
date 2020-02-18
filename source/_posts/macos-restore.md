@@ -19,7 +19,10 @@ tags: macOS
 cp -r /Volumes/Catalina/软件/* /Applications
 
 cp -r /Volumes/Catalina/Surge ~/Documents
+```
 
+## SSH
+```
 unzip /Volumes/Catalina/Restore/SSH.zip
 ```
 
