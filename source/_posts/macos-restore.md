@@ -5,10 +5,9 @@ tags: macOS
 ---
 
 系统 U 盘里存储：
-- Surge
-- iTerm2
-- Spectacle
 - Surge 配置文件
+- Surge iTerm2 Spectacle
+- homebrew core cask font
 - Command Line Tools.dmg
 - SSH、GPG 私钥、账号密码加密压缩包
 
@@ -44,9 +43,7 @@ hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew tap homebrew/cask-fonts
-
-brew tap homebrew/bundle
+cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps
 
 brew install lsd gpg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf 
 
