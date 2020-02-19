@@ -140,7 +140,6 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 @reboot /Applications/v2ray-macos/v2ray
 @reboot sudo python $HOME/dotfile/bin/usbkill.py
 @reboot osascript $HOME/dotfile/bin/reminder.scpt
-
 ```
 
 ## macOS 
