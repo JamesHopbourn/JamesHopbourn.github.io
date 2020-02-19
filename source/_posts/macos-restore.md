@@ -83,9 +83,9 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 sed -i '' '201s/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme
 
-sed -i '' '39s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
+sed -i '' '47s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 
-sed -i '' '44s/github/gh/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
+sed -i '' '52s/github/gh/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
