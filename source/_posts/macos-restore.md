@@ -47,13 +47,13 @@ hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
 
 ## Homebrew
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 mkdir -p /usr/local/Homebrew/Library/Taps
 
 sudo chown -R $(whoami) /usr/local/lib/pkgconfig
 
 cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps
+
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install lsd gnupg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf duti
 
@@ -69,8 +69,6 @@ git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
 chflags hidden ~/potfile
 
 cd ~/potfile
-
-rm ~/.SpaceVim.d/init.toml ~/.zshrc
 
 stow home
 
