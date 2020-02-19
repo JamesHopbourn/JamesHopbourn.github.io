@@ -93,7 +93,7 @@ cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complet
 
 vim ~/.oh-my-zsh/themes/agnoster.zsh-theme +90
 d5d
-o
+i
 ```
 
 ```
@@ -105,8 +105,7 @@ prompt_context() {
 ```
 
 ```
-[ESC]
-o
+[return]
 [ESC]
 :wq
 ```
