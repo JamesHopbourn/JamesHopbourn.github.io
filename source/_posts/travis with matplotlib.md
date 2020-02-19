@@ -11,7 +11,7 @@ categories:
 
 <!-- more -->
 
-备注：如果偏好使用 master 分支作为默认分支，请在第 5 步中将 .travis.yml 文件最后一行末尾的 HEAD:master 改为 HEAD:develop 即可，然后将 master 与 develop 文件内容对调即可。
+备注：如果偏好使用 master 分支作为默认分支，请在第 5 步中将 .travis.yml 文件最后一行末尾的 HEAD:master 改为 HEAD:develop 然后将 master 与 develop 文件内容对调即可。
 
 ---
 
