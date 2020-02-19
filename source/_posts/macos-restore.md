@@ -13,6 +13,12 @@ tags: macOS
 
 <!-- more -->
 
+## 非必需安全措施
+```
+恢复模式下开启固件密码
+FileVault 磁盘加密
+```
+
 ## Applications
 ```
 cp -r /Volumes/Catalina/软件/* /Applications
@@ -160,6 +166,9 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 Launchpad 图标数量
 defaults write com.apple.dock springboard-columns -int 8; defaults write com.apple.dock springboard-rows -int 8; defaults write com.apple.dock ResetLaunchPad -bool TRUE; killall Dock
+
+减少通知提醒时间
+defaults write com.apple.notificationcenterui bannerTime 3
 ```
 
 ## Sublime Text
