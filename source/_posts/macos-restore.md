@@ -169,6 +169,12 @@ defaults write com.apple.dock springboard-columns -int 8; defaults write com.app
 
 减少通知提醒时间
 defaults write com.apple.notificationcenterui bannerTime 3
+
+禁用程序崩溃报告
+defaults write com.apple.CrashReporter DialogType none
+
+禁用多播广告
+sudo defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool YES
 ```
 
 ## duti 设置默认打开程序
@@ -183,3 +189,6 @@ duti -s org.mozilla.firefox ftp
 "font_size": 20,
 "font_face": "SourceCodePro-Semibold",
 ```
+
+## 参考资料
+[macOS-Security-and-Privacy-Guide/README-cn.md](https://github.com/xitu/macOS-Security-and-Privacy-Guide/blob/master/README-cn.md)
