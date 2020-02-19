@@ -51,7 +51,7 @@ hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
 
 cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps
 
-brew install lsd gnupg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf 
+brew install lsd gnupg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf duti
 
 brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro font-hack-nerd-font adguard
 ```
@@ -169,6 +169,13 @@ defaults write com.apple.dock springboard-columns -int 8; defaults write com.app
 
 减少通知提醒时间
 defaults write com.apple.notificationcenterui bannerTime 3
+```
+
+## duti 设置默认打开程序
+```
+duti -s com.apple.Safari afp
+duti -s com.apple.Safari smb
+duti -s org.mozilla.firefox ftp
 ```
 
 ## Sublime Text
