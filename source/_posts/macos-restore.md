@@ -47,13 +47,9 @@ hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
 
 ## Homebrew
 ```
-mkdir -p /usr/local/Homebrew/Library/Taps
-
-sudo chown -R $(whoami) /usr/local/lib/pkgconfig
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install lsd gnupg rmtrash coreutils stow pigz gnu-tar zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf duti
 
@@ -71,8 +67,6 @@ chflags hidden ~/potfile
 cd ~/potfile
 
 stow home
-
-source ~/.zshrc
 
 cp ~/potfile/com.googlecode.iterm2.plist ~/Library/Preferences/
 ```
@@ -108,6 +102,8 @@ prompt_context() {
 [return]
 [ESC]
 :wq
+
+source ~/.zshrc
 ```
 
 ![](/media/200212iterm.png)
@@ -127,7 +123,7 @@ curl -sLf https://spacevim.org/cn/install.sh | bash
 ```
 hdiutil attach /Volumes/Catalina/Restore/Password.dmg
 
-sed -n '23p' /Volumes/Password/password.txt|pbcopy
+sed -n '23p' /Volumes/Password/password.txt
 
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
 ```
