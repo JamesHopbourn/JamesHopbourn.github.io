@@ -62,11 +62,21 @@ brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro fon
 ```
 ssh -T personal
 
-git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
+git clone ssh://james/JamesHopbourn/dotfile ~/potfile
 
 chflags hidden ~/potfile
 
-stow --dir=$HOME/dotfile --ignore='.DS_Store' -target=$HOME home 
+mkdir ~/.config/ ~/.lldb ~/.subversion ~/.tmux
+
+stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME dotfile/
+
+stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.config/ .config/
+
+stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.lldb/ .lldb/
+
+stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.subversion/ .subversion/
+
+stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.tmux/ .tmux/
 
 stow --dir=$HOME/dotfile --ignore='.DS_Store' -target=$HOME/Library/Preferences Preferences
 ```
