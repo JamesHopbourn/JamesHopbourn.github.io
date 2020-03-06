@@ -32,6 +32,8 @@ categories:
 
 ## 网络
 [Mike Bill](https://www.youtube.com/channel/UCFI8X90NLp4C5Qu7X0DVGDA)
+[JS 神技能](https://www.youtube.com/channel/UC6tPP3jOTKgjqfDgqMsaG4g)
+[悟空的日常](https://www.youtube.com/channel/UCii04BCvYIdQvshrdNDAcww)
 [nt l](https://www.youtube.com/channel/UCmgoFtSRdfFNP6Y5vhSY3vg)
 [TuTu生活志](https://www.youtube.com/channel/UCuhAUKCdKrjYoMiJQc74ZkQ)
 [翼王](https://www.youtube.com/channel/UCxcuxsAjdnQaiRwYb5CVISw)
