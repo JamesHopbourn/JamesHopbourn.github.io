@@ -66,11 +66,9 @@ git clone ssh://personal/JamesHopbourn/dotfile ~/potfile
 
 chflags hidden ~/potfile
 
-cd ~/potfile
+stow --dir=$HOME/dotfile --ignore='.DS_Store' -target=$HOME home 
 
-stow home
-
-cp ~/potfile/com.googlecode.iterm2.plist ~/Library/Preferences/
+stow --dir=$HOME/dotfile --ignore='.DS_Store' -target=$HOME/Library/Preferences Preferences
 ```
 
 ## ZSH
