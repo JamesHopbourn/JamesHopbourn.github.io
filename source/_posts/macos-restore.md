@@ -68,7 +68,7 @@ stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/Library/Preferences
 ```
 
 ## ZSH
-```
+```diff
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";\
 sed -i '' '201s/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme;\
 sed -i '' '47s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh;\
@@ -106,12 +106,12 @@ pip install powerline-status --user
 ```
 
 ## vim-plug
-```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;vim -c PlugInstall
+```diff
+! curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;vim -c PlugInstall
 ```
 
 ## GPG
-```
+```diff
 hdiutil attach /Volumes/Catalina/Restore/Password.dmg;\
 sed -n '23p' /Volumes/Password/password.txt|pbcopy;\
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg;\
