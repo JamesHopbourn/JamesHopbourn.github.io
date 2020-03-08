@@ -60,11 +60,11 @@ brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro fon
 
 ## dotfile
 ```
-ssh -T james
+ssh -T personal
 
-git clone ssh://james/JamesHopbourn/dotfile ~/dotfile
+git clone ssh://james/JamesHopbourn/dotfile ~/potfile
 
-chflags hidden ~/dotfile
+chflags hidden ~/potfile
 
 mkdir ~/.config/ ~/.lldb ~/.subversion ~/.tmux
 
@@ -124,9 +124,9 @@ sudo easy_install pip
 pip install powerline-status --user
 ```
 
-## vim-plug
+## SpaceVim
 ```
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -sLf https://spacevim.org/cn/install.sh | bash
 ```
 
 ## GPG
