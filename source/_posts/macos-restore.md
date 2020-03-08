@@ -75,8 +75,7 @@ stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/Library/Preferences
 
 ## ZSH
 ```
-sh -c "$(curl -fsSL
-https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";\
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";\
 sed -i '' '201s/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme;\
 sed -i '' '47s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh;\
 sed -i '' '52s/github/gh/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh;\
