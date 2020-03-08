@@ -68,15 +68,15 @@ chflags hidden ~/dotfile
 
 mkdir ~/.config/ ~/.lldb ~/.subversion ~/.tmux
 
-stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME dotfile/
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME home/
 
-stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.config/ .config/
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.config/ .config/
 
-stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.lldb/ .lldb/
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.lldb/ .lldb/
 
-stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.subversion/ .subversion/
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.subversion/ .subversion/
 
-stow --dir=$HOME/dotfile/home --ignore='.DS_Store' --target=$HOME/.tmux/ .tmux/
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.tmux/ .tmux/
 
 stow --dir=$HOME/dotfile --ignore='.DS_Store' -target=$HOME/Library/Preferences Preferences
 ```
