@@ -23,5 +23,6 @@ VIM 基本配置
 - 文本对齐
 https://gist.github.com/tpope/287147
 
-
+- 输入法自动切换
+https://zhuanlan.zhihu.com/p/49411224
 
