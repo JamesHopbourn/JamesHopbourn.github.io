@@ -21,8 +21,7 @@ FileVault 磁盘加密
 
 ## Applications
 ```
-cp -r /Volumes/Catalina/软件/* /Applications
-
+cp -r /Volumes/Catalina/软件/* /Applications;\
 cp -r /Volumes/Catalina/Surge ~/Documents
 ```
 
@@ -46,16 +45,11 @@ say 'Command line tools installed'
 
 ## Homebrew
 ```
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps
-
-brew install lsd gnupg rmtrash coreutils stow pigz zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf duti
-
-brew install findutils gnu-tar gnu-sed gawk gnutls grep
-
-brew cask install font-source-code-pro font-hack-nerd-font
-
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)";\
+cp -r /Volumes/Catalina/homebrew /usr/local/Homebrew/Library/Taps;\
+brew install lsd gnupg rmtrash coreutils stow pigz zip unzip unrar p7zip highlight hexyl hub git vim icdiff fzf duti;\
+brew install findutils gnu-tar gnu-sed gawk gnutls grep;\
+brew cask install font-source-code-pro font-hack-nerd-font;\
 brew cask install sublime-text gpg-suite veracrypt adguard
 ```
 
@@ -118,10 +112,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 ## GPG
 ```
-hdiutil attach /Volumes/Catalina/Restore/Password.dmg
-
-sed -n '23p' /Volumes/Password/password.txt|pbcopy
-
+hdiutil attach /Volumes/Catalina/Restore/Password.dmg;\
+sed -n '23p' /Volumes/Password/password.txt|pbcopy;\
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
 ```
 
