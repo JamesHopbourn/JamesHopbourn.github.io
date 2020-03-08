@@ -126,7 +126,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ```
 hdiutil attach /Volumes/Catalina/Restore/Password.dmg
 
-sed -n '23p' /Volumes/Password/password.txt
+sed -n '23p' /Volumes/Password/password.txt|pbcopy
 
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
 ```
