@@ -116,6 +116,7 @@ hdiutil attach /Volumes/Catalina/Restore/Password.dmg;\
 sed -n '23p' /Volumes/Password/password.txt|pbcopy;\
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg;\
 hdiutil unmount /Volumes/Password;\
+kill -9 $(fuser /Volumes/Catalina 2>/dev/null);\
 hdiutil unmount /Volumes/Catalina
 ```
 
