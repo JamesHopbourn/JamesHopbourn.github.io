@@ -114,7 +114,9 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ```
 hdiutil attach /Volumes/Catalina/Restore/Password.dmg;\
 sed -n '23p' /Volumes/Password/password.txt|pbcopy;\
-gpg --import /Volumes/Catalina/Restore/secret-backup.gpg
+gpg --import /Volumes/Catalina/Restore/secret-backup.gpg;\
+hdiutil unmount /Volumes/Password;\
+hdiutil unmount /Volumes/Catalina
 ```
 
 ## WeChat
