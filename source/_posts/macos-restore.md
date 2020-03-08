@@ -74,7 +74,7 @@ sed -i '' '201s/%~/%c/' ~/.oh-my-zsh/themes/agnoster.zsh-theme;\
 sed -i '' '47s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh;\
 sed -i '' '52s/github/gh/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh;\
 curl -fLo ~/Library/Fonts/Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete.otf https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf;\
-vim -c 90,94d -c startinsert ~/.oh-my-zsh/themes/agnoster.zsh-theme +90
+! vim -c 90,94d -c startinsert ~/.oh-my-zsh/themes/agnoster.zsh-theme +90
 ```
 
 ```
@@ -116,7 +116,7 @@ hdiutil attach /Volumes/Catalina/Restore/Password.dmg;\
 sed -n '23p' /Volumes/Password/password.txt|pbcopy;\
 gpg --import /Volumes/Catalina/Restore/secret-backup.gpg;\
 hdiutil unmount /Volumes/Password;\
-kill -9 $(fuser /Volumes/Catalina 2>/dev/null);\
+! kill -9 $(fuser /Volumes/Catalina 2>/dev/null);\
 hdiutil unmount /Volumes/Catalina
 ```
 
