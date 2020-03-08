@@ -65,7 +65,7 @@ stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.tmux/ .tmux/;\
 stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.config/ .config/;\
 stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.subversion/ .subversion/;\
 stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/Library/Preferences Preferences;\
-stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/Library/Application\ Support/iTerm2/DynamicProfiles Profiles 
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/Library/Application\ Support/iTerm2/DynamicProfiles Profile 
 ```
 
 ## ZSH
