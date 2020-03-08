@@ -38,11 +38,7 @@ export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152
 
 ## Command Line Tools
 ```
-hdiutil attach /Volumes/Catalina/Restore/Command_Line_Tools_for_Xcode_11.3.1.dmg
-
-sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools.pkg  -target /
-
-hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
+hdiutil attach /Volumes/Catalina/Restore/Command_Line_Tools_for_Xcode_11.3.1.dmg;sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools.pkg  -target /;hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
 ```
 
 ## Homebrew
@@ -55,7 +51,9 @@ brew install lsd gnupg rmtrash coreutils stow pigz zip unzip unrar p7zip highlig
 
 brew install findutils gnu-tar gnu-sed gawk gnutls grep
 
-brew cask install keka sublime-text gpg-suite veracrypt font-source-code-pro font-hack-nerd-font adguard
+brew cask install keka sublime-text gpg-suite veracrypt adguard
+
+brew cask install font-source-code-pro font-hack-nerd-font
 ```
 
 ## dotfile
@@ -91,8 +89,6 @@ sed -i '' '47s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 
 sed -i '' '52s/github/gh/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
-
 cd ~/Library/Fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf && cd -
 
 vim ~/.oh-my-zsh/themes/agnoster.zsh-theme +90
@@ -112,6 +108,10 @@ prompt_context() {
 [return]
 [ESC]
 :wq
+```
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 
 source ~/.zshrc
 
