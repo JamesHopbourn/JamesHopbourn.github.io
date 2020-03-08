@@ -114,6 +114,8 @@ prompt_context() {
 :wq
 
 source ~/.zshrc
+
+sed -i '' '36s/8/180/' ~/.zinit/plugins/zsh-users---zsh-autosuggestions/zsh-autosuggestions.zsh
 ```
 
 ![](/media/200212iterm.png)
