@@ -81,11 +81,8 @@ sed -i '' '47s/google/gg/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh
 sed -i '' '52s/github/gh/' ~/.oh-my-zsh/plugins/web-search/web-search.plugin.zsh;\
 cd ~/Library/Fonts/;\
 curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf;\
-cd ~
-
-vim ~/.oh-my-zsh/themes/agnoster.zsh-theme +90
-d5d
-i
+cd ~;\
+vim -c 90,94d -c startinsert zsh.txt +90
 ```
 
 ```
