@@ -38,7 +38,7 @@ export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152
 
 ## Command Line Tools
 ```
-hdiutil attach /Volumes/Catalina/Restore/Command_Line_Tools_for_Xcode_11.3.1.dmg;sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools.pkg  -target /;hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools
+hdiutil attach /Volumes/Catalina/Restore/Command_Line_Tools_for_Xcode_11.3.1.dmg;sudo installer -pkg /Volumes/Command\ Line\ Developer\ Tools/Command\ Line\ Tools.pkg  -target /;hdiutil unmount /Volumes/Command\ Line\ Developer\ Tools;say Done
 ```
 
 ## Homebrew
@@ -51,9 +51,9 @@ brew install lsd gnupg rmtrash coreutils stow pigz zip unzip unrar p7zip highlig
 
 brew install findutils gnu-tar gnu-sed gawk gnutls grep
 
-brew cask install keka sublime-text gpg-suite veracrypt adguard
-
 brew cask install font-source-code-pro font-hack-nerd-font
+
+brew cask install sublime-text gpg-suite veracrypt adguard
 ```
 
 ## dotfile
@@ -68,13 +68,13 @@ mkdir ~/.config/ ~/.lldb ~/.subversion ~/.tmux
 
 stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME home/
 
-stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.config/ .config/
-
 stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.lldb/ .lldb/
 
-stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.subversion/ .subversion/
-
 stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.tmux/ .tmux/
+
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.config/ .config/
+
+stow --dir=$HOME/dotfile --ignore='.DS_Store' --target=$HOME/.subversion/ .subversion/
 
 stow --dir=$HOME/dotfile --ignore='.DS_Store' -target=$HOME/Library/Preferences Preferences
 ```
