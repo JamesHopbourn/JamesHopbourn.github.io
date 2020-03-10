@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="题目昨天晚上没睡着突然有个这么个想法，觉得还行，故意挖了个坑会让人觉得这是个二进制去处理   hljs.initHighlightingOnLoad();">
+<meta name="keywords" content="CTF">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CTF 二维码出题解题思路">
+<meta property="og:url" content="https://jameshopbourn.github.io/2019/12/30/QRCode-01/index.html">
+<meta property="og:site_name" content="James Notes">
+<meta property="og:description" content="题目昨天晚上没睡着突然有个这么个想法，觉得还行，故意挖了个坑会让人觉得这是个二进制去处理   hljs.initHighlightingOnLoad();">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-03-10T09:26:07.482Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CTF 二维码出题解题思路">
+<meta name="twitter:description" content="题目昨天晚上没睡着突然有个这么个想法，觉得还行，故意挖了个坑会让人觉得这是个二进制去处理   hljs.initHighlightingOnLoad();">
+  <link rel="canonical" href="https://jameshopbourn.github.io/2019/12/30/QRCode-01/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>CTF 二维码出题解题思路 | James Notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">James Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-图说">
+      
+    
+
+    <a href="/diagram" rel="section"><i class="fa fa-fw fa-image"></i>图说</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-频道">
+      
+    
+
+    <a href="https://t.me/s/JamesNotes" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>频道</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://jameshopbourn.github.io/2019/12/30/QRCode-01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Hopbourn">
+      <meta itemprop="description" content="Make Something Wonderful.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Notes">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">CTF 二维码出题解题思路
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-30 20:05:00" itemprop="dateCreated datePublished" datetime="2019-12-30T20:05:00+08:00">2019-12-30</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-10 17:26:07" itemprop="dateModified" datetime="2020-03-10T17:26:07+08:00">2020-03-10</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>昨天晚上没睡着突然有个这么个想法，觉得还行，故意挖了个坑会让人觉得这是个二进制去处理</p>
+<link href="http://apps.bdimg.com/libs/highlight.js/9.1.0/styles/default.min.css" rel="stylesheet">
+<script src="http://apps.bdimg.com/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<a id="more"></a>
+
+<p>H4sIAPHrCV4AA4VSWw7AIAj732nk/pebZmG0pUQSDcqrBSJQ1pZzf3qIrF/QJ99l<br>q1j0TB1t6lk+N8+s6HMyTkTFOJkdH89cY51FaxbW/oP3PIGpr5zD9UXz+04rImag<br>DKfJ9X4yc90aroh7gnFaR7Ez+z7J3nufU6v5Xep7wgx9XtSeF2yR0OxzAwAA</p>
+<h2 id="出题"><a href="#出题" class="headerlink" title="出题"></a>出题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">生成 flag 二维码的 ASCII：qrencode -t ASCII &apos;flag:jbcool&apos; &gt; new.txt</span><br><span class="line">井号和空格替换：sed -i &apos;&apos; -e &apos;s/ /0/g&apos; -e &apos;s/#/1/g&apos; new.txt</span><br><span class="line">压缩为一行数字：tr  &quot;\n&quot; &quot; &quot; &lt; new.txt &gt; edit.txt</span><br><span class="line">删去多余的空格：sed -i &apos;&apos; -e &apos;s/ //g&apos; edit.txt</span><br><span class="line">压缩 01 字符：cat edit.txt | gzip &gt; edit.zip</span><br><span class="line">base64 编码：openssl base64 -in edit.zip &gt; base.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h2><ol>
+<li>base64 解码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">openssl base64 -d -in base.txt &gt; edit.zip</span><br><span class="line">unzip edit.zip</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>由于已经将多行文本压缩为一行，所以需要先对这一行数字进行分割，写一个小脚本实现：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var character = process.argv[2];</span><br><span class="line"></span><br><span class="line">function isInteger(obj) &#123;</span><br><span class="line">    return obj%1 === 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">for (var i=0;i&lt;50;i++)</span><br><span class="line">&#123;</span><br><span class="line">	line = character/i</span><br><span class="line">	if (isInteger(line) == true)&#123;</span><br><span class="line">	console.log(i +&apos;行:&apos;+ line)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>计算文件字符数并减去 1 字符的空格，然后运行这个 JS</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">wc news.txt</span><br><span class="line">       1       1     883 news.txt</span><br><span class="line">node 191227\ 行数判断.js 882</span><br><span class="line">1行:882</span><br><span class="line">2行:441</span><br><span class="line">3行:294</span><br><span class="line">6行:147</span><br><span class="line">7行:126</span><br><span class="line">9行:98</span><br><span class="line">14行:63</span><br><span class="line">18行:49</span><br><span class="line">21行:42</span><br><span class="line">42行:21</span><br><span class="line">49行:1</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>大概排除一下，盲猜应该是属于 14、18、21 这三个比较有可能，我直接用 21 来演示：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">fold -w 42 news.txt &gt; flag.txt</span><br><span class="line">111111111111110000110011110011111111111111</span><br><span class="line">110000000000110011110011000011000000000011</span><br><span class="line">110011111100110011110000110011001111110011</span><br><span class="line">110011111100110000110011000011001111110011</span><br><span class="line">110011111100110011000000110011001111110011</span><br><span class="line">110000000000110011000011110011000000000011</span><br><span class="line">111111111111110011001100110011111111111111</span><br><span class="line">000000000000000011111111110000000000000000</span><br><span class="line">111100110000111100111100000011111100111100</span><br><span class="line">000011000011000011111100001100111100111111</span><br><span class="line">110000111100111111001100110000110000110011</span><br><span class="line">001100000011001100000011000011111111001100</span><br><span class="line">001100110000111111000000110000001100001111</span><br><span class="line">000000000000000011001111001111110011000011</span><br><span class="line">111111111111110011110000001111111100111100</span><br><span class="line">110000000000110000000011110000111100000011</span><br><span class="line">110011111100110000000011001100001100001100</span><br><span class="line">110011111100110011001100000000111111001111</span><br><span class="line">110011111100110000000000111100111111000011</span><br><span class="line">110000000000110011110011001100110011000000</span><br><span class="line">111111111111110011000000000011000000001100</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>恢复正常二维码并扫描得到 flag</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">空格替换为数字0：sed -i &apos;&apos; -e &apos;s/0/ /g&apos; flag.txt</span><br><span class="line">井号替换为数字1：sed -i &apos;&apos; -e &apos;s/1/#/g&apos; flag.txt</span><br></pre></td></tr></table></figure>
+
+<p>ACSII 二维码在网页上显示字符密度较低无法扫描，可能需要用文本编辑器稍微缩放一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">##############    ##  ####  ##############</span><br><span class="line">##          ##  ####  ##    ##          ##</span><br><span class="line">##  ######  ##  ####    ##  ##  ######  ##</span><br><span class="line">##  ######  ##    ##  ##    ##  ######  ##</span><br><span class="line">##  ######  ##  ##      ##  ##  ######  ##</span><br><span class="line">##          ##  ##    ####  ##          ##</span><br><span class="line">##############  ##  ##  ##  ##############</span><br><span class="line">                ##########                </span><br><span class="line">####  ##    ####  ####      ######  ####  </span><br><span class="line">    ##    ##    ######    ##  ####  ######</span><br><span class="line">##    ####  ######  ##  ##    ##    ##  ##</span><br><span class="line">  ##      ##  ##      ##    ########  ##  </span><br><span class="line">  ##  ##    ######      ##      ##    ####</span><br><span class="line">                ##  ####  ######  ##    ##</span><br><span class="line">##############  ####      ########  ####  </span><br><span class="line">##          ##        ####    ####      ##</span><br><span class="line">##  ######  ##        ##  ##    ##    ##  </span><br><span class="line">##  ######  ##  ##  ##        ######  ####</span><br><span class="line">##  ######  ##          ####  ######    ##</span><br><span class="line">##          ##  ####  ##  ##  ##  ##      </span><br><span class="line">##############  ##          ##        ##</span><br></pre></td></tr></table></figure>
+
+<h2 id="彩蛋"><a href="#彩蛋" class="headerlink" title="彩蛋"></a>彩蛋</h2><p>嫌不够难的话，把 base64 结果大小写互转一下，decode 一下懵逼了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var text = process.argv[2];</span><br><span class="line">var text = text.split(&quot;&quot;);</span><br><span class="line"></span><br><span class="line">for(var i=0;i&lt;text.length;i++)&#123;</span><br><span class="line">if(text[i] == text[i].toLowerCase())text[i]  = text[i].toUpperCase();</span><br><span class="line">else if(text[i] == text[i].toUpperCase())text[i] = text[i].toLowerCase();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">text = text.join(&quot;&quot;);</span><br><span class="line">console.log(&quot;\n大小写互换之后的结果是：\n&quot;+text);</span><br></pre></td></tr></table></figure>
+
+<p>大小写转换后的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h4SiaphRcv4aa4vswW7aiaJ732NK/PEBzMg0PuqsdCQRbsjq1PzZF3QiRf/qj99L</span><br><span class="line">Q1J0tb1T6LK+n8+S6hmYtKtfojKDh89Cy51fAXBw/Op3pigPR5Zd9uxZ+04RiMAG</span><br><span class="line">dkFj9x4YC90AROH7GNfAr7eZ+Z7j3NUFu6V5xEP7WGX9xTsEf2Yr0oXZaWaa</span><br></pre></td></tr></table></figure>
+
+<p>进行 base64 decode 后的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">���j�Qr�k���nډ�&#123;�cJ����4&gt;�t$n�����t&quot;E���KCRt��S貾�ϒ����_�2���B˝_pp��w�(G�]��Y�N��vAc�</span><br><span class="line">                  �D�������������y�C�Xe��;f+҅�if�%</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/CTF/" rel="tag"># CTF</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/12/30/QRCode-resort/" rel="next" title="CTF 二维码行列重排">
+                  <i class="fa fa-chevron-left"></i> CTF 二维码行列重排
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/12/31/iOS-applications/" rel="prev" title="iOS 效率软件列表整理">
+                  iOS 效率软件列表整理 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#出题"><span class="nav-number">2.</span> <span class="nav-text">出题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解题"><span class="nav-number">3.</span> <span class="nav-text">解题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彩蛋"><span class="nav-number">4.</span> <span class="nav-text">彩蛋</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">James Hopbourn</p>
+  <div class="site-description" itemprop="description">Make Something Wonderful.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/JamesHopbourn" title="GitHub &rarr; https://github.com/JamesHopbourn" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:hopbourncontact@gmail.com" title="E-Mail &rarr; mailto:hopbourncontact@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://t.me/JamesHopbourn" title="Telegram &rarr; https://t.me/JamesHopbourn" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Telegram</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://t.me/JamesNotes" title="Channel &rarr; https://t.me/JamesNotes" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Channel</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://twitter.com/JamesHopbourn" title="Twitter &rarr; https://twitter.com/JamesHopbourn" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://gist.github.com/JamesHopbourn/0d5cc822f16b45ec311e03f7e255e90b" title="GPG &rarr; https://gist.github.com/JamesHopbourn/0d5cc822f16b45ec311e03f7e255e90b" rel="noopener" target="_blank"><i class="fa fa-fw fa-lock"></i>GPG</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://youtube.com/yourname" title="YouTube &rarr; https://youtube.com/yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-youtube"></i>YouTube</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">Copyright &copy;   <span itemprop="copyrightYear">2020</span>
+
+  <span class="author">James Hopbourn. All rights reserved.</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/muse.js?v=7.4.1"></script>
+
+<script src="/js/next-boot.js?v=7.4.1"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
