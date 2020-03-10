@@ -22,7 +22,9 @@ FileVault 磁盘加密
 ## Applications
 ```
 cp -r /Volumes/Catalina/软件/* /Applications;\
-cp -r /Volumes/Catalina/Surge ~/Documents
+cp -r /Volumes/Catalina/Surge ~/Documents;\
+sudo installer -pkg /Volumes/Catalina/Restore/1Password-6.8.9.pkg -target /;\
+say '1Password Installed'
 ```
 
 ## SSH
