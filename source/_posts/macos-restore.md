@@ -6,7 +6,7 @@ tags: macOS
 
 系统 U 盘里存储：
 - Surge 配置文件
-- Surge iTerm2 Spectacle
+- Surge 1Password 等常用软件
 - homebrew core cask font
 - Command Line Tools.dmg
 - SSH、GPG 私钥、账号密码加密压缩包
