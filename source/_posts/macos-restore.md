@@ -37,6 +37,16 @@ unzip /Volumes/Catalina/Restore/SSH.zip
 export https_proxy=http://127.0.0.1:6152;export http_proxy=http://127.0.0.1:6152;export all_proxy=socks5://127.0.0.1:6153
 ```
 
+## Hosts
+```
+sudo vim /etc/hosts
+
+0.0.0.0  ocsp.apple.com
+
+[ESC]
+:wq
+```
+
 ## Command Line Tools
 ```
 hdiutil attach /Volumes/Catalina/Restore/Command_Line_Tools_for_Xcode_11.3.1.dmg;\
