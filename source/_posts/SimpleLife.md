@@ -17,12 +17,12 @@ categories:
 - 整理存储卡：存储卡收纳盒
 
 ## 数据整理
-- 代码：写完第一时间推送 GitHub
+- 代码：写完立即推送 GitHub
+- 配置：stow 配合 GitHub 同步
 - 文章：MWeb 配合 iCloud 同步
 - 笔记：Bear 配合 iCloud 同步
 - 密码：1Password 配合 iCloud 同步
 - 文件：PDF Expert 配合 Dropbox 同步
-- 配置：stow 配合 GitHub 同步
 - 照片：每周整理一次，有意义的转存 SSD，其他删除
 
 ## 存储方案
