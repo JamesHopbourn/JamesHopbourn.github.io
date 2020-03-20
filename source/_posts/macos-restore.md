@@ -27,6 +27,11 @@ sudo installer -pkg /Volumes/Catalina/Restore/1Password-6.8.9.pkg -target /;\
 say '1Password Installed'
 ```
 
+## Music
+```
+cp -r /Volumes/Catalina/Music ~/Music
+```
+
 ## SSH
 ```
 unzip /Volumes/Catalina/Restore/SSH.zip
