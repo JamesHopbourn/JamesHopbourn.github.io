@@ -14,26 +14,28 @@ categories:
 
 - 整理走线：透明电线夹
 - 整理线材：衣柜挂衣杆
+- 整理存储卡：存储卡收纳盒
 
 ## 数据整理
 - 代码：写完第一时间推送 GitHub
-- 照片：每周整理一次，有意义的转存 SSD，其他删除
 - 文章：MWeb 配合 iCloud 同步
 - 笔记：Bear 配合 iCloud 同步
 - 密码：1Password 配合 iCloud 同步
 - 文件：PDF Expert 配合 Dropbox 同步
-- 系统配置文件：stow 配合 GitHub 同步
+- 配置：stow 配合 GitHub 同步
+- 照片：每周整理一次，有意义的转存 SSD，其他删除
 
 ## 存储方案
 #### 低级重要程度（系统盘）：
-- SD卡 32GB：树莓派
-- SD卡 32GB：树莓派
+- TF卡 32GB：树莓派
+- TF卡 32GB：树莓派
 - 固态系统盘 120GB：macOS + 软件 + SSH key + GPG key
 - 固态系统盘 120GB：Windows To Go
 
 #### 中级重要程度（素材盘）：
-- SD 卡 64GB：相机
+- TF 卡 64GB：相机
 - SD 卡 64GB：GoPro
+- TF 卡 64GB：备用
 - SD 卡 64GB：备用
 - 机械视频盘 1TB：vlog 视频存储备份
 
