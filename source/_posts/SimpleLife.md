@@ -16,6 +16,8 @@ categories:
 - 整理线材：衣柜挂衣杆
 - 整理存储卡：存储卡收纳盒
 
+![](/media/sort.jpg)
+
 ## 数据整理
 - 代码：写完立即推送 GitHub
 - 配置：stow 配合 GitHub 同步
