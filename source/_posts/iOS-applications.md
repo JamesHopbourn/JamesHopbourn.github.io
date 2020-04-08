@@ -2,7 +2,7 @@
 title: iOS 效率软件列表整理
 date: 2019-12-31 01:00
 tags: iOS
-categories: [清单]
+categories: [清单, 效率]
 ---
 
 ## 图片编辑
