@@ -10,6 +10,9 @@ command+Z 撤销
 command+X 剪切
 command+C 复制 copy
 command+V 粘贴
+
+<!-- more -->
+
 command+option+V 剪切
 command+D 创建副本
 command+A 全选 all
