@@ -184,6 +184,8 @@ git add -A ; git commit -m 'sed test' ; git push
 
 ### git clone 指定文件夹
 ```
+brew install svn
+
 建议先添加代理
 vim ~/.subversion/servers
 
