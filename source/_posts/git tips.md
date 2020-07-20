@@ -226,6 +226,11 @@ zstyle :omz:plugins:ssh-agent lifetime 4h
 zstyle :omz:plugins:ssh-agent identities id_rsa_personal id_rsa_company 
 ```
 
+### git alias
+```
+git config --global alias.last 'log -1'
+```
+
 ### git 忽略文件
 ```
 vim .gitignore
