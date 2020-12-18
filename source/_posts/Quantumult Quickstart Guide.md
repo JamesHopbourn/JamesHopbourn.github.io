@@ -62,6 +62,7 @@ hostname = mp.weixin.qq.com, www.zhihu.com, duckduckgo.com
 
 11. 添加 WeChat.js 重写脚本
 打开文件 → 我的 iPhone → Quantumult X → Scripts → 新建文件：WecChat.js → 粘贴以下内容
+如果不会如何在文件应用中新建文件的话，可以先把这段代码在电脑上编辑保存，发送给 iPhone 然后再选择在文件应用中打开，最后移动到 Scripts 文件夹下。
 ```
 /**
  * @supported 
