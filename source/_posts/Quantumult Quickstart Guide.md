@@ -84,5 +84,6 @@ $done({ body: JSON.stringify(obj) });
 - 在 Safari 搜索栏可以使用关键词：db ddg bd gh gm yd 直接跳转搜索网页，如果不带关键词默认重定向至 Google 搜索  
   
 [alpha87/QuantumultX](https://github.com/alpha87/QuantumultX-Profiles)  
+[Quantumult X 不完全教程](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917)
 [QuantumultX 配置文件以及常用的脚本推荐](https://www.lijianxun.top/106.html)  
 [Rules / 分流/去广告规则：Surge / Shadowrocket / Quantumult/ Quantumult X 及详细配置步骤教程（萌新小白版本）](https://limbopro.xyz/archives/2561.html)  
