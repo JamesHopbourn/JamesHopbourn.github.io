@@ -54,10 +54,12 @@ hostname = mp.weixin.qq.com, www.zhihu.com, duckduckgo.com
 打开 Quantumult X → 右下角按钮 → 滑到 MitM 分类 → 点击生成证书
 
 9. 安装 MitM 根证书  
-打开 Quantumult X → 右下角按钮 → 滑到 MitM 分类 → 点击配置证书
+打开 Quantumult X → 右下角按钮 → 滑到 MitM 分类 → 点击配置证书  
+打开设置 → 安装证书  
+打开设置 → 通用 → 关于本机 → 滑到底部证书信任设置 → 开启信任 Quantumult X 证书  
 
 10. 开启重写功能  
-打开 Quantumult X → 右下角按钮 → 滑到重写分类 → 点击开启重写
+打开 Quantumult X → 右下角按钮 → 滑到重写分类 → 点击开启重写  
 打开 Quantumult X → 右下角按钮 → 滑到 MitM 分类 → 点击开启 MitM
 
 11. 添加 WeChat.js 重写脚本  
