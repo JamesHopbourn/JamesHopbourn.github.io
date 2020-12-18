@@ -24,9 +24,6 @@ https://raw.githubusercontent.com/alpha87/QuantumultX-Profiles/master/quantumult
 
 4. 修改规则模式
 打开 Quantumult X → 右下角按钮 → 滑到底部 → 其他设置 → 选择「规则分流」
-```
-https://raw.githubusercontent.com/alpha87/QuantumultX-Profiles/master/quantumultX_profile.conf
-```
 
 5. 安装 VPN 配置
 打开 Quantumult X → 点击右上角按钮 → 安装 VPN 配置
