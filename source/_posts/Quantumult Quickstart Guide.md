@@ -82,7 +82,8 @@ $done({ body: JSON.stringify(obj) });
 - 微信公众号尾部的广告屏蔽
 - 知乎不会强制要求跳转客户端
 - 在 Safari 搜索栏可以使用关键词：db ddg bd gh gm yd 直接跳转搜索网页，如果不带关键词默认重定向至 Google 搜索  
-  
+ 
+#### 参考文章 
 [alpha87/QuantumultX](https://github.com/alpha87/QuantumultX-Profiles)  
 [Quantumult X 不完全教程](https://www.notion.so/Quantumult-X-1d32ddc6e61c4892ad2ec5ea47f00917)  
 [QuantumultX 配置文件以及常用的脚本推荐](https://www.lijianxun.top/106.html)  
