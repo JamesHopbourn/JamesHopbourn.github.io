@@ -20,7 +20,7 @@ Quantumult 快速入门教程，主要是奔着去除微信广告的功能去的
 打开 Quantumult X → 右下角按钮 → 滑到底部 → 其他设置 → 选择「规则分流」
 
 4. 安装 VPN 配置  
-打开 Quantumult X → 点击右上角按钮 → 安装 VPN 配置
+打开 Quantumult X → 点击右上角按钮 → 连接 → 安装 VPN 配置
 
 5. 添加重写规则  
 打开 Quantumult X → 右下角按钮 → 滑到底部 → 配置文件分类 → 编辑 → 找到 [rewrite_local] 所在行 → 粘贴以下内容 → 点击右上角保存
@@ -42,7 +42,7 @@ Quantumult 快速入门教程，主要是奔着去除微信广告的功能去的
 ```
 
 6. 添加 MitM 主机名  
-打开 Quantumult X → 右下角按钮 → 滑到底部 → 配置文件分类 → 编辑 → 找到 [rewrite_local] 所在行 → 粘贴以下内容 → 点击右上角保存
+打开 Quantumult X → 右下角按钮 → 滑到底部 → 配置文件分类 → 编辑 → 找到 [mitm] 所在行 → 粘贴以下内容 → 点击右上角保存
 ```
 hostname = mp.weixin.qq.com, www.zhihu.com, duckduckgo.com
 ```
@@ -65,10 +65,6 @@ hostname = mp.weixin.qq.com, www.zhihu.com, duckduckgo.com
 11. 添加 WeChat.js 重写脚本  
 打开文件 → 我的 iPhone → Quantumult X → Scripts → 新建文件：WecChat.js → 粘贴以下内容  
 ```
-/**
- * @supported 
- */
-
 // 去除微信公众号文章内广告
 var obj = JSON.parse($response.body);
 obj.advertisement_num = 0;
