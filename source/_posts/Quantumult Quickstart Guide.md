@@ -1,11 +1,11 @@
 ---
-title: Quantumult 快速入门教程
+title: Quantumult X 快速入门教程
 date: 2020-12-18 20:35
 tags: iOS
 categories: 
 ---
 
-Quantumult 快速入门教程，主要是奔着去除微信广告的功能去的。
+Quantumult X 快速入门教程，主要是奔着去除微信广告的功能去的。
 
 <!-- more -->
 
