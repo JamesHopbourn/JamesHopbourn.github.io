@@ -10,7 +10,7 @@ Quantumult X 快速入门教程，主要是奔着去除微信广告的功能去�
 <!-- more -->
 
 1. 通过美区 App Store 购买下载 Quantumult X  
-如果这步遇到困难请在 Telegram 联系 @Rocket_Girls 代购
+如果这步遇到困难请在 Telegram 联系 [@Rocket_Girls](https://t.me/Rocket_Girls) 代购
 
 2. 添加订阅地址  
 把自己购买的线路节点订阅地址复制到剪切板之后
