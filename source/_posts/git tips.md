@@ -200,9 +200,13 @@ svn ls https://github.com/JamesHopbourn/Apple-Automation/trunk
 现在仓库中的指定目录
 svn checkout https://github.com/JamesHopbourn/Apple-Automation/trunk/Shortcuts ~/Desktop
 
+更新仓库内容
 svn status
 svn add *
 svn commit -m "SVN commit"
+
+拉取仓库内容
+svn update
 ```
 
 ### passprash + ssh-agent
