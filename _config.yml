@@ -73,7 +73,7 @@ theme: next
 
 deploy:
   type: git   
-  repository: https://github.com/JamesHopbourn/JamesHopbourn.github.io
+  repository: git@hopbourn:JamesHopbourn/JamesHopbourn.github.io.git
   branch: master
 
 feed:
