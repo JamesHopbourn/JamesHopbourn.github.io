@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
+  <link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
+
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '7.4.1',
+    exturl: false,
+    sidebar: {"position":"right","display":"hide","offset":12,"onmobile":true},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
+  };
+</script>
+
+  <meta name="description" content="图片编辑Annotable：图片标注、调色板Picsew：长图拼接、水印添加、格式化状态栏LightScreen：HEX 值读取、软件图标下载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 效率软件列表整理">
+<meta property="og:url" content="https://jameshopbourn.github.io/2019/12/31/iOS%20Applications/index.html">
+<meta property="og:site_name" content="James Notes">
+<meta property="og:description" content="图片编辑Annotable：图片标注、调色板Picsew：长图拼接、水印添加、格式化状态栏LightScreen：HEX 值读取、软件图标下载">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-30T17:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-25T00:36:44.230Z">
+<meta property="article:author" content="James Hopbourn">
+<meta property="article:tag" content="iOS">
+<meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://jameshopbourn.github.io/2019/12/31/iOS%20Applications/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>iOS 效率软件列表整理 | James Notes</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">James Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-图说">
+      
+    
+
+    <a href="/diagram" rel="section"><i class="fa fa-fw fa-image"></i>图说</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-频道">
+      
+    
+
+    <a href="https://t.me/s/JamesNotes" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>频道</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+      <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block post">
+    <link itemprop="mainEntityOfPage" href="https://jameshopbourn.github.io/2019/12/31/iOS%20Applications/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="James Hopbourn">
+      <meta itemprop="description" content="Make Something Wonderful.">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="James Notes">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">iOS 效率软件列表整理
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-31 01:00:00" itemprop="dateCreated datePublished" datetime="2019-12-31T01:00:00+08:00">2019-12-31</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-05-25 08:36:44" itemprop="dateModified" datetime="2022-05-25T08:36:44+08:00">2022-05-25</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%B8%85%E5%8D%95/" itemprop="url" rel="index"><span itemprop="name">清单</span></a></span>
+
+                
+                
+                  ，
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/%E6%B8%85%E5%8D%95/%E6%95%88%E7%8E%87/" itemprop="url" rel="index"><span itemprop="name">效率</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="图片编辑"><a href="#图片编辑" class="headerlink" title="图片编辑"></a>图片编辑</h2><p>Annotable：图片标注、调色板<br>Picsew：长图拼接、水印添加、格式化状态栏<br>LightScreen：HEX 值读取、软件图标下载</p>
+<a id="more"></a>
+
+<h2 id="任务管理"><a href="#任务管理" class="headerlink" title="任务管理"></a>任务管理</h2><p>OmniFocus：近期任务管理<br>Things：长远任务管理<br>Due：重复任务管理、临时重要提醒<br>Launch Center Pro：配合 Due 添加提醒电话、短信</p>
+<h2 id="文字工具"><a href="#文字工具" class="headerlink" title="文字工具"></a>文字工具</h2><p>Drafts：文本分发、内容创做中心<br>Bear：笔记存储、整理<br>Ulysses：不公开发布的长文撰写<br>MWeb：少数派写稿、流程图、LaTeX<br>Pin：生成图片短文、剪切板内容暂存<br>锤子便签：生成图片长文<br>TextExpander：配合 Drafts 使用<br>MindNode：生成偏向美观的思维导图<br>iThoughts：生成偏向复杂的思维导图</p>
+<h2 id="日程安排"><a href="#日程安排" class="headerlink" title="日程安排"></a>日程安排</h2><p>Timepage：添加、查看日程<br>Days Matter：纪念日、朋友生日提醒</p>
+<h2 id="加密存储"><a href="#加密存储" class="headerlink" title="加密存储"></a>加密存储</h2><p>1Password：老牌密码管理软件<br>Disk Decipher：iOS VeraCrypt 客户端</p>
+<h2 id="代码工具"><a href="#代码工具" class="headerlink" title="代码工具"></a>代码工具</h2><p>Textastic：编辑 Working Copy 代码<br>Scriptable：JavaScript IDE<br>Pythonista：Python IDE<br>Working Copy：git 客户端<br>PCal：虽然是计算器，但是用来做进制转换</p>
+<h2 id="网络工具"><a href="#网络工具" class="headerlink" title="网络工具"></a>网络工具</h2><p>Surge：订阅购买的 SS 节点<br>QuantumultX：连接自建 v2ray 节点<br>Hyperapp：VPS 自动化部署软件</p>
+<h2 id="阅读软件"><a href="#阅读软件" class="headerlink" title="阅读软件"></a>阅读软件</h2><p>Reeder：Inoreader 订阅、微博关注订阅<br>PDF Expert：PDF 阅读、Dropbox 文件夹同步</p>
+<h2 id="番茄钟"><a href="#番茄钟" class="headerlink" title="番茄钟"></a>番茄钟</h2><p>Forest：支持 3 小时的番茄钟以及种树功能</p>
+<h2 id="邮件收发"><a href="#邮件收发" class="headerlink" title="邮件收发"></a>邮件收发</h2><p>邮件：登录沟通邮箱，跟人收发邮件<br>Spark：登录收件邮箱，接收订阅邮件</p>
+<h2 id="广告拦截"><a href="#广告拦截" class="headerlink" title="广告拦截"></a>广告拦截</h2><p>AdGuard：拦截广告，特别是 YouTube 广告</p>
+<h2 id="玩转-App-的两个建议"><a href="#玩转-App-的两个建议" class="headerlink" title="玩转 App 的两个建议"></a>玩转 App 的两个建议</h2><ol>
+<li>某个类型的软件直接去找最好的最贵的买下来开始用就好了。这样能节省很多精力和时间，每次我看到别人再推荐同类型的软件的时候我就可以完全可以不听不看，不用去花时间再学习新软件。</li>
+<li>我个人同类型的软件出于不同需求考虑一般会使用两个，让软件「专门化」。类似于生物里细胞分化成各种不同细胞器的概念一样，让软件专门化是提高效率的另一个途径。例如：<br>任务管理：OmniFocus 保存当下任务；Things 保存长期任务<br>提醒事项：Reminders 通过 Siri 添加临时提醒；Due 添加长期重复提醒事项<br>思维导图：MindNode 简单思维导图制作；iThoughts 复杂思维导图制作<br>邮件：Mail 和开发者联系，点击软件里面的 feedback 就可以发邮件；Spark 接收验证码、订阅邮件和绑定账号</li>
+</ol>
+<p>Surge、1Password、Forest、FancyDays、Annotable 等软件质量和口碑在同类产品中皆属上乘，所以这些类型的软件我只用它们，这些-来一直都是。</p>
+<p>用 iPhone 也是类似的道理，省心。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+          
+            
+          
+          <div class="post-tags">
+            
+              <a href="/tags/iOS/" rel="tag"># iOS</a>
+            
+          </div>
+        
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/12/30/QRCode%20Bniary/" rel="next" title="CTF 二维码出题解题思路">
+                  <i class="fa fa-chevron-left"></i> CTF 二维码出题解题思路
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/12/31/YouTube%20Recommand/" rel="prev" title="YouTube 推荐频道列表">
+                  YouTube 推荐频道列表 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#图片编辑"><span class="nav-number">1.</span> <span class="nav-text">图片编辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务管理"><span class="nav-number">2.</span> <span class="nav-text">任务管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字工具"><span class="nav-number">3.</span> <span class="nav-text">文字工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日程安排"><span class="nav-number">4.</span> <span class="nav-text">日程安排</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#加密存储"><span class="nav-number">5.</span> <span class="nav-text">加密存储</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码工具"><span class="nav-number">6.</span> <span class="nav-text">代码工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络工具"><span class="nav-number">7.</span> <span class="nav-text">网络工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读软件"><span class="nav-number">8.</span> <span class="nav-text">阅读软件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#番茄钟"><span class="nav-number">9.</span> <span class="nav-text">番茄钟</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#邮件收发"><span class="nav-number">10.</span> <span class="nav-text">邮件收发</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#广告拦截"><span class="nav-number">11.</span> <span class="nav-text">广告拦截</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#玩转-App-的两个建议"><span class="nav-number">12.</span> <span class="nav-text">玩转 App 的两个建议</span></a></li></ol></div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">James Hopbourn</p>
+  <div class="site-description" itemprop="description">Make Something Wonderful.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/%20%7C%7C%20archive">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span>
+        
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        <span class="site-state-item-count">28</span>
+        <span class="site-state-item-name">标签</span>
+        
+      </div>
+    
+  </nav>
+</div>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/JamesHopbourn" title="GitHub &amp;rarr; https:&#x2F;&#x2F;github.com&#x2F;JamesHopbourn" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:hopbourncontact@gmail.com" title="E-Mail &amp;rarr; mailto:hopbourncontact@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://t.me/JamesHopbourn" title="Telegram &amp;rarr; https:&#x2F;&#x2F;t.me&#x2F;JamesHopbourn" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Telegram</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://t.me/JamesNotes" title="Channel &amp;rarr; https:&#x2F;&#x2F;t.me&#x2F;JamesNotes" rel="noopener" target="_blank"><i class="fa fa-fw fa-telegram"></i>Channel</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://twitter.com/JamesHopbourn" title="Twitter &amp;rarr; https:&#x2F;&#x2F;twitter.com&#x2F;JamesHopbourn" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://gist.github.com/JamesHopbourn/0d5cc822f16b45ec311e03f7e255e90b" title="GPG &amp;rarr; https:&#x2F;&#x2F;gist.github.com&#x2F;JamesHopbourn&#x2F;0d5cc822f16b45ec311e03f7e255e90b" rel="noopener" target="_blank"><i class="fa fa-fw fa-lock"></i>GPG</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://youtube.com/yourname" title="YouTube &amp;rarr; https:&#x2F;&#x2F;youtube.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fa fa-fw fa-youtube"></i>YouTube</a>
+      </span>
+    
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">Copyright &copy;   <span itemprop="copyrightYear">2022</span>
+
+  <span class="author">James Hopbourn. All rights reserved.</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+<script src="/js/utils.js?v=7.4.1.js"></script>
+
+<script src="/js/motion.js?v=7.4.1.js"></script>
+
+
+<script src="/js/schemes/muse.js?v=7.4.1.js"></script>
+
+
+
+<script src="/js/next-boot.js?v=7.4.1.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
