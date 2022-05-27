@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成绩查询</title>
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script>
+      window.onload = () => {
+        document.title = "成绩查询";
+        Overall();
+      }
+
+      function setData(url){
+        // $("table tr").remove();
+        $("tbody").empty();
+        $.getJSON(url, result => {
+          text = [];
+          text.push("<tr>");
+          text.push("<th>排名</th>");
+          text.push("<th>名字</th>");
+          text.push("<th>性别</th>");
+          text.push("<th>计时时间</th>");
+          text.push("<th>配速</th>");
+          text.push("</tr>");
+          for (let index = 0; index < result.length; index++) {
+            data = result[index];
+            text.push("<tr>")
+            text.push(`<td>${index}</td>`)
+            text.push(`<td><a href="./certificate/${data['name']}">${data['name']}</a></td>`)
+            text.push(`<td>${data['gender']}</td>`)
+            text.push(`<td>${data['time']}</td>`)
+            text.push(`<td>${data['pace']}</td>`)
+            text.push("</tr>")
+          }
+          $('tbody').append(text.join("\n"));
+        })     
+      }
+      
+      function Overall(){
+        setData('data/overall.json');
+      }
+      function OrderByMan() {
+        setData('data/man.json');
+      }
+
+      function OrderByWoman(){
+        setData('data/woman.json');
+      }
+      </script>
+</head>
+<body>
+  <div>2022 特跑族全国 10K 排位赛成绩</div>
+  <button onclick="Overall()">全体排名</button>
+  <button onclick="OrderByMan()">男子排名</button>
+  <button onclick="OrderByWoman()">女子排名</button>
+  
+  <div style="margin-bottom: 20px;"></div>
+
+  <table>
+      <tr>
+        <th>排名</th>
+        <th>名字</th>
+        <th>性别</th>
+        <th>计时时间</th>
+        <th>配速</th>
+      </tr>
+      <!-- <tbody>
+
+      </tbody> -->
+    </table>
+</body>
+</html>
