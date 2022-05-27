@@ -10,11 +10,10 @@
     <script>
       window.onload = () => {
         document.title = "成绩查询";
-        Overall();
+        setData('data/overall.json')
       }
 
       function setData(url){
-        // $("table tr").remove();
         $("tbody").empty();
         $.getJSON(url, result => {
           text = [];
@@ -38,24 +37,13 @@
           $('tbody').append(text.join("\n"));
         })     
       }
-      
-      function Overall(){
-        setData('data/overall.json');
-      }
-      function OrderByMan() {
-        setData('data/man.json');
-      }
-
-      function OrderByWoman(){
-        setData('data/woman.json');
-      }
       </script>
 </head>
 <body>
   <div>2022 特跑族全国 10K 排位赛成绩</div>
-  <button onclick="Overall()">全体排名</button>
-  <button onclick="OrderByMan()">男子排名</button>
-  <button onclick="OrderByWoman()">女子排名</button>
+  <button onclick="setData('data/overall.json')">全体排名</button>
+  <button onclick="setData('data/man.json')">男子排名</button>
+  <button onclick="setData('data/woman.json')">女子排名</button>
   
   <div style="margin-bottom: 20px;"></div>
 
