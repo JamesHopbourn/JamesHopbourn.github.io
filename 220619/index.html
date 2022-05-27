@@ -56,15 +56,15 @@
   };
 </script>
 
-  <meta name="description" content="成绩查询                      window.onload &#x3D; () &#x3D;&gt; {         document.title &#x3D; &quot;成绩查询&quot;;         setData(&#39;data&#x2F;overall.json&#39;)       }        function setData(url){         $(&quot;tbody&quot;).e">
+  <meta name="description" content="#title {         text-align: center;         font-size: 22px;       }        #button-pref {         margin-top: 10px;         margin-bottom: 20px;         text-a">
 <meta property="og:type" content="website">
 <meta property="og:title" content="James Notes">
 <meta property="og:url" content="https://jameshopbourn.github.io/220619/index.html">
 <meta property="og:site_name" content="James Notes">
-<meta property="og:description" content="成绩查询                      window.onload &#x3D; () &#x3D;&gt; {         document.title &#x3D; &quot;成绩查询&quot;;         setData(&#39;data&#x2F;overall.json&#39;)       }        function setData(url){         $(&quot;tbody&quot;).e">
+<meta property="og:description" content="#title {         text-align: center;         font-size: 22px;       }        #button-pref {         margin-top: 10px;         margin-bottom: 20px;         text-a">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-27T18:43:12.601Z">
-<meta property="article:modified_time" content="2022-05-27T18:43:12.601Z">
+<meta property="article:published_time" content="2022-05-27T19:00:41.742Z">
+<meta property="article:modified_time" content="2022-05-27T19:00:41.742Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://jameshopbourn.github.io/220619/">
@@ -266,13 +266,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>成绩查询</title>
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <style>
+      #title {
+        text-align: center;
+        font-size: 22px;
+      }
+
+      #button-pref {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    </style>
     <script>
       window.onload = () => {
         document.title = "成绩查询";
-        setData('data/overall.json')
+        setData('data/overall.json');
       }
 
       function setData(url){
@@ -290,7 +301,7 @@
             data = result[index];
             text.push("<tr>")
             text.push(`<td>${index}</td>`)
-            text.push(`<td><a href="./certificate/${data['name']}">${data['name']}</a></td>`)
+            text.push(`<td><a href="./certificate/001.png">${data['name']}</a></td>`)
             text.push(`<td>${data['gender']}</td>`)
             text.push(`<td>${data['time']}</td>`)
             text.push(`<td>${data['pace']}</td>`)
@@ -303,22 +314,18 @@
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>
 <body>
-  <div style="text-align: center;text-size-adjust: 40px;">2022 特跑族全国 10K 排位赛成绩</div>
-  <button onclick="setData('data/overall.json')">全体排名</button>
-  <button onclick="setData('data/man.json')">男子排名</button>
-  <button onclick="setData('data/woman.json')">女子排名</button>
+  <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
   
-  <div style="margin-bottom: 20px;"></div>
+  <div id="button-pref">
+    <button onclick="setData('data/overall.json')">全体排名</button>
+    <button onclick="setData('data/man.json')">男子排名</button>
+    <button onclick="setData('data/woman.json')">女子排名</button>
+  </div>
 
   <table>
-      <tr>
-        <th>排名</th>
-        <th>名字</th>
-        <th>性别</th>
-        <th>计时时间</th>
-        <th>配速</th>
-      </tr>
-    </table>
+    <tr>
+    </tr>
+  </table>
 </body>
 </html>
 
