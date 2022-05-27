@@ -63,8 +63,8 @@
 <meta property="og:site_name" content="James Notes">
 <meta property="og:description" content="#title {         text-align: center;         font-size: 22px;       }        #button-pref {         margin-top: 10px;         margin-bottom: 20px;         text-a">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-27T19:00:41.742Z">
-<meta property="article:modified_time" content="2022-05-27T19:00:41.742Z">
+<meta property="article:published_time" content="2022-05-27T19:15:51.357Z">
+<meta property="article:modified_time" content="2022-05-27T19:15:51.357Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://jameshopbourn.github.io/220619/">
@@ -268,7 +268,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-    <style>
+    <style type="text/css">
       #title {
         text-align: center;
         font-size: 22px;
@@ -279,6 +279,10 @@
         margin-bottom: 20px;
         text-align: center;
       }
+
+      table, th, td {
+        text-align: center;
+      }
     </style>
     <script>
       window.onload = () => {
@@ -286,7 +290,7 @@
         setData('data/overall.json');
       }
 
-      function setData(url){
+      setData = (url) => {
         $("tbody").empty();
         $.getJSON(url, result => {
           text = [];
