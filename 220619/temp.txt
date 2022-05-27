@@ -1,0 +1,15 @@
+        // $("table tr").remove();
+        $.getJSON(url, result => {
+          text = [];
+          keys = Object.keys(result);
+          for (let index = 0; index < keys.length; index++) {
+            data = result[keys[index]];
+            text.push("<tr>")
+            text.push(`<td><a href="./certificate/001.png">${data['性别']}</a></td>`)
+            text.push(`<td>${data['净时间']}</td>`)
+            text.push('<td>Germany</td>')
+            text.push(`<td>${data['配速']}</td>`)
+            text.push("</tr>")
+          }
+          $('tbody').append(text.join("\n"));
+        })     
