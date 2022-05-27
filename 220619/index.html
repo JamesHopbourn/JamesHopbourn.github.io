@@ -56,15 +56,15 @@
   };
 </script>
 
-  <meta name="description" content="成绩查询                      window.onload &#x3D; () &#x3D;&gt; {         document.title &#x3D; &quot;成绩查询&quot;;         Overall();       }        function setData(url){         &#x2F;&#x2F; $(&quot;table tr&quot;).remove();">
+  <meta name="description" content="成绩查询                      window.onload &#x3D; () &#x3D;&gt; {         document.title &#x3D; &quot;成绩查询&quot;;         setData(&#39;data&#x2F;overall.json&#39;)       }        function setData(url){         $(&quot;tbody&quot;).e">
 <meta property="og:type" content="website">
 <meta property="og:title" content="James Notes">
 <meta property="og:url" content="https://jameshopbourn.github.io/220619/index.html">
 <meta property="og:site_name" content="James Notes">
-<meta property="og:description" content="成绩查询                      window.onload &#x3D; () &#x3D;&gt; {         document.title &#x3D; &quot;成绩查询&quot;;         Overall();       }        function setData(url){         &#x2F;&#x2F; $(&quot;table tr&quot;).remove();">
+<meta property="og:description" content="成绩查询                      window.onload &#x3D; () &#x3D;&gt; {         document.title &#x3D; &quot;成绩查询&quot;;         setData(&#39;data&#x2F;overall.json&#39;)       }        function setData(url){         $(&quot;tbody&quot;).e">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-27T18:12:55.020Z">
-<meta property="article:modified_time" content="2022-05-27T18:12:55.020Z">
+<meta property="article:published_time" content="2022-05-27T18:43:12.601Z">
+<meta property="article:modified_time" content="2022-05-27T18:43:12.601Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://jameshopbourn.github.io/220619/">
@@ -272,11 +272,10 @@
     <script>
       window.onload = () => {
         document.title = "成绩查询";
-        Overall();
+        setData('data/overall.json')
       }
 
       function setData(url){
-        // $("table tr").remove();
         $("tbody").empty();
         $.getJSON(url, result => {
           text = [];
@@ -300,25 +299,14 @@
           $('tbody').append(text.join("\n"));
         })     
       }
-      
-      function Overall(){
-        setData('data/overall.json');
-      }
-      function OrderByMan() {
-        setData('data/man.json');
-      }
-
-      function OrderByWoman(){
-        setData('data/woman.json');
-      }
       </script>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>
 <body>
-  <div>2022 特跑族全国 10K 排位赛成绩</div>
-  <button onclick="Overall()">全体排名</button>
-  <button onclick="OrderByMan()">男子排名</button>
-  <button onclick="OrderByWoman()">女子排名</button>
+  <div style="text-align: center;text-size-adjust: 40px;">2022 特跑族全国 10K 排位赛成绩</div>
+  <button onclick="setData('data/overall.json')">全体排名</button>
+  <button onclick="setData('data/man.json')">男子排名</button>
+  <button onclick="setData('data/woman.json')">女子排名</button>
   
   <div style="margin-bottom: 20px;"></div>
 
@@ -330,9 +318,6 @@
         <th>计时时间</th>
         <th>配速</th>
       </tr>
-      <!-- <tbody>
-
-      </tbody> -->
     </table>
 </body>
 </html>
