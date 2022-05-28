@@ -31,10 +31,8 @@
 
     setData = (url, type) => {
       $.getJSON(url, result => {
-        text = [];
-        head = ['<tr>', `<th>${type}</th>`, '<th>号码</th>', '<th>名字</th>', 
+        text = ['<tr>', `<th>${type}</th>`, '<th>号码</th>', '<th>名字</th>', 
                 '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>', '</tr>'];
-        head.forEach(item => text.push(item));
         for (let index = 0; index < result.length; index++) {
           data = result[index];
           text.push('<tr>')
