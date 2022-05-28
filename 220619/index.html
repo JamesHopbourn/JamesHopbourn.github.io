@@ -63,8 +63,8 @@
 <meta property="og:site_name" content="James Notes">
 <meta property="og:description" content="#title {         text-align: center;         font-size: 22px;       }        #button-pref {         margin-top: 10px;         margin-bottom: 20px;         text-a">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-27T19:15:51.357Z">
-<meta property="article:modified_time" content="2022-05-27T19:15:51.357Z">
+<meta property="article:published_time" content="2022-05-28T02:03:42.440Z">
+<meta property="article:modified_time" content="2022-05-28T02:03:42.440Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://jameshopbourn.github.io/220619/">
@@ -304,8 +304,8 @@
           for (let index = 0; index < result.length; index++) {
             data = result[index];
             text.push("<tr>")
-            text.push(`<td>${index}</td>`)
-            text.push(`<td><a href="./certificate/001.png">${data['name']}</a></td>`)
+            text.push(`<td>${index+1}</td>`)
+            text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
             text.push(`<td>${data['gender']}</td>`)
             text.push(`<td>${data['time']}</td>`)
             text.push(`<td>${data['pace']}</td>`)
