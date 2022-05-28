@@ -63,8 +63,8 @@
 <meta property="og:site_name" content="James Notes">
 <meta property="og:description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子排名     女子排名                            window.onload &#x3D; () &#x3D;&gt; {       document.title &#x3D; &#39;成绩查询&#39;;       setData(&#39;data&#x2F;overall.json&#39;, &#39;全体">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-05-28T18:07:27.298Z">
-<meta property="article:modified_time" content="2022-05-28T18:07:27.298Z">
+<meta property="article:published_time" content="2022-05-28T18:19:55.731Z">
+<meta property="article:modified_time" content="2022-05-28T18:19:55.731Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://jameshopbourn.github.io/220619/">
@@ -294,18 +294,19 @@
 
     setData = (url, type) => {
       $.getJSON(url, result => {
+        medal = {1: "🏅️", 2: "🥈", 3: "🥉"};
         text = ['<tr>', `<th>${type}</th>`, '<th>号码</th>', '<th>名字</th>', 
                 '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>', '</tr>'];
         for (let index = 0; index < result.length; index++) {
           data = result[index];
-          text.push('<tr>')
-          text.push(`<td>第 ${data['rank']} 名</td>`)
-          text.push(`<td>${data['bib_no']}</td>`)
-          text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
-          text.push(`<td>${data['gender']}</td>`)
-          text.push(`<td>${data['time']}</td>`)
-          text.push(`<td>${data['pace']}</td>`)
-          text.push('</tr>')
+          text.push('<tr>');
+          text.push(`<td>${medal[data['rank']] || `第 ${data['rank']} 名`}</td>`);
+          text.push(`<td>${data['bib_no']}</td>`);
+          text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`);
+          text.push(`<td>${data['gender']}</td>`);
+          text.push(`<td>${data['time']}</td>`);
+          text.push(`<td>${data['pace']}</td>`);
+          text.push('</tr>');
         }
         $('tbody').empty().append(text.join('\n'));
       })
