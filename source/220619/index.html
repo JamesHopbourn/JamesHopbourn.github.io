@@ -1,61 +1,12 @@
----
-description: 2022 特跑族全国 10K 排位赛成绩
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-    <style type="text/css">
-      #title {
-        text-align: center;
-        font-size: 22px;
-      }
-
-      #button-pref {
-        margin-top: 10px;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      table, th, td {
-        text-align: center;
-      }
-    </style>
-    <script>
-      window.onload = () => {
-        document.title = "成绩查询";
-        setData('data/overall.json', '全体排名');
-      }
-
-      setData = (url, type) => {
-        $.getJSON(url, result => {
-          text = []; 
-          text.push("<tr>");
-          text.push(`<th>${type}</th>`);
-          text.push("<th>名字</th>");
-          text.push("<th>性别</th>");
-          text.push("<th>计时时间</th>");
-          text.push("<th>配速</th>");
-          text.push("</tr>");
-          for (let index = 0; index < result.length; index++) {
-            data = result[index];
-            text.push("<tr>")
-            text.push(`<td>${index+1}</td>`)
-            text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
-            text.push(`<td>${data['gender']}</td>`)
-            text.push(`<td>${data['time']}</td>`)
-            text.push(`<td>${data['pace']}</td>`)
-            text.push("</tr>")
-          }
-          $('tbody').empty().append(text.join("\n"));
-        })     
-      }
-      </script>
 </head>
 <body>
   <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
@@ -70,5 +21,35 @@ description: 2022 特跑族全国 10K 排位赛成绩
     <tr>
     </tr>
   </table>
+  <script>
+    window.onload = () => {
+      document.title = "成绩查询";
+      setData('data/overall.json', '全体排名');
+    }
+
+    setData = (url, type) => {
+      $.getJSON(url, result => {
+        text = []; 
+        text.push("<tr>");
+        text.push(`<th>${type}</th>`);
+        text.push("<th>名字</th>");
+        text.push("<th>性别</th>");
+        text.push("<th>计时时间</th>");
+        text.push("<th>配速</th>");
+        text.push("</tr>");
+        for (let index = 0; index < result.length; index++) {
+          data = result[index];
+          text.push("<tr>")
+          text.push(`<td>${index+1}</td>`)
+          text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
+          text.push(`<td>${data['gender']}</td>`)
+          text.push(`<td>${data['time']}</td>`)
+          text.push(`<td>${data['pace']}</td>`)
+          text.push("</tr>")
+        }
+        $('tbody').empty().append(text.join("\n"));
+      })     
+    }
+    </script>
 </body>
 </html>
