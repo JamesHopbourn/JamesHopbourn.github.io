@@ -18,7 +18,7 @@
         CreateCertificate = (url) => {
             $.getJSON(url, result => {
                 // 元素赋值
-                let keys = ['name', 'bib_no', 'gender', 'pace', 'time'];
+                let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
                 let query = new URLSearchParams(window.location.search).get('index');
                 for (let index = 0; index < keys.length; index++) {
                     $(`#${keys[index]}`).text(result[query][keys[index]]);
@@ -40,7 +40,7 @@
         <div id="name" style="top: 630px"></div>
         <div id="bib_no" style="top: 720px"></div>
         <div id="time" style="top: 810px"></div>
-        <div id="pace" style="top: 900px"></div>
+        <div id="rank" style="top: 900px"></div>
       </div>
 </body>
 </html>
