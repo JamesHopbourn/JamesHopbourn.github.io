@@ -17,17 +17,17 @@
 
         CreateCertificate = (url) => {
             $.getJSON(url, result => {
-                let query = new URLSearchParams(window.location.search).get('index');
                 // 元素赋值
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time'];
+                let query = new URLSearchParams(window.location.search).get('index');
                 for (let index = 0; index < keys.length; index++) {
                     $(`#${keys[index]}`).text(result[query][keys[index]]);
                 }
                 // 生成证书图片
-                html2canvas("#certificate").then((canvas) => {
+                html2canvas($("#certificate")).then((canvas) => {
                     let img = new Image();
                     img.src = canvas.toDataURL();
-                    ("#certificate").html(img);
+                    ($("#certificate")).html(img);
                 });
             })     
         }
