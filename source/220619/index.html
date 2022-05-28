@@ -31,18 +31,19 @@
 
     setData = (url, type) => {
       $.getJSON(url, result => {
+        medal = {1: "🏅️", 2: "🥈", 3: "🥉"};
         text = ['<tr>', `<th>${type}</th>`, '<th>号码</th>', '<th>名字</th>', 
                 '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>', '</tr>'];
         for (let index = 0; index < result.length; index++) {
           data = result[index];
-          text.push('<tr>')
-          text.push(`<td>${data['rank']}</td>`)
-          text.push(`<td>${data['bib_no']}</td>`)
-          text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
-          text.push(`<td>${data['gender']}</td>`)
-          text.push(`<td>${data['time']}</td>`)
-          text.push(`<td>${data['pace']}</td>`)
-          text.push('</tr>')
+          text.push('<tr>');
+          text.push(`<td>${medal[data['rank']] || `第 ${data['rank']} 名`}</td>`);
+          text.push(`<td>${data['bib_no']}</td>`);
+          text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`);
+          text.push(`<td>${data['gender']}</td>`);
+          text.push(`<td>${data['time']}</td>`);
+          text.push(`<td>${data['pace']}</td>`);
+          text.push('</tr>');
         }
         $('tbody').empty().append(text.join('\n'));
       })
