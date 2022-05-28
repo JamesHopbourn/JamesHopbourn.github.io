@@ -1,0 +1,14 @@
+#title {
+    text-align: center;
+    font-size: 22px;
+}
+
+#button-pref {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table, th, td {
+    text-align: center;
+}
