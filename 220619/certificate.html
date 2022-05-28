@@ -11,8 +11,8 @@
     <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
     <script>
         window.onload = () => {
-          document.title = "证书下载";
-          CreateCertificate(new URLSearchParams(window.location.search).get('type'));
+            document.title = "证书下载";
+            CreateCertificate(new URLSearchParams(window.location.search).get('type'));
         }
 
         CreateCertificate = (url) => {
