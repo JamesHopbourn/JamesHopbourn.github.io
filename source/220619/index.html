@@ -1,3 +1,7 @@
+---
+description: 2022 特跑族全国 10K 排位赛成绩
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
     <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-    <style>
+    <style type="text/css">
       #title {
         text-align: center;
         font-size: 22px;
@@ -17,6 +21,10 @@
         margin-bottom: 20px;
         text-align: center;
       }
+
+      table, th, td {
+        text-align: center;
+      }
     </style>
     <script>
       window.onload = () => {
@@ -24,8 +32,7 @@
         setData('data/overall.json');
       }
 
-      function setData(url){
-        $("tbody").empty();
+      setData = (url) => {
         $.getJSON(url, result => {
           text = [];
           text.push("<tr>");
@@ -38,14 +45,14 @@
           for (let index = 0; index < result.length; index++) {
             data = result[index];
             text.push("<tr>")
-            text.push(`<td>${index}</td>`)
-            text.push(`<td><a href="./certificate/001.png">${data['name']}</a></td>`)
+            text.push(`<td>${index+1}</td>`)
+            text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
             text.push(`<td>${data['gender']}</td>`)
             text.push(`<td>${data['time']}</td>`)
             text.push(`<td>${data['pace']}</td>`)
             text.push("</tr>")
           }
-          $('tbody').append(text.join("\n"));
+          $('tbody').empty().append(text.join("\n"));
         })     
       }
       </script>
