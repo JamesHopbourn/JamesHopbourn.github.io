@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css" type="text/css" />
-    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
-    <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
+  <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 </head>
+
 <body>
   <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
-  
+
   <div id="button-pref">
     <button onclick="setData('data/overall.json', '全体排名')">全体排名</button>
     <button onclick="setData('data/man.json', '男子排名')">男子排名</button>
@@ -29,7 +31,7 @@
 
     setData = (url, type) => {
       $.getJSON(url, result => {
-        text = []; 
+        text = [];
         text.push("<tr>");
         text.push(`<th>${type}</th>`);
         text.push("<th>名字</th>");
@@ -40,7 +42,7 @@
         for (let index = 0; index < result.length; index++) {
           data = result[index];
           text.push("<tr>")
-          text.push(`<td>${index+1}</td>`)
+          text.push(`<td>${data['rank']}</td>`)
           text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${data['name']}</a></td>`)
           text.push(`<td>${data['gender']}</td>`)
           text.push(`<td>${data['time']}</td>`)
@@ -48,8 +50,9 @@
           text.push("</tr>")
         }
         $('tbody').empty().append(text.join("\n"));
-      })     
+      })
     }
-    </script>
+  </script>
 </body>
+
 </html>
