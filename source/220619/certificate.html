@@ -1,0 +1,49 @@
+---
+layout: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>证书下载</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script>
+        window.onload = () => {
+          document.title = "证书下载";
+          CreateCertificate(new URLSearchParams(window.location.search).get('type'));
+        }
+
+        CreateCertificate = (url) => {
+            $.getJSON(url, result => {
+                let query = new URLSearchParams(window.location.search).get('index');
+                // 元素赋值
+                let keys = ['name', 'bib_no', 'gender', 'pace', 'time'];
+                for (let index = 0; index < keys.length; index++) {
+                    $(`#${keys[index]}`).text(result[query][keys[index]]);
+                }
+                // 生成证书图片
+                let testElement = $("#certificate");
+                html2canvas(testElement).then((canvas) => {
+                    let img = new Image();
+                    img.src = canvas.toDataURL();
+                    testElement.html(img);
+                });
+            })     
+        }
+  </script>
+</head>
+<body>
+    <h1>👇 长按保存成绩证书</h1>
+    <div id="certificate">
+        <div id="name" style="top: 630px"></div>
+        <div id="bib_no" style="top: 720px"></div>
+        <div id="time" style="top: 810px"></div>
+        <div id="pace" style="top: 900px"></div>
+      </div>
+</body>
+</html>
