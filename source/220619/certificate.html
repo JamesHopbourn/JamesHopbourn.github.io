@@ -19,12 +19,12 @@ layout: false
         }
 
         CreateCertificate = (url) => {
-            $.getJSON(url, result => {
+            $.getJSON(url, data => {
                 // 元素赋值
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
                 let query = new URLSearchParams(window.location.search).get('index');
                 for (let index = 0; index < keys.length; index++) {
-                    $(`#${keys[index]}`).text(result[query][keys[index]]);
+                    $(`#${keys[index]}`).text(data[query][keys[index]]);
                 }
                 // 生成证书图片
                 html2canvas($("#certificate")).then((canvas) => {
