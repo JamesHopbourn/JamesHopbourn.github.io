@@ -8,6 +8,23 @@
   <link rel="stylesheet" href="css/index.css" type="text/css" />
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
   <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+  <style>
+    .footer-img {
+        display:flex;
+        border: none;
+        justify-content: center;     
+    }
+
+    img {
+        margin: 4px;
+        align-items: center;
+    }
+
+    #id {
+      text-align: left !important;
+    }
+    .textbottom {vertical-align:text-bottom;}
+</style>
 </head>
 
 <body>
@@ -15,14 +32,15 @@
 
   <div id="button-pref">
     <button onclick="setData('data/overall.json', '全体排名')">全体排名</button>
-    <button onclick="setData('data/man.json', '男子排名')">男子排名</button>
-    <button onclick="setData('data/woman.json', '女子排名')">女子排名</button>
+    <button onclick="setData('data/man.json', '男子组排名')">男子组排名</button>
+    <button onclick="setData('data/woman.json', '女子组排名')">女子组排名</button>
   </div>
 
   <table>
     <tr>
     </tr>
   </table>
+  <div class="footer-img"><img src="images/xetp.png"></div>
   <script>
     window.onload = () => {
       $('title').text('成绩查询');
@@ -32,8 +50,14 @@
     setData = (url, type) => {
       $.getJSON(url, data => {
         medal = {1: "🏅️", 2: "🥈", 3: "🥉"};
-        text = ['<tr>', `<td colspan="6" id="type">${type}</td>`, '</tr>', '<tr>', `<th>排名</th>`, '<th>号码</th>',
-            '<th>名字</th>', '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>', '</tr>'];
+        text = ['<tr>', `<td colspan="6" id="type">${type}</td>`, '</tr>',
+          '<tr>',
+            '<td colspan="3" id="type">比赛日期：2022/06/19</br>比赛地点：木兰溪</td>',
+            '<td colspan="3" id="type">距离：10 公里</br>圈数：一圈</td>',
+          '</tr>',
+          '</tr>', `<th>排名</th>`, '<th>号码</th>','<th>名字</th>', 
+          '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>','</tr>'
+        ];
         for (let index = 0; index < data.length; index++) {
           item = data[index];
           text.push('<tr>');
