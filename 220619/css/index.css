@@ -1,6 +1,7 @@
 #title {
     text-align: center;
     font-size: 22px;
+    font-weight: 100px;
 }
 
 #button-pref {
@@ -11,4 +12,10 @@
 
 table, th, td {
     text-align: center;
+}
+
+/* 禁用主题本身的 img 渲染效果 */
+.post-body img {
+    padding: none !important;
+    border: none !important;
 }
