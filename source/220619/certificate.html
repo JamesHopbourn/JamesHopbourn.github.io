@@ -15,11 +15,11 @@ layout: false
     <script>
         window.onload = () => {
             document.title = "证书下载";
-            CreateCertificate(new URLSearchParams(window.location.search).get('type'));
+            CreateCertificate(new URLSearchParams(window.location.search).get('group'));
         }
 
-        CreateCertificate = (url) => {
-            $.getJSON(`data/${url}.json`, data => {
+        CreateCertificate = (group) => {
+            $.getJSON(`data/${group}.json`, data => {
                 // 元素赋值
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
                 let query = new URLSearchParams(window.location.search).get('index');

@@ -29,11 +29,11 @@
       setData(sessionStorage.getItem('group') || '全体排名');
     }
 
-    setData = (type) => {
-      sessionStorage.setItem('group', type);
+    setData = (group) => {
+      sessionStorage.setItem('group', group);
       mapper = {"全体排名": "overall", "男子排名": "man", "女子排名": "woman"};
-      $.getJSON(`data/${mapper[type]}.json`, data => {
-        text = ['<tr>', `<td colspan="6" id="type">${type}</td>`, '</tr>',
+      $.getJSON(`data/${mapper[group]}.json`, data => {
+        text = ['<tr>', `<td colspan="6" id="type">${group}</td>`, '</tr>',
           '<tr>',
             '<td colspan="3" id="type">地点：木兰溪</br>日期：2022/06/19</td>',
             '<td colspan="3" id="type">圈数：一圈</br>距离：10 公里</td>',
@@ -45,7 +45,7 @@
           text.push('<tr>');
           text.push(`<td>${data[index]['rank']}</td>`);
           text.push(`<td>${data[index]['bib_no']}</td>`);
-          text.push(`<td><a href="./certificate.html?type=${mapper[type]}&index=${index}">${data[index]['name']}</a></td>`);
+          text.push(`<td><a href="./certificate.html?group=${mapper[group]}&index=${index}">${data[index]['name']}</a></td>`);
           text.push(`<td>${data[index]['gender']}</td>`);
           text.push(`<td>${data[index]['time']}</td>`);
           text.push(`<td>${data[index]['pace']}</td>`);
