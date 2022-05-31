@@ -16,7 +16,7 @@
         }
 
         CreateCertificate = (url) => {
-            $.getJSON(url, data => {
+            $.getJSON(`data/${url}.json`, data => {
                 // 元素赋值
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
                 let query = new URLSearchParams(window.location.search).get('index');
