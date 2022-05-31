@@ -56,16 +56,16 @@
   };
 </script>
 
-  <meta name="description" content=".footer-img {         display:flex;         border: none;         justify-content: center;          }      img {         margin: 4px;         align-items: center;     }">
+  <meta name="description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(&#39;data&#x2F;overall.json&#39;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="James Notes">
 <meta property="og:url" content="https://jameshopbourn.github.io/220619/index.html">
 <meta property="og:site_name" content="James Notes">
-<meta property="og:description" content=".footer-img {         display:flex;         border: none;         justify-content: center;          }      img {         margin: 4px;         align-items: center;     }">
+<meta property="og:description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(&#39;data&#x2F;overall.json&#39;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jameshopbourn.github.io/220619/images/xetp.png">
-<meta property="article:published_time" content="2022-05-30T14:33:07.775Z">
-<meta property="article:modified_time" content="2022-05-30T14:33:07.775Z">
+<meta property="article:published_time" content="2022-05-31T02:38:45.860Z">
+<meta property="article:modified_time" content="2022-05-31T02:38:45.860Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jameshopbourn.github.io/220619/images/xetp.png">
@@ -272,23 +272,6 @@
   <link rel="stylesheet" href="css/index.css" type="text/css" />
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
   <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-  <style>
-    .footer-img {
-        display:flex;
-        border: none;
-        justify-content: center;     
-    }
-
-    img {
-        margin: 4px;
-        align-items: center;
-    }
-
-    #id {
-      text-align: left !important;
-    }
-    .textbottom {vertical-align:text-bottom;}
-</style>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>
 
@@ -314,19 +297,18 @@
 
     setData = (url, type) => {
       $.getJSON(url, data => {
-        medal = {1: "🏅️", 2: "🥈", 3: "🥉"};
         text = ['<tr>', `<td colspan="6" id="type">${type}</td>`, '</tr>',
           '<tr>',
             '<td colspan="3" id="type">地点：木兰溪</br>日期：2022/06/19</td>',
             '<td colspan="3" id="type">圈数：一圈</br>距离：10 公里</td>',
           '</tr>',
-          '</tr>', `<th>排名</th>`, '<th>号码</th>','<th>名字</th>', 
+          '<tr>', `<th>排名</th>`, '<th>号码</th>','<th>名字</th>', 
           '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>','</tr>'
         ];
         for (let index = 0; index < data.length; index++) {
           item = data[index];
           text.push('<tr>');
-          text.push(`<td>${medal[item['rank']] || `${item['rank']}`}</td>`);
+          text.push(`<td>${item['rank']}</td>`);
           text.push(`<td>${item['bib_no']}</td>`);
           text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${item['name']}</a></td>`);
           text.push(`<td>${item['gender']}</td>`);
