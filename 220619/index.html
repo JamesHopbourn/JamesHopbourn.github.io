@@ -56,16 +56,16 @@
   };
 </script>
 
-  <meta name="description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(&#39;data&#x2F;overall.json&#39;">
+  <meta name="description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(sessionStorage.getItem">
 <meta property="og:type" content="website">
 <meta property="og:title" content="James Notes">
 <meta property="og:url" content="https://jameshopbourn.github.io/220619/index.html">
 <meta property="og:site_name" content="James Notes">
-<meta property="og:description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(&#39;data&#x2F;overall.json&#39;">
+<meta property="og:description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(sessionStorage.getItem">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jameshopbourn.github.io/220619/images/xetp.png">
-<meta property="article:published_time" content="2022-05-31T03:43:35.664Z">
-<meta property="article:modified_time" content="2022-05-31T03:43:35.664Z">
+<meta property="article:published_time" content="2022-05-31T06:42:30.032Z">
+<meta property="article:modified_time" content="2022-05-31T06:42:30.032Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jameshopbourn.github.io/220619/images/xetp.png">
@@ -271,7 +271,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index.css" type="text/css" />
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.js"></script>
-  <script src="https://cdn.staticfile.org/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>
 
@@ -279,9 +278,9 @@
   <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
 
   <div id="button-pref">
-    <button onclick="setData('data/overall.json', '全体排名')">全体排名</button>
-    <button onclick="setData('data/man.json', '男子组排名')">男子组排名</button>
-    <button onclick="setData('data/woman.json', '女子组排名')">女子组排名</button>
+    <button onclick="setData('全体排名')">全体排名</button>
+    <button onclick="setData('男子组排名')">男子组排名</button>
+    <button onclick="setData('女子组排名')">女子组排名</button>
   </div>
 
   <table>
@@ -292,12 +291,13 @@
   <script>
     window.onload = () => {
       $('title').text('成绩查询');
-      setData('data/overall.json', sessionStorage.getItem('group') || '全体排名');
+      setData(sessionStorage.getItem('group') || '全体排名');
     }
 
-    setData = (url, type) => {
+    setData = (type) => {
       sessionStorage.setItem('group', type);
-      $.getJSON(url, data => {
+      mapper = {"全体排名": "overall.json", "男子组排名": "man.json", "女子组排名": "woman.json"};
+      $.getJSON(`data/${mapper[type]}`, data => {
         text = ['<tr>', `<td colspan="6" id="type">${type}</td>`, '</tr>',
           '<tr>',
             '<td colspan="3" id="type">地点：木兰溪</br>日期：2022/06/19</td>',
@@ -307,14 +307,13 @@
           '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>','</tr>'
         ];
         for (let index = 0; index < data.length; index++) {
-          item = data[index];
           text.push('<tr>');
-          text.push(`<td>${item['rank']}</td>`);
-          text.push(`<td>${item['bib_no']}</td>`);
-          text.push(`<td><a href="./certificate.html?type=${url}&index=${index}">${item['name']}</a></td>`);
-          text.push(`<td>${item['gender']}</td>`);
-          text.push(`<td>${item['time']}</td>`);
-          text.push(`<td>${item['pace']}</td>`);
+          text.push(`<td>${data[index]['rank']}</td>`);
+          text.push(`<td>${data[index]['bib_no']}</td>`);
+          text.push(`<td><a href="./certificate.html?type=data/${mapper[type]}&index=${index}">${data[index]['name']}</a></td>`);
+          text.push(`<td>${data[index]['gender']}</td>`);
+          text.push(`<td>${data[index]['time']}</td>`);
+          text.push(`<td>${data[index]['pace']}</td>`);
           text.push('</tr>');
         }
         $('tbody').empty().append(text.join('\n'));
