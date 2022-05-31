@@ -14,8 +14,8 @@
 
   <div id="button-pref">
     <button onclick="setData('全体排名')">全体排名</button>
-    <button onclick="setData('男子排名')">男子组排名</button>
-    <button onclick="setData('女子排名')">女子组排名</button>
+    <button onclick="setData('男子组排名')">男子组排名</button>
+    <button onclick="setData('女子组排名')">女子组排名</button>
   </div>
 
   <table>
@@ -31,7 +31,7 @@
 
     setData = (group) => {
       sessionStorage.setItem('group', group);
-      mapper = {"全体排名": "overall", "男子排名": "man", "女子排名": "woman"};
+      mapper = {"全体排名": "overall", "男子组排名": "man", "女子组排名": "woman"};
       $.getJSON(`data/${mapper[group]}.json`, data => {
         text = ['<tr>', `<td colspan="6" id="type">${group}</td>`, '</tr>',
           '<tr>',
