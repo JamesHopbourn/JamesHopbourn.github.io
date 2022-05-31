@@ -13,9 +13,9 @@
   <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
 
   <div id="button-pref">
-    <button onclick="setData('全体排名')">全体排名</button>
-    <button onclick="setData('男子组排名')">男子组排名</button>
-    <button onclick="setData('女子组排名')">女子组排名</button>
+    <button onclick="setData(0)">全体排名</button>
+    <button onclick="setData(1)">男子组排名</button>
+    <button onclick="setData(2)">女子组排名</button>
   </div>
 
   <table>
@@ -26,14 +26,14 @@
   <script>
     window.onload = () => {
       $('title').text('成绩查询');
-      setData(sessionStorage.getItem('group') || '全体排名');
+      setData(sessionStorage.getItem('group') || 0);
     }
 
     setData = (group) => {
       sessionStorage.setItem('group', group);
-      mapper = {"全体排名": "overall", "男子组排名": "man", "女子组排名": "woman"};
-      $.getJSON(`data/${mapper[group]}.json`, data => {
-        text = ['<tr>', `<td colspan="6" class="head">${group}</td>`, '</tr>',
+      header = ["全体排名", "男子组排名", "女子组排名"];
+      $.getJSON(`data/${["overall", "man", "woman"][group]}.json`, data => {
+        text = ['<tr>', `<td colspan="6" class="head">${header[group]}</td>`, '</tr>',
           '<tr>',
             '<td colspan="3" class="head">地点：木兰溪</br>日期：2022/06/19</td>',
             '<td colspan="3" class="head">圈数：一圈</br>距离：10 公里</td>',
@@ -45,7 +45,8 @@
           text.push('<tr>');
           text.push(`<td>${data[index]['rank']}</td>`);
           text.push(`<td>${data[index]['bib_no']}</td>`);
-          text.push(`<td><a href="./certificate.html?group=${mapper[group]}&index=${index}">${data[index]['name']}</a></td>`);
+          link = window.btoa(`${group},${index}`).replace(/=/g, '');
+          text.push(`<td><a href="./cert.html?${link}">${data[index]['name']}</a></td>`);
           text.push(`<td>${data[index]['gender']}</td>`);
           text.push(`<td>${data[index]['time']}</td>`);
           text.push(`<td>${data[index]['pace']}</td>`);
