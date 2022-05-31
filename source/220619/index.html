@@ -33,10 +33,10 @@
       sessionStorage.setItem('group', group);
       mapper = {"全体排名": "overall", "男子组排名": "man", "女子组排名": "woman"};
       $.getJSON(`data/${mapper[group]}.json`, data => {
-        text = ['<tr>', `<td colspan="6" class="type">${group}</td>`, '</tr>',
+        text = ['<tr>', `<td colspan="6" class="head">${group}</td>`, '</tr>',
           '<tr>',
-            '<td colspan="3" class="type">地点：木兰溪</br>日期：2022/06/19</td>',
-            '<td colspan="3" class="type">圈数：一圈</br>距离：10 公里</td>',
+            '<td colspan="3" class="head">地点：木兰溪</br>日期：2022/06/19</td>',
+            '<td colspan="3" class="head">圈数：一圈</br>距离：10 公里</td>',
           '</tr>',
           '<tr>', `<th>排名</th>`, '<th>号码</th>','<th>名字</th>', 
           '<th>性别</th>', '<th>计时时间</th>', '<th>配速</th>','</tr>'
