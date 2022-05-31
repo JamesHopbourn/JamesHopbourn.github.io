@@ -13,7 +13,7 @@
         window.onload = () => {
             document.title = "证书下载";
             mapper = ["overall", "man", "woman"];
-            query = atob(window.location.search.replace('?', '')).split(',');
+            query = atob(window.location.search.substr(1)).split(',');
             $.getJSON(`data/${mapper[query[0]]}.json`, data => {
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
                 for (let index = 0; index < keys.length; index++) {
