@@ -19,3 +19,18 @@ table, th, td {
     padding: none !important;
     border: none !important;
 }
+
+.footer-img {
+    display:flex;
+    border: none;
+    justify-content: center;     
+}
+
+img {
+    margin: 4px;
+    align-items: center;
+}
+
+#id {
+  text-align: left !important;
+}
