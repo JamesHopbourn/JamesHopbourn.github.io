@@ -12,25 +12,20 @@
     <script>
         window.onload = () => {
             document.title = "证书下载";
-            CreateCertificate(new URLSearchParams(window.location.search).get('group'));
-        }
-
-        CreateCertificate = (group) => {
-            $.getJSON(`data/${group}.json`, data => {
-                // 元素赋值
+            mapper = ["overall", "man", "woman"];
+            query = atob(window.location.search.replace('?', '')).split(',');
+            $.getJSON(`data/${mapper[query[0]]}.json`, data => {
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
-                let query = new URLSearchParams(window.location.search).get('index');
                 for (let index = 0; index < keys.length; index++) {
-                    $(`#${keys[index]}`).text(data[query][keys[index]]);
+                    $(`#${keys[index]}`).text(data[query[1]][keys[index]]);
                 }
-                // 生成证书图片
                 html2canvas($("#certificate")).then((canvas) => {
                     let img = new Image();
                     img.src = canvas.toDataURL();
                     ($("#certificate")).html(img);
                 });
-            })     
-        }
+            }
+        )}
   </script>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>

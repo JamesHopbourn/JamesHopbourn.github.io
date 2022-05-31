@@ -64,8 +64,8 @@
 <meta property="og:description" content="2022 特跑族全国 10K 排位赛成绩         全体排名     男子组排名     女子组排名                               window.onload &#x3D; () &#x3D;&gt; {       $(&#39;title&#39;).text(&#39;成绩查询&#39;);       setData(sessionStorage.getItem">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jameshopbourn.github.io/220619/images/xetp.png">
-<meta property="article:published_time" content="2022-05-31T09:14:21.822Z">
-<meta property="article:modified_time" content="2022-05-31T09:14:21.822Z">
+<meta property="article:published_time" content="2022-05-31T10:39:29.118Z">
+<meta property="article:modified_time" content="2022-05-31T10:39:29.118Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jameshopbourn.github.io/220619/images/xetp.png">
@@ -278,9 +278,9 @@
   <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
 
   <div id="button-pref">
-    <button onclick="setData('全体排名')">全体排名</button>
-    <button onclick="setData('男子组排名')">男子组排名</button>
-    <button onclick="setData('女子组排名')">女子组排名</button>
+    <button onclick="setData(0)">全体排名</button>
+    <button onclick="setData(1)">男子组排名</button>
+    <button onclick="setData(2)">女子组排名</button>
   </div>
 
   <table>
@@ -291,14 +291,14 @@
   <script>
     window.onload = () => {
       $('title').text('成绩查询');
-      setData(sessionStorage.getItem('group') || '全体排名');
+      setData(sessionStorage.getItem('group') || 0);
     }
 
     setData = (group) => {
       sessionStorage.setItem('group', group);
-      mapper = {"全体排名": "overall", "男子组排名": "man", "女子组排名": "woman"};
-      $.getJSON(`data/${mapper[group]}.json`, data => {
-        text = ['<tr>', `<td colspan="6" class="head">${group}</td>`, '</tr>',
+      header = ["全体排名", "男子组排名", "女子组排名"];
+      $.getJSON(`data/${["overall", "man", "woman"][group]}.json`, data => {
+        text = ['<tr>', `<td colspan="6" class="head">${header[group]}</td>`, '</tr>',
           '<tr>',
             '<td colspan="3" class="head">地点：木兰溪</br>日期：2022/06/19</td>',
             '<td colspan="3" class="head">圈数：一圈</br>距离：10 公里</td>',
@@ -310,7 +310,8 @@
           text.push('<tr>');
           text.push(`<td>${data[index]['rank']}</td>`);
           text.push(`<td>${data[index]['bib_no']}</td>`);
-          text.push(`<td><a href="./certificate.html?group=${mapper[group]}&index=${index}">${data[index]['name']}</a></td>`);
+          link = window.btoa(`${group},${index}`).replace(/=/g, '');
+          text.push(`<td><a href="./cert.html?${link}">${data[index]['name']}</a></td>`);
           text.push(`<td>${data[index]['gender']}</td>`);
           text.push(`<td>${data[index]['time']}</td>`);
           text.push(`<td>${data[index]['pace']}</td>`);
