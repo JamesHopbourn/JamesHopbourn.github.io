@@ -6,9 +6,19 @@
   background-image: url("../images/成绩证书.png");
 }
 
+#cert {
+  width: 360px;
+  height: 360px;
+}
+
 div{
   left: 390px;
   position: absolute;
   font-size: 45px;
   font-family: "Arial Regular";
+}
+
+div img {
+    display: block;
+    width: 100%;
 }
