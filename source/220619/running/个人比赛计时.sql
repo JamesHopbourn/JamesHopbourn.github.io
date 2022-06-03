@@ -1,5 +1,5 @@
 SELECT
-	json_arrayagg(
+-- 	json_arrayagg(
 		json_object( -- 括号内的 value 对应 28~44
 			"rank", CASE final.`rank`
 								WHEN "1" THEN "🏅️"
@@ -14,7 +14,7 @@ SELECT
 			"time", final.`time`,
 			"pace", final.`pace`
 		) -- json_object END
-	) -- json_arrayagg END
+-- 	) -- json_arrayagg END
 	AS "data"
 FROM(
 	SELECT
@@ -49,7 +49,7 @@ FROM(
 -- 			WHERE FIND_IN_SET(gender, '女')
 -- 			WHERE FIND_IN_SET(gender, '男,女')
 	) result -- 设置一级 alias
-) final -- 设置二级 alias 
+) final -- 设置二级 alias
 -- 	INTO OUTFILE 'man.json';
 -- 	INTO OUTFILE 'woman.json';
 -- 	INTO OUTFILE "overall.json";
