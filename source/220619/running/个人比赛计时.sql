@@ -45,9 +45,11 @@ FROM(
 				, '%i′%s″') AS "pace"
 		FROM
 			PR20220619 p1
--- 			WHERE FIND_IN_SET(gender, '男')
--- 			WHERE FIND_IN_SET(gender, '女')
--- 			WHERE FIND_IN_SET(gender, '男,女')
+		WHERE 
+			record_time -- 筛选条件要求 record_time 数值存在，用于接力赛及时更新数据
+-- 	AND FIND_IN_SET(gender, '男')
+-- 	AND	FIND_IN_SET(gender, '女')
+-- 	AND	FIND_IN_SET(gender, '男,女')
 	) result -- 设置一级 alias
 ) final -- 设置二级 alias
 -- 	INTO OUTFILE 'man.json';
