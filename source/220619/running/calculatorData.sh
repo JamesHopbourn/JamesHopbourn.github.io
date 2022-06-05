@@ -6,6 +6,6 @@ sed '/json_arrayagg/ s/--// ; /tag:overall/ s/--//' 个人比赛计时.sql|mysql
 
 mv $HOME/docker/mysql/data/running/*.json ../data/
 
-cat ../data/man.json|jq length|sed '/136/ s/^/✅ man /'
-cat ../data/woman.json|jq length|sed '/68/ s/^/✅ woman /'
-cat ../data/overall.json|jq length|sed '/204/ s/^/✅ overall /'
+cat ../data/man.json|jq length|sed '/136/ s/^/✅ man / ; /✅/! s/^/男子组：/ ; s/$/ 人/'
+cat ../data/woman.json|jq length|sed '/68/ s/^/✅ woman / ; /✅/! s/^/女子组：/ ; s/$/ 人/'
+cat ../data/overall.json|jq length|sed '/204/ s/^/✅ overall / ; /✅/! s/^/全体选手：/ ; s/$/ 人/'
