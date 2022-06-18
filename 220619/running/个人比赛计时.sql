@@ -1,5 +1,7 @@
+SET @distance := 10;
+
 SELECT
-	json_arrayagg(
+-- 	json_arrayagg(
 		json_object( -- 括号内的 value 对应 28~44
 			"rank", CASE final.`rank`
 								WHEN "1" THEN "🏅️"
@@ -14,7 +16,7 @@ SELECT
 			"time", final.`time`,
 			"pace", final.`pace`
 		) -- json_object END
-	) -- json_arrayagg END
+-- 	) -- json_arrayagg END
 	AS "data"
 FROM(
 	SELECT
@@ -39,17 +41,19 @@ FROM(
 						FLOOR( -- SEC_TO_TIME 函数不能处理含有小数点的数值，对数值向下取整
 							TIME_TO_SEC( -- SUBTIME 得到的结果是分钟数，转为秒数
 								SUBTIME(p1.record_time, p1.start_time) -- 减去分批出发的时间差
-							)/6.76 -- 除以公里数获得平均配速
+							) / @distance -- 除以公里数获得平均配速
 						)
 					)
 				, '%i′%s″') AS "pace"
 		FROM
 			PR20220619 p1
--- 			WHERE FIND_IN_SET(gender, '男')
--- 			WHERE FIND_IN_SET(gender, '女')
--- 			WHERE FIND_IN_SET(gender, '男,女')
+		WHERE
+			record_time -- 筛选条件要求 record_time 数值存在，用于接力赛及时更新数据
+-- 	AND FIND_IN_SET(gender, '男')	-- tag:man
+-- 	AND	FIND_IN_SET(gender, '女')	-- tag:woman
+-- 	AND	FIND_IN_SET(gender, '男,女')	-- tag:overall
 	) result -- 设置一级 alias
-) final -- 设置二级 alias 
--- 	INTO OUTFILE 'man.json';
--- 	INTO OUTFILE 'woman.json';
--- 	INTO OUTFILE "overall.json";
+) final -- 设置二级 alias
+-- 	INTO OUTFILE 'man.json';	-- tag:man
+-- 	INTO OUTFILE 'woman.json';	-- tag:woman
+-- 	INTO OUTFILE 'overall.json';	-- tag:overall

@@ -14,6 +14,8 @@
             document.title = "证书下载";
             mapper = ["overall", "man", "woman"];
             query = atob(window.location.search.substr(1)).split(',');
+            // specify the image path here
+//            document.getElementById('a').style.backgroundImage="url(images/img.jpg)";
             $.getJSON(`data/${mapper[query[0]]}.json`, data => {
                 let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
                 for (let index = 0; index < keys.length; index++) {
@@ -31,7 +33,7 @@
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>
 <body>
-    <h1>👇 长按保存成绩证书</h1>
+    <h1>长按保存成绩证书 👇</h1>
     <div id="cert"></div>
 
     <div id="certificate" class="left">
