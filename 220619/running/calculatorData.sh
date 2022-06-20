@@ -4,6 +4,9 @@ sed '/JSON_ARRAYAGG/ s/--// ; /tag:man/ s/--//' 个人比赛计时.sql|mysql --l
 sed '/JSON_ARRAYAGG/ s/--// ; /tag:woman/ s/--//' 个人比赛计时.sql|mysql --login-path=pro running
 sed '/JSON_ARRAYAGG/ s/--// ; /tag:overall/ s/--//' 个人比赛计时.sql|mysql --login-path=pro running
 
+sed '/JSON_ARRAYAGG/ s/--// ; /list:/ s/^/--/ ; /rank:man/ s/--//' 个人比赛计时.sql|mysql --login-path=pro running
+sed '/JSON_ARRAYAGG/ s/--// ; /list:/ s/^/--/ ; /rank:woman/ s/--//' 个人比赛计时.sql|mysql --login-path=pro running
+
 mv $HOME/docker/mysql/data/running/*.json ../data/
 sed -i '' 's|{||g ; s|}||g ; s|^\[|{| ; s|\]$|}|' ../data/*.json
 

@@ -13,7 +13,8 @@
         window.onload = () => {
             document.title = "证书下载";
             bib_no = window.location.search.substr(1);
-            $.getJSON(`data/overall.json`, data => {
+            $.getJSON('data/overall.json', data => {
+                data[bib_no][2] = bib_no;
                 let keys = ['rank', 'name', 'bib_no', 'time'];
                 for (let index = 0; index < keys.length; index++) {
                     $(`#${keys[index]}`).text(data[bib_no][index]);
@@ -24,8 +25,8 @@
                     ($("#cert")).html(img);
                     $("#certificate").hide();
                 });
-            }
-        )}
+            })
+    }
   </script>
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="James Notes" type="application/atom+xml">
 </head>
