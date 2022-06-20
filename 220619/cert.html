@@ -12,14 +12,11 @@
     <script>
         window.onload = () => {
             document.title = "证书下载";
-            mapper = ["overall", "man", "woman"];
-            query = atob(window.location.search.substr(1)).split(',');
-            // specify the image path here
-//            document.getElementById('a').style.backgroundImage="url(images/img.jpg)";
-            $.getJSON(`data/${mapper[query[0]]}.json`, data => {
-                let keys = ['name', 'bib_no', 'gender', 'pace', 'time', 'rank'];
+            bib_no = window.location.search.substr(1);
+            $.getJSON(`data/overall.json`, data => {
+                let keys = ['rank', 'name', 'bib_no', 'time'];
                 for (let index = 0; index < keys.length; index++) {
-                    $(`#${keys[index]}`).text(data[query[1]][keys[index]]);
+                    $(`#${keys[index]}`).text(data[bib_no][index]);
                 }
                 html2canvas($("#certificate")).then((canvas) => {
                     let img = new Image();

@@ -1,0 +1,1 @@
+SELECT CONCAT("未登记成绩选手名单：",personal_name) FROM PR20220619 WHERE record_time IS NULL;

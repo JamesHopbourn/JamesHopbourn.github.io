@@ -1,22 +1,23 @@
 SET @distance := 10;
 
 SELECT
--- 	JSON_ARRAYAGG(
-			JSON_OBJECT(
-				personal_id,
-					JSON_ARRAY( -- 括号内的 value 对应 28~44
-						CASE final.`rank`
-							WHEN "1" THEN "🏅️"
-							WHEN "2" THEN "🥈"
-							WHEN "3" THEN "🥉"
-							ELSE final.`rank`
-						END,
-						final.`name`, final.`gender`, -- final.`start_time`, -- 如果是分批出发则需要取消注释该行
-						IFNULL(final.`time`, 'DNS'),IFNULL(final.`pace`, 'N/A') -- 此处的 DNS 是为了处理退赛的情况
-				) -- JSON_ARRAY() END
-			) -- JSON_OBJECT() END
-	-- )  -- JSON_ARRAYAGG() END
-	AS "result"
+-- 	json_arrayagg(
+		json_object( -- 括号内的 value 对应 28~44
+			"rank", CASE final.`rank`
+								WHEN "1" THEN "🏅️"
+								WHEN "2" THEN "🥈"
+								WHEN "3" THEN "🥉"
+								ELSE final.`rank`
+							END,
+			"name", final.`name`,
+			"gender", final.`gender`,
+			"bib_no", final.`bib_no`,
+-- 			"start_time", final.`start_time`, -- 如果是分批出发则需要取消注释该行
+			"time", final.`time`,
+			"pace", final.`pace`
+		) -- json_object END
+-- 	) -- json_arrayagg END
+	AS "data"
 FROM(
 	SELECT
 		 -- 根据情况选择 DENSE_RANK(), RANK(), ROW_NUMBER()
@@ -28,9 +29,9 @@ FROM(
 		SELECT
 			p1.personal_name AS "name",
 			p1.gender AS "gender",
-			p1.personal_id AS "personal_id",
+			p1.personal_id AS "bib_no",
 			p1.video_rank AS "video_rank",
-			DATE_FORMAT(start_time, '%H:%i:%s') AS "start_time",
+			-- p1.start_time AS "start_time", -- 如果是分批出发，需要去设置 start_time
 			DATE_FORMAT(
 				SUBTIME(p1.record_time, p1.start_time) -- 减去分批出发的时间差
 			, '%H:%i:%s') AS "time",
@@ -48,10 +49,9 @@ FROM(
 			PR20220619 p1
 		WHERE
 			record_time -- 筛选条件要求 record_time 数值存在，用于接力赛及时更新数据
-		AND
--- 	FIND_IN_SET(gender, '男')	-- tag:man
--- 	FIND_IN_SET(gender, '女')	-- tag:woman
--- 	FIND_IN_SET(gender, '男,女')	-- tag:overall
+-- 	AND FIND_IN_SET(gender, '男')	-- tag:man
+-- 	AND	FIND_IN_SET(gender, '女')	-- tag:woman
+-- 	AND	FIND_IN_SET(gender, '男,女')	-- tag:overall
 	) result -- 设置一级 alias
 ) final -- 设置二级 alias
 -- 	INTO OUTFILE 'man.json';	-- tag:man
