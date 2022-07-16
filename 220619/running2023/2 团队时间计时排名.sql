@@ -1,6 +1,16 @@
-SELECT team_name AS '团队名称', MAX(record_time) as '团队时间' FROM PR20220115 GROUP BY team_name ORDER BY 团队时间;
+SELECT
+json_object(
+	team_name,TIME_FORMAT( MAX( record_time ), "%H:%i:%s" )
+	) AS "team.json"
+FROM
+	PR20220115
+GROUP BY
+	team_name 
+ORDER BY
+	MAX(record_time);
 
- -- 个人成绩排名
+
+-- 个人成绩排名
 SELECT
 json_object(
 		m1.`personal_name`,
@@ -29,21 +39,25 @@ json_object(
 				SELECT
 				DATE_FORMAT(
 					SEC_TO_TIME(
-						TIMESTAMPDIFF(
-							SECOND,m2.record_time, m1.record_time
-						)/6.76 -- TIMESTAMPDIFF
+						FLOOR( 
+							TIMESTAMPDIFF(
+								SECOND,m2.record_time, m1.record_time
+							)/6.76 -- TIMESTAMPDIFF
+						) -- FLOOR
 					), -- SEC_TO_TIME
-					'%i′%s″')	 -- DATE_FORMAT
+				'%i′%s″')	 -- DATE_FORMAT
 				FROM
 					PR20220115 AS m2
 				WHERE
-					m2.`personal_bib` = m1.`personal_bib`+1
+					m2.`personal_bib`+1 = m1.`personal_bib`
 				AND
 					m1.`team_name` = m2.`team_name`
 					), -- COALESCE
 				DATE_FORMAT(
 					SEC_TO_TIME(
-						TIME_TO_SEC( m1.`record_time` )/ 6.76), '%i′%s″'
+						FLOOR(
+							TIME_TO_SEC( m1.`record_time` )/ 6.76)
+						), '%i′%s″' -- FLOOR
 					) -- SEC_TO_TIME
 				) -- DATE_FORMAT
 			) -- '配速'

@@ -1,0 +1,24 @@
+#certificate {
+  width: 1080px; 
+  height: 1477px;
+  /* background-size: 1477px, 1080px; */
+  background-repeat: no-repeat;
+  background-image: url("../images/成绩证书.png");
+}
+
+#cert {
+  width: 360px;
+  height: 360px;
+}
+
+div{
+  left: 390px;
+  position: absolute;
+  font-size: 45px;
+  font-family: "Arial Regular";
+}
+
+div img {
+    display: block;
+    width: 100%;
+}

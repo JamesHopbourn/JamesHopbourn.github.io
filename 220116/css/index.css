@@ -1,0 +1,36 @@
+#title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 100px;
+}
+
+#button-pref {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table, th, td {
+    text-align: center;
+}
+
+/* 禁用主题本身的 img 渲染效果 */
+.post-body img {
+    padding: none !important;
+    border: none !important;
+}
+
+.footer-img {
+    display:flex;
+    border: none;
+    justify-content: center;     
+}
+
+img {
+    margin: 4px;
+    align-items: center;
+}
+
+#id {
+  text-align: left !important;
+}
