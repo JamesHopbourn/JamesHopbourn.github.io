@@ -56,15 +56,15 @@
   };
 </script>
 
-  <meta name="description" content="&#x2F;&#x2F; 载入网页显示第一题     window.onload &#x3D; () &#x3D;&gt; {       switchQuestion();     }      var index &#x3D; 0; &#x2F;&#x2F; 题目位置     var score &#x3D; new Array(9); &#x2F;&#x2F; 成绩得分      function switchQuestion(){       $.get">
+  <meta name="description" content="&#x2F;&#x2F; 载入网页显示第一题     window.onload &#x3D; () &#x3D;&gt; {       switchQuestion();     }      var index &#x3D; 0; &#x2F;&#x2F; 题目位置     var score &#x3D; new Array(9); &#x2F;&#x2F; 成绩得分      function switchQuestion(){       &#x2F;&#x2F; if">
 <meta property="og:type" content="website">
 <meta property="og:title" content="James Notes">
 <meta property="og:url" content="https://jameshopbourn.github.io/test/index.html">
 <meta property="og:site_name" content="James Notes">
-<meta property="og:description" content="&#x2F;&#x2F; 载入网页显示第一题     window.onload &#x3D; () &#x3D;&gt; {       switchQuestion();     }      var index &#x3D; 0; &#x2F;&#x2F; 题目位置     var score &#x3D; new Array(9); &#x2F;&#x2F; 成绩得分      function switchQuestion(){       $.get">
+<meta property="og:description" content="&#x2F;&#x2F; 载入网页显示第一题     window.onload &#x3D; () &#x3D;&gt; {       switchQuestion();     }      var index &#x3D; 0; &#x2F;&#x2F; 题目位置     var score &#x3D; new Array(9); &#x2F;&#x2F; 成绩得分      function switchQuestion(){       &#x2F;&#x2F; if">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-16T08:55:25.578Z">
-<meta property="article:modified_time" content="2022-07-16T08:55:25.578Z">
+<meta property="article:published_time" content="2022-07-16T09:25:07.651Z">
+<meta property="article:modified_time" content="2022-07-16T09:25:07.651Z">
 <meta property="article:author" content="James Hopbourn">
 <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://jameshopbourn.github.io/test/">
@@ -277,12 +277,15 @@
     var score = new Array(9); // 成绩得分
 
     function switchQuestion(){
+      // if (index == 1) {
+      //   $('input[name="drone"]').val(100);
+      // }
       $.getJSON('question.json', (data) => {
         $("label:eq(0)").html(data[index][1]);
         $("label:eq(1)").html(data[index][2]);
         $("label:eq(2)").html(data[index][3]);
         $("label:eq(3)").html(data[index][4]);
-        $("legend").html(`请选择你的 ${data[index][0]}`);
+        $("legend").html(data[index][0]);
       });
     }
 
