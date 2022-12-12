@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <title>Redirect in a new window</title>
+    <script type="text/javascript">
+      setTimeout(() => window.open('http://google.com'), 3000);
+
+      function doIt () {
+        // var form = document.createElement('form');
+        // form.action = 'http://www.google.com/';
+        // form.target = '_blank';
+        // document.getElementById('hidden_div').appendChild(form);
+        // form.submit();
+      }
+    </script>
+    <style>
+      #hidden_div {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      This is my page content<br />
+      <a href="http://www.google.com/">This is a link to Google</a>...<br />
+      ...and this button will open Google in a new tab or window: <input id="james" type="button" value="Click Me!" onclick="doIt();" />
+    </div>
+    <div id="hidden_div"></div>
+  </body>
+  <script>
+        document.getElementById('james').click()
+  </script>
+</html>

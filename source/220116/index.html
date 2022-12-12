@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css" type="text/css" />
+  <script src="javascript/jquery.js"></script>
+</head>
+
+<body>
+  <div id="title">2022 特跑族全国 10K 排位赛成绩</div>
+
+  <div id="button-pref">
+    <button onclick="setData(0)">团队排名</button>
+    <button onclick="setData(1)">全体排名</button>
+  </div>
+  <div id="button-pref">
+    <button onclick="setData(2)">男子排名</button>
+    <button onclick="setData(3)">女子排名</button>
+  </div>
+
+  <table>
+    <tr>
+    </tr>
+  </table>
+  
+  <script>
+    window.onload = () => {
+      $('title').text('成绩查询');
+      setData(sessionStorage.getItem('group') || 0);
+    }
+
+    setData = (group) => {
+      sessionStorage.setItem('group', group);
+      header = ["团队排名", "全体排名", "男子组排名", "女子组排名"];
+      $.getJSON(`data/${["team", "overall", "man", "woman"][group]}.json`, data => {
+        text = ['<tr>', `<td colspan="4" class="head">${header[group]}</td>`, '</tr>',
+          '<tr>',
+            '<td colspan="2" class="head">地点：华佳彩</br>日期：2022/01/15</td>',
+            '<td colspan="2" class="head">圈数：七圈</br>距离：42 公里</td>',
+          '</tr>',
+          '<tr>', `<th>排名</th>`, '<th>团队名称</th>', '<th>成绩</th>', '</tr>'
+        ];
+        team_name = Object.keys(data);
+        for (let index = 0; index < team_name.length; index++) {
+          text.push('<tr>');
+          text.push(`<td>${index+1}</td>`);
+          text.push(`<td>${team_name[index]}</td>`);
+          text.push(`<td>${data[team_name[index]]}</td>`);
+          text.push('</tr>');
+        }
+        $('tbody').empty().append(text.join('\n'));
+      });
+    }
+  </script>
+</body>
+
+</html>

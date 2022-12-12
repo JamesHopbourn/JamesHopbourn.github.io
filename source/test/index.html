@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <script type="text/javascript" src="javascript/jquery.js"></script>
+</head>
+<body>
+  <script>
+    // 载入网页显示第一题
+    window.onload = () => {
+      switchQuestion();
+    }
+
+    var index = 0; // 题目位置
+    var score = new Array(9); // 成绩得分
+
+    function switchQuestion(){
+      if (index == 7) {
+        $('input[name="drone"]').val(0);
+        $('input[id="one"]').val(10);
+      } else if (index == 8) {
+        $('input[id="one"]').val(10);
+      } else if (index == 9) {
+        $('input[id="one"]').val(10);
+      }
+      console.log($('input[name="drone"]'));
+      $.getJSON('question.json', (data) => {
+        $("label:eq(0)").html(data[index][1]);
+        $("label:eq(1)").html(data[index][2]);
+        $("label:eq(2)").html(data[index][3]);
+        $("label:eq(3)").html(data[index][4]);
+        $("legend").html(data[index][0]);
+      });
+    }
+
+    $(document).ready(function(){
+      // 跳转下一题，累计得分      
+      btn_next.onclick = () => {
+        index++;
+        if (index == 10) {
+          score[index-1] = parseInt($('input:radio:checked').val());
+          sum = 0;
+          score.forEach(function(item) {sum += item});
+          alert(`你的得分是：${sum}`);
+          console.log(score);
+        } else {
+          score[index-1] = parseInt($('input:radio:checked').val());
+          switchQuestion();
+          console.log(score);
+        }
+      }
+
+      // 跳转上一题，重置分数
+      btn_prev.onclick = () => {
+        index--;
+        console.log(index);
+        switchQuestion();
+      }
+    });
+
+
+  </script>
+<fieldset>
+    <legend id="question"></legend>
+    <div>
+      <input type="radio" id="one" name="drone" value=10>
+      <label for="one"></label>
+    </div>
+    <div>
+      <input type="radio" id="two" name="drone" value=8>
+      <label for="two"></label>
+    </div>
+    <div>
+      <input type="radio" id="three" name="drone" value=5>
+      <label for="three"></label>
+    </div>
+    <div>
+      <input type="radio" id="four" name="drone" value=0>
+      <label for="four"></label>
+    </div>
+</fieldset>
+    <div class="d_btn">
+        <button id="btn_prev"><a>上一题</a></button>
+        <button id="btn_next"><a>下一题</a></button>
+    </div>
+</body>
+</html>
+
