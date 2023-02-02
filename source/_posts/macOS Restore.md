@@ -141,6 +141,33 @@ hdiutil unmount /Volumes/Catalina
 git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-macOS && cd /tmp/WeChatTweak-macOS && sudo make install && cd -
 ```
 
+#### 创建文件夹
+```
+mkdir -p /Volumes/WD\ 4TB/微信
+```
+#### 切换微信目录
+```
+cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/
+```
+#### 移动原始备份文件
+```
+mv Backup /Volumes/WD\ 4TB/微信/
+```
+#### 创建软链接
+```
+ln -s /Volumes/WD\ 4TB/Backup ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
+```
+#### 微信退出重新签名
+```
+sudo codesign --sign - --force --deep /Applications/WeChat.app
+Password:
+/Applications/WeChat.app: replacing existing signature
+```
+#### 查看链接情况
+```
+open ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9
+```
+
 ## crontab
 ```
 @reboot say 'Welcome back James'
