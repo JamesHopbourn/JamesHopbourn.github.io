@@ -161,7 +161,7 @@ Password:
 ```
 #### 查看链接情况
 ```
-Backup
+ls -l ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup
 lrwxr-xr-x james staff 22 B Mon Jan  9 22:17:45 2023 /Users/james/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/Backup ⇒ /Volumes/WD 4TB/Backup
 ```
 
