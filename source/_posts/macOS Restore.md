@@ -145,13 +145,9 @@ git clone https://github.com/Sunnyyoung/WeChatTweak-macOS.git /tmp/WeChatTweak-m
 ```
 mkdir -p /Volumes/WD\ 4TB/微信
 ```
-#### 切换微信目录
+#### 移动原始文件
 ```
-cd ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/
-```
-#### 移动原始备份文件
-```
-mv Backup /Volumes/WD\ 4TB/微信/
+mv ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9/Backup /Volumes/WD\ 4TB/微信/
 ```
 #### 创建软链接
 ```
@@ -165,7 +161,8 @@ Password:
 ```
 #### 查看链接情况
 ```
-open ~/Library/Containers/com.tencent.xinWeChat/Data/Library/Application\ Support/com.tencent.xinWeChat/2.0b4.0.9
+Backup
+lrwxr-xr-x james staff 22 B Mon Jan  9 22:17:45 2023 /Users/james/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/Backup ⇒ /Volumes/WD 4TB/Backup
 ```
 
 ## crontab
