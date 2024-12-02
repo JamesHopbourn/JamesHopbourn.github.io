@@ -11,10 +11,6 @@ categories:
 </head> 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
 
-## 言论
-[陈秋实官方频道](https://www.youtube.com/channel/UCv361SF6FKznoGPKEFG9Yhw)
-
-<!-- more -->
 
 ## 科技
 [Learn OmniFocus](https://www.youtube.com/channel/UCDznDkN2wxYBeRdFTA2oC7Q)
@@ -24,6 +20,8 @@ categories:
 [TuTu生活志](https://www.youtube.com/channel/UCuhAUKCdKrjYoMiJQc74ZkQ)
 [Christopher Lawley](https://www.youtube.com/channel/UC8raOG7HXJoCUygx219fU4A)
 [Tech Craft](https://www.youtube.com/channel/UCT-GpMtIFhX9EMA0Eauevhw)
+
+<!-- more -->
 
 ## 音乐
 [音樂製作課Shawn](https://www.youtube.com/channel/UCCEG92L1pQRvVmTKcGa3V4g)
